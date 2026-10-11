@@ -1,0 +1,17 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\revcaption{Task-specific allocation metrics for the two $2\times2$ comparisons. These are synthetic criteria, not human-subject measurements.}
+\label{tab:task-targets}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+Method & Absolute TVF & Positive-part unfairness & Synthetic pass (\%) & Strict TVF pass (\%) \\
+\midrule
+Preference revenue baseline & $0.64315\pm 0.01830$ & $0.32158\pm 0.00915$ & $53.32\pm 2.38$ & $15.43\pm 0.70$ \\
+PreferenceNet & $0.02497\pm 0.00801$ & $0.01248\pm 0.00401$ & $99.80\pm 0.34$ & $36.85\pm 12.42$ \\
+Fairness revenue baseline & $0.48642\pm 0.04306$ & $0.24321\pm 0.02153$ & $62.50\pm 4.20$ & $17.77\pm 1.79$ \\
+ProportionNet & $0.00196\pm 0.00098$ & $0.00098\pm 0.00049$ & $100.00\pm 0.00$ & $74.87\pm 8.61$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.98\textwidth}\footnotesize Means $\pm$ sample SD across three seeds. Lower is better for the two unnormalized unfairness sums. Synthetic pass uses the same fixed reference threshold in both comparisons; strict TVF pass uses a maximum allocation-distance threshold of $10^{-3}$. These two pass rates test different conditions and need not agree.\end{minipage}
+\end{table*}

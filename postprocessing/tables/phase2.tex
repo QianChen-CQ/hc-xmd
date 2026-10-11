@@ -1,0 +1,21 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\revcaption{Phase II: static tasks separated by size and implementation source. Means $\pm$ sample SD over three models; $r_{\max}^{\rm all}$ is the largest observed gain across all three models.}
+\label{tab:phase2main}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccccc}
+\toprule
+Task & Method/source & Revenue & Welfare & Mean regret & $r_{\max}^{\rm all}$ & PMR (\%) \\
+\midrule
+3$\times$10 & RegretNet (RI) & $5.5614\pm 0.0140$ & $6.8116\pm 0.0036$ & $1.47\times10^{-3}\pm 1.27\times10^{-4}$ & $2.54\times10^{-2}$ & $99.91\pm 0.04$ \\
+3$\times$10 & AMenuNet (RI) & $5.6236\pm 0.0135$ & $6.7654\pm 0.0220$ & $2.51\times10^{-16}\pm 3.75\times10^{-18}$ & $3.55\times10^{-15}$ & $0.00\pm 0.00$ \\
+3$\times$10 & RegretNet (A; budget) & $5.7694\pm 0.0084$ & $6.9516\pm 0.0119$ & $2.62\times10^{-3}\pm 6.68\times10^{-5}$ & $4.79\times10^{-2}$ & $99.96\pm 0.04$ \\
+3$\times$10 & RegretFormer (A) & $6.2020\pm 0.0315$ & $7.2284\pm 0.0023$ & $9.52\times10^{-3}\pm 2.47\times10^{-3}$ & $4.37\times10^{-1}$ & $98.94\pm 0.43$ \\
+\midrule
+2$\times$2 & AMenuNet (RI) & $0.8751\pm 0.0019$ & $1.2037\pm 0.0165$ & $4.50\times10^{-17}\pm 9.79\times10^{-18}$ & $5.00\times10^{-16}$ & $0.00\pm 0.00$ \\
+2$\times$2 & RegretNet (A; budget) & $0.8983\pm 0.0011$ & $1.1962\pm 0.0062$ & $8.41\times10^{-4}\pm 1.16\times10^{-4}$ & $8.12\times10^{-3}$ & $91.67\pm 0.44$ \\
+2$\times$2 & RegretFormer (A) & $0.9155\pm 0.0033$ & $1.2106\pm 0.0026$ & $1.71\times10^{-3}\pm 5.10\times10^{-4}$ & $9.22\times10^{-2}$ & $90.07\pm 0.89$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.98\textwidth}\footnotesize RI: newly trained paper-based implementation; the $2\times2$ uniform AMenuNet task is a review-added extension. A: checkpoints released with Optimaler and reevaluated here; these summarize three checkpoint identities, not verified independent training seeds. The two $3\times10$ RI rows reuse Phase I models and are not additional independent evidence. Training protocols differ across sources; common evaluation does not establish equal-budget architectural superiority. GemNet is disclosed separately in Table~\ref{tab:gemnet-diagnostic}.\end{minipage}
+\end{table*}

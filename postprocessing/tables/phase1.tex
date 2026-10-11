@@ -1,0 +1,15 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\revcaption{Phase I: static $3\times10$ auctions. Means $\pm$ sample SD across three new training seeds; regret and PMR use the strong audit.}
+\label{tab:phase1-main}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccrl}
+\toprule
+Method & Revenue & Welfare & Mean regret & PMR (\%) & Parameters & Representation \\
+\midrule
+RegretNet (RI) & $5.5614\pm 0.0140$ & $6.8116\pm 0.0036$ & $1.47\times10^{-3}\pm 1.27\times10^{-4}$ & $99.91\pm 0.04$ & 91,747 & Direct map \\
+AMenuNet (RI) & $5.6236\pm 0.0135$ & $6.7654\pm 0.0220$ & $2.51\times10^{-16}\pm 3.75\times10^{-18}$ & $0.00\pm 0.00$ & 795,105 & 512 + no-sale \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.98\textwidth}\footnotesize RI denotes this review's paper-based reimplementation. Direct map: RegretNet computes allocations and payments from bids without a fixed candidate-menu list. AMenuNet selects among 512 learned candidate allocations plus a no-sale option and computes pivot payments. The representation entries describe implemented mechanisms, not missing runs or human-burden scores; configured slots need not be distinct effective outcomes.\end{minipage}
+\end{table*}

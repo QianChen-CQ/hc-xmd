@@ -1,0 +1,19 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\revcaption{Phase III: task-specific comparisons with matched mechanism-update budgets. All three training seeds are retained; strong-audit results are shown.}
+\label{tab:phase3quant}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccccc}
+\toprule
+Task & Method & \makecell{Revenue /\\change vs. control} & Welfare & Mean regret & $r_{\max}^{\rm all}$ & PMR (\%) \\
+\midrule
+Context $3\times10$ & No-context ablation & $1.8528\pm 1.6046$ & $2.4783\pm 2.1463$ & $8.97\times10^{-5}\pm 8.17\times10^{-5}$ & $2.60\times10^{-3}$ & $64.84\pm 56.16$ \\
+ & CITransNet & \makecell{$2.8938\pm 0.0181$\\ \textbf{(+56.19\%)}} & $3.7181\pm 0.0093$ & $2.16\times10^{-4}\pm 1.52\times10^{-4}$ & $3.78\times10^{-3}$ & $98.72\pm 0.31$ \\
+Preference $2\times2$ & Matched revenue baseline & $0.9317\pm 0.0047$ & $1.1998\pm 0.0019$ & $4.51\times10^{-3}\pm 5.47\times10^{-4}$ & $3.20\times10^{-2}$ & $97.75\pm 0.10$ \\
+ & PreferenceNet & \makecell{$0.8770\pm 0.0027$\\ \textbf{(-5.88\%)}} & $1.1673\pm 0.0020$ & $4.26\times10^{-3}\pm 8.40\times10^{-4}$ & $2.97\times10^{-2}$ & $96.94\pm 2.20$ \\
+Fairness $2\times2$ & Matched revenue baseline & $0.8860\pm 0.0028$ & $1.1888\pm 0.0010$ & $1.51\times10^{-3}\pm 2.26\times10^{-4}$ & $1.76\times10^{-2}$ & $93.82\pm 2.17$ \\
+ & ProportionNet & \makecell{$0.8567\pm 0.0012$\\ \textbf{(-3.30\%)}} & $1.1665\pm 0.0015$ & $1.83\times10^{-3}\pm 2.46\times10^{-4}$ & $1.30\times10^{-2}$ & $94.60\pm 0.74$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.98\textwidth}\footnotesize Cells are means $\pm$ sample SD except $r_{\max}^{\rm all}$, which is the observed maximum across all seeds. Bold percentages below method revenues are $100(\bar R_{\rm method}/\bar R_{\rm control}-1)$, using unrounded three-seed means and the preceding control row; they are not averages of seedwise ratios. The no-context control is CITransNet with public-context inputs masked in training and evaluation. Its seed 0 collapses to near-zero allocation (revenue $5.19\times10^{-12}$) and remains in the aggregate; +56.19\% therefore describes this three-seed mean contrast, not a stable causal context benefit. PreferenceNet adds classifier computation and different batch ordering. Context-dependent valuations differ from the static uniform tasks.\end{minipage}
+\end{table*}
