@@ -1,0 +1,17 @@
+# External source: fetched locally, not covered by this repository's license.
+/phase3_author/vendor/PreferenceNet/README.md
+/phase3_author/vendor/PreferenceNet/learnable_preferences/network.py
+/phase3_author/vendor/PreferenceNet/learnable_preferences/regretnet.py
+/phase3_author/vendor/PreferenceNet/**/*.download.tmp
+
+# Generated runs, training state, and caches.
+/runs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+.env
+*.log

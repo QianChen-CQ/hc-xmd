@@ -1,0 +1,367 @@
+{
+  "repository": "https://github.com/dimonenka/optimaler",
+  "commit": "1f35c1e27f62bfa18bcd610de2a553156f9e6da5",
+  "license": "MIT",
+  "files": {
+    "LICENSE": {
+      "bytes": 1066,
+      "sha256": "4249ac880b835506c83e11cc7ecb2c271b403e8a5647f740135b7ee8365003b9"
+    },
+    "README.md": {
+      "bytes": 5889,
+      "sha256": "b5a5e1aedd447cb7b39402cc57bbc63bf17cb1c310c30d73d4dab12f22c77d6d"
+    },
+    "core/base/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/base/base_generator.py": {
+      "bytes": 3550,
+      "sha256": "6c74d8afa61c75052c98241310a7741963620bdb8a4c969ad3912c96e7fb1d13"
+    },
+    "core/base/base_generator_ca.py": {
+      "bytes": 4063,
+      "sha256": "eef7162d430650faca3d6910d59e2612e9b60a6addb78ce669459525787527dc"
+    },
+    "core/clip_ops/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/clip_ops/clip_ops.py": {
+      "bytes": 513,
+      "sha256": "09e54d069b0358b8d1d7f52c6202d8e713bf35a01ab7f261f551a18933beec1d"
+    },
+    "core/configs/README.MD": {
+      "bytes": 8318,
+      "sha256": "bc934805a879f664b9ca5aeb8ccdcd9294894c5b979cc2b5de95ee13efea55b8"
+    },
+    "core/configs/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/configs/additive_1x2_uniform_416_47_config.py": {
+      "bytes": 468,
+      "sha256": "5c472b74cf2da59e57f00f6133052cc3e04a94a26ab2c1866ae09714f26840d9"
+    },
+    "core/configs/additive_1x2_uniform_config.py": {
+      "bytes": 373,
+      "sha256": "a7cd3f9f89c60f5070026f23eb35de8bc7bdfb68fe1d83f72d9dcfc5f8d0107e"
+    },
+    "core/configs/additive_2x2_uniform_config.py": {
+      "bytes": 473,
+      "sha256": "d618d74d7b4fa489dbdfb0c1ef0a2a5694a7b8ea6e6829f7228f181a95caaafb"
+    },
+    "core/configs/additive_2x3_uniform_config.py": {
+      "bytes": 473,
+      "sha256": "221a5f8133fe16f2ec3e3a4e443ba81fb6a656bc57e0a99abeb8655eb472c2e0"
+    },
+    "core/configs/additive_2x5_uniform_config.py": {
+      "bytes": 592,
+      "sha256": "3ca107edad2abb6c2e4f360b25b81740b62b0fa146ebd8ca89dbb5cbe3b9bee4"
+    },
+    "core/configs/additive_3x10_uniform_config.py": {
+      "bytes": 614,
+      "sha256": "2f0ef9202a1d5c1ce23a27c92e229f24e10062d9a85824200cf81a47b3b1440c"
+    },
+    "core/configs/default_config.py": {
+      "bytes": 3615,
+      "sha256": "1976b795fc3fda29b4513bca954fa346f4c766d5f6f0a5f018705d84e2c7821d"
+    },
+    "core/data/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/data/uniform_01_generator.py": {
+      "bytes": 484,
+      "sha256": "699109b90a14fe9bd7ce6425f4b83f72227266d0a3209ffca822267a645dd4b3"
+    },
+    "core/data/uniform_416_47_generator.py": {
+      "bytes": 828,
+      "sha256": "cfecfdc0831e87bd6a47b717c3bc8177c318df1ee04ed11a494390c652cf88a8"
+    },
+    "core/nets/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/nets/additive_net.py": {
+      "bytes": 5763,
+      "sha256": "164ba3ae86e8bbe0e7a001d8f2b2922e3c0b3a23b05b090c4daa64f4729a3e7e"
+    },
+    "core/nets/additive_net_attention.py": {
+      "bytes": 2576,
+      "sha256": "0d3ba6ff9cee0c95cda725fe02332075cd6ca32502f8438fc70da27f11b7d705"
+    },
+    "core/nets/additive_net_exchangeable.py": {
+      "bytes": 1184,
+      "sha256": "7f9bb313a619485b1c7c12f420c68de5bf206669e639928c3057626f3b603524"
+    },
+    "core/plot.py": {
+      "bytes": 4015,
+      "sha256": "3936d5de98f4ad27d4f2912c845301321d70eff8528647f4cc4132d799f05238"
+    },
+    "core/run_train.py": {
+      "bytes": 3510,
+      "sha256": "8f3b9524180d858453c9d77a83f5f750cab077b775759566c19464b2283809d8"
+    },
+    "core/trainer/__init__.py": {
+      "bytes": 201,
+      "sha256": "584db38b741a4b4f984b1d786cee620dec6e834c29412f840a1b54c1224718bc"
+    },
+    "core/trainer/trainer.py": {
+      "bytes": 34223,
+      "sha256": "0cddc0a54dcfe62acc8fc25d72f33f1ced18c9166945639cb71175129308e3e0"
+    },
+    "core/utils.py": {
+      "bytes": 1449,
+      "sha256": "da8c84890f7869e76c0131104c8f4638d46a03cff1fd20c83de48df10ba12577"
+    },
+    "layers/attention.py": {
+      "bytes": 3762,
+      "sha256": "e1e8a173e42ff06967c878e302f801bbc6670f9a76dcfea488a3929902c3d75c"
+    },
+    "layers/blocks.py": {
+      "bytes": 5609,
+      "sha256": "f885043b49b07542f56aad897ccfd93f7bfdb4e4cf05173245073982225d1354"
+    },
+    "layers/exchangeable_layer.py": {
+      "bytes": 2679,
+      "sha256": "aa2222c3c926d806ed388b814d366fe87a4c15178628b149b15e31a51000fc98"
+    },
+    "layers/mh_attention.py": {
+      "bytes": 1866,
+      "sha256": "e72c1f6722bfed695e70e0501c8a3e93ed54372d316ba19f1cfbd01e6e7a9289"
+    },
+    "layers/utility/scaledproduct.py": {
+      "bytes": 560,
+      "sha256": "25de49133aa639f7a6530a6edcd3c34fae4a02a3e50033ba0a83cbce99230331"
+    },
+    "main.py": {
+      "bytes": 987,
+      "sha256": "3ff866f0edb37366781ff21506b6a4ad6484c213bd60e7345c1d554ec975e7a5"
+    },
+    "mechanisms/myerson.py": {
+      "bytes": 7424,
+      "sha256": "3e7481071c5276b5bc83d042f5e7a8e0f26ad7e710633138538f8b2988942384"
+    },
+    "mechanisms/vcg.py": {
+      "bytes": 1049,
+      "sha256": "1152600d1fb8d46a26ea3e8b8c79f84094b276fc8470ffa3582d9f6a7653af13"
+    },
+    "plots/colors.py": {
+      "bytes": 1715,
+      "sha256": "72ce63bb652a49571a8c4df8bd4121570833d63e7c1ce73046ca57a73e720543"
+    },
+    "plots/plot_config.py": {
+      "bytes": 2333,
+      "sha256": "186fe63a4eeea3111a469b8a6d2d885f069ccccd12803e75e84e50beec296c4a"
+    },
+    "requirements.txt": {
+      "bytes": 80,
+      "sha256": "c347c42b386a2f2a422b732d6f281b1f16a85fb5d81969288c58d0c4780ab3b6"
+    },
+    "run_configs/cross_val_1x2.py": {
+      "bytes": 291,
+      "sha256": "4627e784f0d6c8b1aa3a70b35f19c54c565477f63862f8ce50b2d092d1e89b0e"
+    },
+    "run_configs/cross_val_2x2.py": {
+      "bytes": 291,
+      "sha256": "98010ef8b4bb4af44988eb654bd1ae753d24d9b921264158de2103739324723b"
+    },
+    "run_configs/cross_val_2x3.py": {
+      "bytes": 291,
+      "sha256": "66dbea28008a11c0d6d4f817e87ea53de35cdd6735b2c08670d22dc0b31525f0"
+    },
+    "run_configs/cross_val_2x5.py": {
+      "bytes": 291,
+      "sha256": "76a2cc14eca685816b8b839fc12ffef4d400b3bd3e4013479343d8d3af47e296"
+    },
+    "run_configs/cross_val_3x10.py": {
+      "bytes": 293,
+      "sha256": "01c9a6dc0bd31a6aa6f93d74fcf0c516aab21d26d2fd98ca7d615c0215d9237b"
+    },
+    "run_configs/distillation_equivariantnet_on_regretformer_1x2.py": {
+      "bytes": 464,
+      "sha256": "9b82ecb9b3c72eb4ca93518f351c25582f573eecf2bf87018fea9c3491602c50"
+    },
+    "run_configs/distillation_equivariantnet_on_regretformer_2x2.py": {
+      "bytes": 464,
+      "sha256": "e1b91d26633126ef384b655ee99fb8cd7482003cbecaf4acfcd6de55bc071894"
+    },
+    "run_configs/distillation_equivariantnet_on_regretformer_2x3.py": {
+      "bytes": 464,
+      "sha256": "3e50fc8942c220ea7e49b74468ab1d340b348ad9a4e386ec07b5a96213fa6e99"
+    },
+    "run_configs/distillation_equivariantnet_on_regretformer_2x5.py": {
+      "bytes": 464,
+      "sha256": "1478dc656db139c0f7239d88fe241adaa392219f48c63691a98469c9bc2256be"
+    },
+    "run_configs/distillation_equivariantnet_on_regretformer_3x10.py": {
+      "bytes": 466,
+      "sha256": "e180062083ee51a3a25b223c2dc92e71d21f5d9bdad75e3233fa22dccfb3beff"
+    },
+    "run_configs/distillation_regretnet_on_regretformer_1x2.py": {
+      "bytes": 459,
+      "sha256": "9fea42b7b48134e9e6b5a52f482f15209c3edc23545d975b1cdf8b99b27c4d0b"
+    },
+    "run_configs/distillation_regretnet_on_regretformer_2x2.py": {
+      "bytes": 459,
+      "sha256": "08f048611a4a7a09077192a1d517065d6635bb8ddfe3ba10a328a2aa0f0ef47b"
+    },
+    "run_configs/distillation_regretnet_on_regretformer_2x3.py": {
+      "bytes": 459,
+      "sha256": "97019e97ce7300203d90b2a420625b5adb46d8ab4237533b431a4674dde2bab6"
+    },
+    "run_configs/distillation_regretnet_on_regretformer_2x5.py": {
+      "bytes": 459,
+      "sha256": "08cd6252d5507f619a6897bec66a48c3224d055d626e6834e288c2dd97d8bd09"
+    },
+    "run_configs/distillation_regretnet_on_regretformer_3x10.py": {
+      "bytes": 461,
+      "sha256": "ab8cdafbaa96334c5b1af69b41a67570973c0ebc48b08da12baacc2a5922cb18"
+    },
+    "run_configs/equivariantnet_1x2.py": {
+      "bytes": 279,
+      "sha256": "9f7ed7f939ea441a013fea90390d60aeea76ffcd30c8381913a048ded595dc2d"
+    },
+    "run_configs/equivariantnet_2x2.py": {
+      "bytes": 279,
+      "sha256": "430bafefa3e9043d22355a1e5d4b830629224a6778dae67737bf6b6675e80647"
+    },
+    "run_configs/equivariantnet_2x3.py": {
+      "bytes": 279,
+      "sha256": "ff8f801de2a70985faf2d560a0e2414d37935ee00b7220afe5e1400700b45656"
+    },
+    "run_configs/equivariantnet_2x5.py": {
+      "bytes": 279,
+      "sha256": "bdd5fb3ed703ed162addb9807979d3c3350a7f5022b591ed5a98a6d4f3a5b71b"
+    },
+    "run_configs/equivariantnet_3x10.py": {
+      "bytes": 281,
+      "sha256": "dd66f37a49dceba7d64449f9499ad65d5cf3edee7cdda62a88ae1c8d936f0e44"
+    },
+    "run_configs/regretformer_1x2.py": {
+      "bytes": 277,
+      "sha256": "c699d6ebb396a4618ca40a9d308a2ca630e6ee5471fa2d2edc783112a2aa65fd"
+    },
+    "run_configs/regretformer_2x2.py": {
+      "bytes": 277,
+      "sha256": "4158d04b27d0624efc3605a9b750e85047d48405c142911529723193756f7fd9"
+    },
+    "run_configs/regretformer_2x3.py": {
+      "bytes": 277,
+      "sha256": "c51e5aafc2b18833de17ff089e59da9ef73b2f073204a8c12ff9531111040601"
+    },
+    "run_configs/regretformer_2x5.py": {
+      "bytes": 277,
+      "sha256": "6972b1f7fc3979d782a2826d588dced017acc24013a823c088e99f51a58daa30"
+    },
+    "run_configs/regretformer_3x10.py": {
+      "bytes": 279,
+      "sha256": "fcdd9580b156c1d6c3a2be0507ead55bb697a4c6ced7b7337ccacba3a96fec80"
+    },
+    "run_configs/regretformer_asymmetric_no_pe.py": {
+      "bytes": 345,
+      "sha256": "8fc8ee048863b704ffefda05c1fb88797ac19ac896a3822e31447ce449aa6478"
+    },
+    "run_configs/regretformer_asymmetric_pe.py": {
+      "bytes": 344,
+      "sha256": "f6e00c0e6558aef21d90d0e7d1e6377bf5dc8be5b5416118941230efbf9b4144"
+    },
+    "run_configs/regretnet_1x2.py": {
+      "bytes": 274,
+      "sha256": "875b0fe63458ae83d8c5e9504ad2b2178ac2efab5e7af6710de91db602ec125a"
+    },
+    "run_configs/regretnet_2x2.py": {
+      "bytes": 274,
+      "sha256": "cc94e64a7726e87b03cde4b2a68d2d13b6f2c79119bb9e6fa9069723f07ed8c5"
+    },
+    "run_configs/regretnet_2x3.py": {
+      "bytes": 274,
+      "sha256": "c5193e96bdff9d74a7be8c0d96d22247ec0fbb63d6c0b56f31a2a284d018719d"
+    },
+    "run_configs/regretnet_2x5.py": {
+      "bytes": 274,
+      "sha256": "c254cbb1e78c584585d6c1ce11407b1a8a3525ce1ead0f2f600f94b38e0095db"
+    },
+    "run_configs/regretnet_3x10.py": {
+      "bytes": 276,
+      "sha256": "662c598f903c30aa45e6e00a9af4117d98d4826a1c8c2cc30bcc22498f1f86ef"
+    },
+    "run_configs/regretnet_asymmetric.py": {
+      "bytes": 288,
+      "sha256": "913eb4dc522cbc6a8d3c090af432eef1a76e43b65c9f50b23a5f39bd754498be"
+    },
+    "target_nets/RegretFormer/setting_additive_2x2_uniform/seed_0/model_200000": {
+      "bytes": 205242,
+      "sha256": "4d4ab24cc0a5240d2522bed2af6cbfd586574e41682c8af6933ba506a5d5d526"
+    },
+    "target_nets/RegretFormer/setting_additive_2x2_uniform/seed_1/model_200000": {
+      "bytes": 205242,
+      "sha256": "be390777331209c087efbbdb0644ffc01df1b48ea0872629828490c84690b770"
+    },
+    "target_nets/RegretFormer/setting_additive_2x2_uniform/seed_2/model_200000": {
+      "bytes": 205242,
+      "sha256": "841a78349e4e5d002b16323054f86c102b6808d25852b41bc6b0bc23790830e9"
+    },
+    "target_nets/RegretFormer/setting_additive_3x10_uniform/seed_0/model_200000": {
+      "bytes": 1459804,
+      "sha256": "29486579cb74f031a0e6b594a20b10de4ed4c3ef4c1d2d11ffd3d343eb9f5d40"
+    },
+    "target_nets/RegretFormer/setting_additive_3x10_uniform/seed_1/model_200000": {
+      "bytes": 1459804,
+      "sha256": "b407616d507ec3b57d02cfab4d5d4166c64e24949ca24bfba791c5ddc3bf8a46"
+    },
+    "target_nets/RegretFormer/setting_additive_3x10_uniform/seed_2/model_200000": {
+      "bytes": 1459804,
+      "sha256": "9907daa2361f946a2aed1a4e5f982ef4371c9ffa4b70fcdc159ce7ffbfa9a4a1"
+    },
+    "target_nets/RegretNet/setting_additive_2x2_uniform/seed_0/model_200000": {
+      "bytes": 90156,
+      "sha256": "6a992306528109ccb96585c3e6e96b8defe26468e5b2f6849624d4dbc174d6ee"
+    },
+    "target_nets/RegretNet/setting_additive_2x2_uniform/seed_1/model_200000": {
+      "bytes": 90156,
+      "sha256": "3046d8cfc02ba17bd03ed5d1801ae3385faaf7542d8cffb5008f1d7f88147901"
+    },
+    "target_nets/RegretNet/setting_additive_2x2_uniform/seed_2/model_200000": {
+      "bytes": 90156,
+      "sha256": "89c8491e973d484534b0e831926fcf85cd6b33dd09ee2173b1df00d21e31e664"
+    },
+    "target_nets/RegretNet/setting_additive_3x10_uniform/seed_0/model_200000": {
+      "bytes": 369246,
+      "sha256": "c4fcb3cbf2305b8a5971f40b6b467f9c29bb11337687c694792dc459bd4f3d81"
+    },
+    "target_nets/RegretNet/setting_additive_3x10_uniform/seed_1/model_200000": {
+      "bytes": 369246,
+      "sha256": "d38c9d0edca564f2ac2786e5185ec3a93629eab62f52aa1ee0877ac9a3be987b"
+    },
+    "target_nets/RegretNet/setting_additive_3x10_uniform/seed_2/model_200000": {
+      "bytes": 369246,
+      "sha256": "02b7c6086abb66acc01ab274e538504c46cf5776892b2f15f5b1b583f1ff35c9"
+    },
+    "utility/data_generation.py": {
+      "bytes": 3517,
+      "sha256": "ecb4b103f67eb6d8faa7e452d1960a0c0f92d5a908e40f055d431d486f13b9aa"
+    },
+    "utility/distributions.py": {
+      "bytes": 1642,
+      "sha256": "48f94f184d27c4e7c311806343d970cf99a580a31e120f99611de53e606a9523"
+    },
+    "utility/efficient_allocation.py": {
+      "bytes": 4497,
+      "sha256": "4fb23b2ec3fb4f06e33ae63cef12b7275103169a2aeae990c7a435ee3ef96ed3"
+    },
+    "utils/extract_csv.py": {
+      "bytes": 2777,
+      "sha256": "21c1c74d5bfdeca858d2c15dc64399c23867f43bf852a50bbe16c52adaa99acc"
+    },
+    "utils/process_csv.py": {
+      "bytes": 5572,
+      "sha256": "04bf8e743286952a59b2d53e2127ecd1057072b5a0ebc586dcece755905558fc"
+    },
+    "utils/process_csv_ratio.py": {
+      "bytes": 2983,
+      "sha256": "58a68eaf071ee2983cbbbca66c108c212b4e5a11c7e5aad08ec1aa4490dc48d6"
+    }
+  }
+}

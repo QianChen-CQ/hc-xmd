@@ -1,0 +1,4 @@
+numpy==1.26.4
+easyDict==1.13
+matplotlib==3.9.4
+scipy==1.14.1
