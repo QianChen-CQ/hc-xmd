@@ -1,0 +1,108 @@
+Independent Phase III scientific review
+Date: 2026-10-04
+
+Primary sources checked
+- CITransNet: https://proceedings.mlr.press/v162/duan22a/duan22a.pdf
+  Author data generator, Setting H entry point, trainer and utilities at
+  https://github.com/zjduan/CITransNet (commit recorded in SOURCES.json).
+- PreferenceNet: https://proceedings.neurips.cc/paper/2021/file/92977ae4d2ba21425a59afb269c2a14e-Paper.pdf
+  Author mechanism, classifier, preference metrics, labeling, classifier
+  training, self-training and PCA validation code at
+  https://github.com/neeharperi/PreferenceNet (SOURCES.json).
+- ProportionNet: https://arxiv.org/pdf/2010.06398
+  Especially Equations 4/5, Algorithm 1, Section 4.1 and Table 1.
+
+Scientific identity
+The new phase3_author path implements the actual contextual mechanism,
+allocation-preference classifier pipeline, and positive-part fairness
+constraints. It does not rename the old custom proxies as recovered author
+methods. The AST adapter retains author class bodies for CITransNet and
+PreferenceNet; the surrounding portable training code is explicitly new.
+ProportionNet is identified as an independent paper-based objective
+implementation using an appropriate RegretNet neural architecture.
+
+CITransNet
+The context-conditioned data generator agrees with the author Setting H
+construction. Both bidder and item contexts are public Uniform[-1,1]
+10-dimensional vectors; values are Uniform[0,1] times the sigmoid of the
+context inner product. This differs from unconditional Uniform[0,1].
+Contexts are fixed while testing unilateral report changes and repeat in
+profile-major order when candidate batches are flattened. The training
+schedule and squared-mean-regret penalty match the released Setting H
+trainer. The new shared audit is not the original paper's 100-initialization,
+200-step test routine. Cross-task revenue ranking would be misleading.
+
+PreferenceNet
+The original preference model class takes the allocation matrix as its input
+and learns a binary synthetic preference label. Its classifier is trained
+before mechanism training, then receives additional mechanism allocations
+and classifier pseudo-labels during self-training. The frozen classifier
+still provides gradients with respect to the mechanism's allocation output.
+Entropy, quota and absolute allocation-distance preferences are present in
+the source paper/code. Synthetic preferences are therefore legitimate
+replication tasks; they are not newly collected human judgments.
+
+The independent reviewer compared the adapter's entropy and quota against
+the actual author functions on seven random allocation matrices. Maximum
+absolute differences were 4.77e-7 and zero, respectively (float32 reduction
+order explains the entropy difference). The finite random-pair ranking rule
+was verified with ties: a label requires strictly more than 80% wins.
+The frozen-classifier input-gradient check was nonzero (L1 norm 0.0493).
+
+PCA is the share of allocations passing a ground-truth preference rule.
+It is not classifier training accuracy, an explanation-quality score, or a
+human satisfaction result. A shared, fixed reference threshold is a disclosed
+review evaluation choice. Source-paper numeric rows and this new protocol
+must be separated, even when the auction dimensions match.
+
+ProportionNet
+Equation 4 first takes positive parts of directed allocation differences,
+sums within an advertiser category, subtracts the allowed distance, then
+clips at zero and sums over comparison items. This differs from replacing
+the inner positive part with absolute differences. An independent scalar
+NumPy loop agreed with the implementation within 5.01e-8. Both quantities
+are exported separately. Equation 5 uses the square of the sum of expected
+constraint violations; this is implemented separately from the later
+PreferenceNet trainer's reductions.
+
+The initial port used three hidden layers for all non-contextual methods.
+Review found that the original ProportionNet Table 1 specifies two layers
+for 2x2. The implementation agent corrected this and added the full Table 1
+depth mapping; the reviewer checked the mapping against each table row.
+PreferenceNet and its paired RegretNet baseline retain their own released
+architecture. A comparison should describe these original architecture
+choices, rather than claiming all methods have identical capacity.
+
+Failure/restart issues sent for correction during this review
+1. Preserve the configured fairness distance in preference labels and PCA,
+   or explicitly declare a separate zero-distance preference definition.
+2. Refuse a requested resume without a checkpointed training state, or
+   explicitly record a restart from initialization instead of a restored run.
+3. Remove uncheckpointed trailing epoch rows from the canonical training
+   log on resume, preserving a separate copy for diagnosis.
+4. Match the author's single-bidder quota convention (zero/unsupported).
+5. Distinguish original auction-setting coverage from changed evaluation
+   protocol in metadata; non-contextual 2x2 is an original paper setting.
+6. For ProportionNet's multiplier update, follow Algorithm 1's post-update
+   model constraints or disclose the pre-update approximation explicitly.
+The default two-/three-bidder, zero-distance experiments were unaffected by
+items 1 and 4, but configurable runs should also remain correctly labeled.
+
+Resolution check
+The reviewer subsequently inspected corrections for items 1, 2, 3, 5 and 6
+in bridge.py/train.py: the preference distance is passed consistently;
+resume_action distinguishes full restoration from a restart before the first
+saved epoch; trailing uncheckpointed rows are separated; original settings
+are tagged separately; and ProportionNet's multiplier update recomputes
+constraints at the updated model parameters. Quota training for one bidder
+is rejected as unsupported. The implementation agent is responsible for the
+separate interruption/resume execution test; this review does not claim to
+have independently executed a full checkpoint-interruption comparison.
+
+Limits
+The checks above verify selected scientific contracts and source alignment.
+They do not constitute full-duration training, GPU validation, recovery of
+missing historical checkpoints, reproduction of human surveys, or proof
+that newly trained numeric results equal the paper tables. Experimental
+results must be assessed after completed server runs, with per-seed files,
+raw evaluation values, source hashes, audit budgets and feasibility checks.

@@ -1,0 +1,101 @@
+Phase III final-results audit
+18 training runs and 18 shared evaluations complete.
+{
+  "all_raw_numeric_and_hash_checks_pass": true,
+  "n_runs": 18,
+  "seed_summary_max_error": 3.552713678800501e-15,
+  "cpu_replay_all_within_1e5": true
+}
+
+Key aggregates (mean +/- sample SD across 3 seeds):
+CITransNet
+  revenue: 2.893825715 +/- 0.01813298262
+  welfare: 3.71810398 +/- 0.009287263716
+  regret_mean: 0.0002158919598 +/- 0.0001517100646
+  regret_max: 0.003112514814 +/- 0.0006584585979
+  pmr: 0.9871961806 +/- 0.003076702882
+  paper_unfairness_sum: 36.15319992 +/- 0.2060370308
+  absolute_tvf_sum: 72.30639981 +/- 0.4120743264
+  tvf_constraint_satisfaction_1e3: 0 +/- 0
+CITransNetNoContext
+  revenue: 1.852772864 +/- 1.604553621
+  welfare: 2.478325897 +/- 2.14629785
+  regret_mean: 8.974197039e-05 +/- 8.173557604e-05
+  regret_max: 0.001502474184 +/- 0.001345940746
+  pmr: 0.6484375 +/- 0.5615648573
+  paper_unfairness_sum: 21.52365568 +/- 18.64108482
+  absolute_tvf_sum: 43.04731152 +/- 37.28216979
+  tvf_constraint_satisfaction_1e3: 0.3333333333 +/- 0.5773502692
+PreferenceNet
+  revenue: 0.8769879109 +/- 0.002728128479
+  welfare: 1.167283031 +/- 0.001979658004
+  regret_mean: 0.004263460013 +/- 0.0008404675254
+  regret_max: 0.02652056019 +/- 0.004580576175
+  pmr: 0.9694010417 +/- 0.02197446462
+  paper_unfairness_sum: 0.01248278121 +/- 0.004007491375
+  absolute_tvf_sum: 0.02496556242 +/- 0.00801498275
+  pca: 0.998046875 +/- 0.003382911734
+  tvf_constraint_satisfaction_1e3: 0.3684895833 +/- 0.1241630509
+ProportionNet
+  revenue: 0.856687958 +/- 0.001199463307
+  welfare: 1.166482306 +/- 0.001471266185
+  regret_mean: 0.001833930648 +/- 0.0002455809363
+  regret_max: 0.01066088676 +/- 0.002483460407
+  pmr: 0.9459635417 +/- 0.007394411909
+  paper_unfairness_sum: 0.000982230586 +/- 0.0004915062651
+  absolute_tvf_sum: 0.001964461172 +/- 0.0009830125302
+  pca: 1 +/- 0
+  tvf_constraint_satisfaction_1e3: 0.7486979167 +/- 0.08612225642
+RegretNetPreferenceBaseline
+  revenue: 0.9317299386 +/- 0.004693440489
+  welfare: 1.199787635 +/- 0.001901955244
+  regret_mean: 0.0045050193 +/- 0.000546656509
+  regret_max: 0.02795320749 +/- 0.003519717907
+  pmr: 0.9775390625 +/- 0.0009765625
+  paper_unfairness_sum: 0.3215761961 +/- 0.009148839957
+  absolute_tvf_sum: 0.6431523922 +/- 0.01829767991
+  pca: 0.533203125 +/- 0.02376079113
+  tvf_constraint_satisfaction_1e3: 0.154296875 +/- 0.007042092335
+RegretNetProportionBaseline
+  revenue: 0.8859591468 +/- 0.002841065971
+  welfare: 1.188776866 +/- 0.0009757029769
+  regret_mean: 0.001509950476 +/- 0.0002263872956
+  regret_max: 0.01425200701 +/- 0.003571267972
+  pmr: 0.9381510417 +/- 0.021712508
+  paper_unfairness_sum: 0.2432114455 +/- 0.02153131636
+  absolute_tvf_sum: 0.486422891 +/- 0.04306263273
+  pca: 0.625 +/- 0.04202623983
+  tvf_constraint_satisfaction_1e3: 0.177734375 +/- 0.01790068631
+
+Interpretation and limits:
+Training collapses around epoch 11; epoch 12 onward revenue near zero. Final revenue 5.19e-12, welfare 1.24e-11. All budgets completed, finite output, feasible. It is a failed optimization outcome, not missing data. Keep in aggregate and report instability. Do not claim the +56.19% pooled context gain is a stable causal benefit.
+PreferenceNet objective is synthetic TVF; PCA compares a fixed synthetic threshold -0.1785513163. Neither PCA nor fairness is human understanding/trust/behavior evidence.
+Shared audit uses 32/128 random candidates plus 8 starts x100 projected gradient updates. Not original papers' native evaluation or exact original-table recovery; empirical regrets remain search lower bounds.
+Matched pairs: PreferenceNet 3 hidden layers/200 epochs vs its baseline; ProportionNet 2 hidden layers/120 epochs vs its baseline. Direct PreferenceNet-vs-ProportionNet differences cannot be attributed solely to objective.
+Contextual valuation task differs from static iid uniform task; no cross-family revenue ranking.
+training/status.json evaluation_pending stays true because written at training completion; separate evaluation/status.json and suite_status.json confirm all 18 evaluations completed.
+
+Matched tradeoffs:
+PreferenceNet vs RegretNetPreferenceBaseline
+  revenue: difference -0.05474202773; relative -5.875310587876514; paired differences [-0.056144207693933024, -0.05686308134954743, -0.051218794160462155]
+  welfare: difference -0.03250460393; relative -2.709196443397044; paired differences [-0.03301240510802472, -0.03094564694305313, -0.03355575972605607]
+  regret_mean: difference -0.0002415592872; relative -5.362003381387559; paired differences [-0.0012481198572106005, -0.0006907680741794001, 0.0012142100698019995]
+  paper_unfairness_sum: difference -0.3090934149; relative -96.11825086467935; paired differences [-0.3081635933824436, -0.30426940518185, -0.3148472461586653]
+  absolute_tvf_sum: difference -0.6181868298; relative -96.11825086467935; paired differences [-0.6163271867648873, -0.6085388103637, -0.6296944923173305]
+  pca: difference 0.46484375; relative 87.17948717948718; paired differences [0.43359375, 0.478515625, 0.482421875]
+  tvf_constraint_satisfaction_1e3: difference 0.2141927083; relative 138.81856540084385; paired differences [0.294921875, 0.2734375, 0.07421875]
+ProportionNet vs RegretNetProportionBaseline
+  revenue: difference -0.0292711888; relative -3.3038982563683983; paired differences [-0.03093210451337569, -0.029381792357469294, -0.027499669535643534]
+  welfare: difference -0.02229456026; relative -1.8754200980636182; paired differences [-0.02259625950125632, -0.022570989031748923, -0.021716432261257523]
+  regret_mean: difference 0.0003239801721; relative 21.456344242228088; paired differences [0.0002874675144909002, 7.652361063349993e-05, 0.0006079493911435999]
+  paper_unfairness_sum: difference -0.2422292149; relative -99.59614129840504; paired differences [-0.21902699273496368, -0.26239426564272605, -0.2452663864365651]
+  absolute_tvf_sum: difference -0.4844584299; relative -99.59614129840504; paired differences [-0.4380539854699274, -0.5247885312854522, -0.4905327728731301]
+  pca: difference 0.375; relative 60.00000000000001; paired differences [0.33203125, 0.416015625, 0.376953125]
+  tvf_constraint_satisfaction_1e3: difference 0.5709635417; relative 321.24542124542126; paired differences [0.548828125, 0.6796875, 0.484375]
+CITransNet vs CITransNetNoContext
+  revenue: difference 1.041052851; relative 56.18890859757912; paired differences [2.9011157003645107, 0.13212567730806768, 0.08991717523895204]
+  welfare: difference 1.239778083; relative 50.02482058494062; paired differences [3.7207499400122983, 0.012767239706590772, -0.014182929880917072]
+  regret_mean: difference 0.0001261499894; relative 140.5696675192354; paired differences [0.00012585129417222327, 2.147093682399999e-05, 0.0002311277372154]
+  paper_unfairness_sum: difference 14.62954424; relative 67.96960727049037; paired differences [36.197918803422986, 4.245782182086259, 3.444931724574417]
+  absolute_tvf_sum: difference 29.25908829; relative 67.96960659412186; paired differences [72.39583771301676, 8.491564439609647, 6.889862712472677]
+  tvf_constraint_satisfaction_1e3: difference -0.3333333333; relative -100.0; paired differences [-1.0, 0.0, 0.0]

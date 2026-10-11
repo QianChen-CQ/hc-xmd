@@ -1,0 +1,87 @@
+GemNet paper-based reimplementation, HC-XMD V5
+Source: Wang, Jiang and Parkes, GemNet: Menu-Based, Strategy-Proof Multi-Bidder
+Auctions Through Deep Learning, https://arxiv.org/html/2406.07428v3
+
+WHAT IS IMPLEMENTED
+- Separate own-bid-independent bundle and price networks for each bidder.
+- Two GELU hidden layers with spectral normalization on each linear layer.
+- Additive sigmoid bundle entries, fixed zero-allocation/zero-price null option.
+- Differentiable softmax choices during training and hard argmax at inference.
+- Revenue minus incompatibility objective, temperature and penalty schedules.
+- Actual context-shared price MILPs, not post-hoc rescaling of allocations.
+- Nonnegative price adjustments and IR-screening, plus the paper's 0-Violation
+  and Keep-Choice accelerations (95%, then reduced by 5% if infeasible).
+- Complete finite Cartesian context and own-type grids for small settings.
+- At deployment, actual other bids enter the networks; adjustments are looked
+  up by nearest other-bid grid context. Own bids never choose own price changes.
+- Sequential transformation for n>2; bidder 1 only for the 2-bidder construction.
+- Numerical spectral-norm-product Lipschitz bounds, explicit safety margins.
+- Independent solver constraint/integrality and resulting menu-choice checks.
+- Complete selected-grid feasibility checks when <= max_grid_check (default
+  1,000,000 profiles), plus independent off-grid feasibility/IR diagnostics.
+- Full training optimizer/RNG/schedule resume; per-context MILP resume.
+
+EXPLICIT IMPLEMENTATION CHOICES / DIFFERENCES
+This is not author code and does not claim identical paper numbers.
+The paper's diagram uses a linear price head while its experiment description
+assumes nonnegative prices. Default price_activation=relu is an explicit choice;
+linear is configurable. Positive initial price bias 0.5 is also a choice.
+The frequency of the incompatibility-coefficient update is not specified; the
+default is every optimizer step. The configured training safety margin is 1e-5.
+Checkpoint selection uses separate validation profiles, never final test data.
+Paper-default training dimensions: 1024 hidden units, K=300 including null (or
+K=1000 for m>5), 20,000 steps, batch 8192, validation 50,000 every 100 steps,
+Adam learning rate 0.005. An explicitly named smoke preset reduces these values.
+The LR decay trigger and interpretation are recorded in train_config.json.
+HiGHS replaces Gurobi for the same linear/integer optimization constraints; its
+runtime is not a reproduction of the paper's Gurobi runtime. A time-limit
+incumbent is retained only if all independent checks pass and remains marked
+NOT_OPTIMAL in the log. No incumbent is silently treated as an optimum.
+The full Cartesian default grid has 7 points per coordinate, not the paper's
+100x100 type grid used for the Table 1 runtime comparison. It is configurable.
+No adaptive-grid acceleration is implemented. 0-Violation and Keep-Choice are
+implemented. This changes computational costs and can affect price adjustments.
+The numerical global norm-product bounds are generally more conservative than
+the very small empirical/local constants discussed in the paper.
+Default margin_mode=paper follows the displayed paper safety-margin formula;
+conservative adds (m-1)*epsilon to its direct valuation-change term.
+
+STRICT VERSUS ACCELERATED TRANSFORMATION
+Default transform_variant=paper-accelerated uses Sec. 3.3. Already-compatible
+contexts are unchanged. Keep-Choice rows impose ordinary utility-maximization
+constraints as in the paper's KC equation. A numerical 1e-5 buffer is used only
+against incompatible ties. Remaining rows use the displayed strict Eq. 7/8.
+Optional transform_variant=strict imposes strict utility gaps at every row.
+On connected finite grids those strict gaps can suppress all nonnull choices
+for a transformed bidder; the independent review contains a concrete example.
+The program retains and reports any such revenue loss rather than substituting
+a different mechanism. Per-bidder null rates are in transform_diagnostics.json.
+
+SCIENTIFIC SCOPE
+Default is the paper's 2-bidder/2-item additive independent Uniform[0,1] setting.
+3x10 network training is supported. A full dense transformation at that setting
+grows exponentially and is not a default runnable experiment. An explicitly
+requested sampled-grid mode is only an exploratory extension with no domain
+coverage guarantee. Do not mix 2x2 and 3x10 revenues in a common ranking table.
+Finite grid and random off-grid checks are not global strategy-proofness proofs.
+global_dsic_certified remains false. A menu can have zero observed unilateral
+gain while still overallocating; incentive and feasibility checks are separate.
+If any tested profile overallocates, the output is INVALID_FEASIBILITY and its
+revenue must not be promoted as revenue of a valid auction.
+The selected checkpoint's validation constraint status is explicitly saved;
+failure to meet the paper's pre-transformation threshold is never hidden.
+
+COMMANDS (from the package root)
+python -m gemnet.run train --out /root/hcxmd_gemnet_train --setting 2x2 --seed 0 --preset paper
+python -m gemnet.run transform --checkpoint /root/hcxmd_gemnet_train/checkpoint.pt --out /root/hcxmd_gemnet_transform --grid-points 7
+For interrupted runs use identical arguments with --resume on the relevant step.
+For code checks use --preset smoke for training and --grid-points 3 for transform.
+python -m unittest gemnet.test_gemnet -v
+
+EVALUATION INTERFACE
+from gemnet.model import load_checkpoint
+model = load_checkpoint('.../checkpoint.pt', device='cuda',
+                        transform_path='.../price_transform.npz')
+allocation, payment = model(values)  # [B,n,m] -> [B,n,m], [B,n]
+Omitting transform_path loads the pre-transformation network, which must be
+identified as such and independently checked for allocation feasibility.

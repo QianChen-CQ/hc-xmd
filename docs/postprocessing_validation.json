@@ -1,0 +1,46 @@
+[
+  {
+    "file": "tables/gemnet.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "tables/numbers.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "tables/phase1.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "tables/phase2.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "tables/phase3.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "tables/targets.tex",
+    "matches_v73": true
+  },
+  {
+    "file": "figures/fig2_phase1_structure.png",
+    "matches_v73": true
+  },
+  {
+    "file": "figures/fig3_phase2_static_tradeoffs.png",
+    "matches_v73": true
+  },
+  {
+    "file": "figures/fig4_audit_sensitivity.png",
+    "matches_v73": true
+  },
+  {
+    "file": "figures/fig5_phase3_matched_performance.png",
+    "matches_v73": true
+  },
+  {
+    "file": "figures/fig6_phase3_task_metrics.png",
+    "matches_v73": true
+  }
+]

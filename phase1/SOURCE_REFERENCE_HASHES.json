@@ -1,0 +1,38 @@
+[
+  {
+    "reference_file": "deep-opt-auctions/regretNet/cfgs/additive_3x10_uniform_config.py",
+    "sha256": "08abc3c42d5565315b9bfdee3e6f20c265c57b9da7a7ab0c4e17017c1b5cf692"
+  },
+  {
+    "reference_file": "deep-opt-auctions/regretNet/cfgs/additive_2x2_uniform_config.py",
+    "sha256": "d29d5c431261fdd4888bc30f6572dffa9331264948a25571c0c2097387ebf7b3"
+  },
+  {
+    "reference_file": "deep-opt-auctions/regretNet/nets/additive_net.py",
+    "sha256": "75ba850f693671be78b5141600a585675e02f5547747c926761c6624d5ab2cfe"
+  },
+  {
+    "reference_file": "deep-opt-auctions/regretNet/trainer/trainer.py",
+    "sha256": "bc68d2f030048fe6d5c567ecd8d6ba0bb09fb115d34e4b448e0346e089e31ee1"
+  },
+  {
+    "reference_file": "deep-opt-auctions/regretNet/base/base_generator.py",
+    "sha256": "4dd549b69f1a75422a8b5263534ca240fc4fd4a46da0a76c08f35afa89504152"
+  },
+  {
+    "reference_file": "AMenuNet/code/net.py",
+    "sha256": "e89e87fd87b7ab3b0350d45050f9fd3c3c33d8afa34336c505979c30966441f6"
+  },
+  {
+    "reference_file": "AMenuNet/code/auction.py",
+    "sha256": "97b7ddd90f323a1226f6c4bf70b54c1a9fd3e2fae18a8aa3d0143eb6d11a927d"
+  },
+  {
+    "reference_file": "AMenuNet/code/experiments.py",
+    "sha256": "c9b1ada672c8bd7cd133e3197464c1ffeb3be6e1b5f4a5843e0f8a40febe812e"
+  },
+  {
+    "reference_file": "AMenuNet/code/ablation3x10C.sh",
+    "sha256": "fc8007a5ce5c05c96f2f87f2f73bcbe3342a2937b70784616b3408af97a1c5bc"
+  }
+]

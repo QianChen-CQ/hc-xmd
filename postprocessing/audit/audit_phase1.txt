@@ -1,0 +1,30 @@
+Phase I final V5 audit — 2026-10-10
+
+VERDICT
+All six intended formal runs completed, and no material internal inconsistency was found. Do not retrain Phase I solely because old manuscript values differ: these are new source-labelled experiments and their values replace the old table.
+
+EVIDENCE CHECKS
+138 manifest file entries match bytes/SHA256; 15 absent physical duplicates resolve through DEDUPLICATION_MAP.json. All source hashes recorded in RUN_PLAN.json match the archived evaluator. Each of RegretNet and AMenuNet has seeds0,1,2, 512 heldout profiles per seed and 1536 bidder-profile gains. Six weights are included and match evaluation-provenance hashes; all checkpoints report training_complete=true with correct seed/step.
+Raw arrays -> profile CSV -> per-seed metrics -> mean/sample-SD summary reproduce exactly. All gains finite and nonnegative. Random32 <= random128 <= strong holds elementwise; strong equals max(random128, PGD). All six reused Phase II3x10 records match Phase I raw arrays exactly, so do not count as six additional training runs.
+A supplementary CPU replay loaded all six checkpoints and recomputed truthful outputs plus every stored strongest unilateral-deviation witness. RegretNet outcome deviations from original GPU arrays are <=2.15e-6; stored gain deviation <=1.91e-6. AMenuNet payment deviation<=1.04e-7; gain differences are float64 roundoff <=3.56e-15. PMR unchanged in every replay. This is a CPU witness replay, not a rerun of full PGD search, and originals are unchanged.
+
+EXACT RESULTS (mean +/- sample SD over three newly trained seeds)
+RegretNet: revenue5.5613502846 +/-0.014008838; welfare6.8115983764 +/-0.0035585282; strong mean bidder regret0.00147252067 +/-0.00012716363; mean of seed-wise maxima0.01814288398 +/-0.0063788865; maximum over all seed/profile/bidder observations0.0254453421; PMR(>1e-6)99.91319444% +/-0.03758791 percentage points.
+AMenuNet: revenue5.6235756989 +/-0.0134714465; welfare6.7654299979 +/-0.0219540260; strong mean regret2.51486717e-16; mean of seed-wise maxima2.99760217e-15; maximum overall3.55271368e-15; PMR0.
+RegretNet random32 mean regret2.57723703e-8, PMR0.13020833%; random128 mean regret2.26226520e-7, PMR0.28211806%; strong increases mean gain about6509-fold while model/revenue/welfare are fixed. Interpret as search sensitivity, not changed mechanism.
+AMenuNet revenue is1.1189% higher; welfare0.6778% lower in these local runs. Avoid significance or universal superiority claims.
+
+TRAINING / SCOPE
+RegretNet: paper-reimplementation PyTorch port of ICML2019 additive architecture (source commit466e154b...), 400000 Adam updates per seed, batch128, 640000 fixed uniform profiles, inner misreport25steps; no test-based selection. AMenuNet: independent implementation cross-checked to NeurIPS2023 paper/author equations, fixed public bidder/item IDs, 2000 rounds x16minibatches=32000updates, batch2048,fresh32768profiles/round; final frozen menu evaluated by exact hard affine maximizer and pivot payments. These are not author-issued trained checkpoints and not recovered historical experiments.
+All observed constraints pass evaluator tolerance1e-5; max allocation excess in all checked reports <=1.1921e-7; no observed negative allocation/payment or truthful IR violation. Their validity is empirical at checked reports; general mechanism properties must rely on stated architecture assumptions/proof.
+Common test:512 iid U[0,1] additive3x10, same profile and random-candidate hashes for all models/seeds. Candidate budgets32/128; 8PGDstarts,100steps,lr0.05,clamp[0,1], all other bidders truthful. PMR threshold1e-6. Finite search only lower-bounds worst-case regret. AMenuNet hard argmax is nonsmooth; its PGD can have zero gradients. Therefore do not sell zero empirical regret as search-established global DSIC. Its report-independent menu and affine-maximizer payment structure supply the theoretical rationale.
+Parameter counts:91747RegretNet vs795105AMenuNet. AMenuNet configured menu512learned options+1no-sale; count does not mean512distinct/effective explanations. No human comprehension measurements; no valid human compositeH/D/B/C.
+AMenuNet frozen score/payment calculations float64; RegretNet float32. Roundoff scales should be disclosed when presenting nearly zero regret.
+
+MINOR ARTIFACT CAVEATS
+Training status evaluation_state='NOT_RUN_USE_SHARED_EVALUATOR' describes the training script's scope; separate evaluation/status.json is COMPLETED. Do not misclassify this as unfinished evaluation.
+Training status checkpoint path/hash points to model_final.pt; archived checkpoint.pt is separately torch-serialized and has a different file hash. Source saves identical payload separately; evaluation provenance/manifest match archived checkpoint.pt. This does not indicate mismatched models.
+Resume optimizer states, intermediate weights, duplicate final file and RegretNet train_values.npy are intentionally omitted from compact feedback; retain those on the server. Seed/config/generator/hash allow regeneration, but public release should include adequate data-generation code and evaluator dependencies.
+
+REVIEW RESPONSE USE
+Supports R1-5,R1-6 and R3-2 family/provenance/matched-evaluation corrections; R3-5 artifact traceability. Supports numeric sensitivity response R1-1,R2-4 in a limited operational sense, not human validation. R1-2/R2human-centred claims should be narrowed to structural/incentive diagnostics; no human study has been added.

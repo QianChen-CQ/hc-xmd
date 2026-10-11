@@ -1,0 +1,2323 @@
+{
+  "stage": "Phase III",
+  "root": "/workspace/scratch/9217d3ede1fe/work/results_v5_audit/hc_xmd_phase3_v5_results",
+  "suite": {
+    "state": "COMPLETED",
+    "phase": "phase3",
+    "scope": "paper_reference_training_and_shared_evaluation",
+    "wall_seconds": 157095.0487663746,
+    "completed_evaluations": 18,
+    "expected_evaluations": 18
+  },
+  "checks": {
+    "all_raw_numeric_and_hash_checks_pass": true,
+    "n_runs": 18,
+    "seed_summary_max_error": 3.552713678800501e-15,
+    "cpu_replay_all_within_1e5": true,
+    "candidate_regeneration": [
+      {
+        "task": "CITransNet",
+        "candidate_regeneration_exact": true
+      },
+      {
+        "task": "PreferenceNet",
+        "candidate_regeneration_exact": true
+      }
+    ],
+    "disclosure": "Float32 utility recomputation differs by at most 4.77e-7 due to NumPy/GPU reduction order; accepted tolerance 1e-6. CPU replay from saved weights and best deviations matches within 1.67e-6; no training or search repeated."
+  },
+  "runs": [
+    {
+      "method": "CITransNet",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 2.901115700369701,
+        "welfare": 3.720749940024689,
+        "regret_mean": 0.0001258512993895,
+        "regret_max": 0.0024681091308593,
+        "pmr": 0.98828125,
+        "paper_unfairness_sum": 36.19791880343109,
+        "absolute_tvf_sum": 72.39583771303296,
+        "maximum_l1_allocation_distance": 1.6601033659826498,
+        "pca": null,
+        "entropy": 5.689014658331871,
+        "minimum_normalized_quota": 0.0028262059251934,
+        "tvf_constraint_satisfaction_1e3": 0.0
+      },
+      "truth_utility_float32_max_abs_error": 4.76837158203125e-07,
+      "family_max_abs_error": 2.207234501838684e-07,
+      "basic_max_abs_error": 7.502679033599691e-17,
+      "truthful_min_allocation": 4.145168830405055e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 2.6151383281103335e-09,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 19079.47137784958,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "CITransNet",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 2.907179167261347,
+        "welfare": 3.725781135261059,
+        "regret_mean": 0.0001307760025637,
+        "regret_max": 0.0030852556228637,
+        "pmr": 0.9837239583333334,
+        "paper_unfairness_sum": 36.33320505684242,
+        "absolute_tvf_sum": 72.66641026455909,
+        "maximum_l1_allocation_distance": 1.6588443315122277,
+        "pca": null,
+        "entropy": 5.6784017737954855,
+        "minimum_normalized_quota": 0.002612938080372,
+        "tvf_constraint_satisfaction_1e3": 0.0
+      },
+      "truth_utility_float32_max_abs_error": 2.384185791015625e-07,
+      "family_max_abs_error": 7.264316082000732e-08,
+      "basic_max_abs_error": 6.938893903907228e-17,
+      "truthful_min_allocation": 4.516591101122458e-09,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 2.927606601588195e-09,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 19134.744653224945,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "CITransNet",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 2.8731822767294943,
+        "welfare": 3.707780864322558,
+        "regret_mean": 0.0003910485774313,
+        "regret_max": 0.0037841796875,
+        "pmr": 0.9895833333333334,
+        "paper_unfairness_sum": 35.928475893102586,
+        "absolute_tvf_sum": 71.85695144254714,
+        "maximum_l1_allocation_distance": 1.6428450245584827,
+        "pca": null,
+        "entropy": 5.721081985160708,
+        "minimum_normalized_quota": 0.0032224809364004,
+        "tvf_constraint_satisfaction_1e3": 0.0
+      },
+      "truth_utility_float32_max_abs_error": 4.76837158203125e-07,
+      "family_max_abs_error": 5.392357707023621e-07,
+      "basic_max_abs_error": 6.69494841509799e-17,
+      "truthful_min_allocation": 4.311707257897979e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 7.959442882565781e-09,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 19100.51231980324,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "CITransNetNoContext",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 5.1901777394150975e-12,
+        "welfare": 1.2390717618858552e-11,
+        "regret_mean": 5.217276719671617e-12,
+        "regret_max": 1.042209860080412e-10,
+        "pmr": 0.0,
+        "paper_unfairness_sum": 8.09778755550167e-12,
+        "absolute_tvf_sum": 1.6195575176436634e-11,
+        "maximum_l1_allocation_distance": 4.434866683837614e-13,
+        "pca": null,
+        "entropy": 6.907754421234131,
+        "minimum_normalized_quota": 0.3333333432674408,
+        "tvf_constraint_satisfaction_1e3": 1.0
+      },
+      "truth_utility_float32_max_abs_error": 3.469446951953614e-18,
+      "family_max_abs_error": 4.76837158203125e-07,
+      "basic_max_abs_error": 1.6155871338926322e-27,
+      "truthful_min_allocation": 1.155326648152183e-13,
+      "truthful_max_item_allocation": 3.6421601845582074e-11,
+      "truthful_min_utility": 1.9654450864135115e-13,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 21298.269279956818,
+      "source_role": "controlled_ablation",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "CITransNetNoContext",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 2.7750534899532795,
+        "welfare": 3.713013895554468,
+        "regret_mean": 0.0001093050657397,
+        "regret_max": 0.0019094944000244,
+        "pmr": 0.9713541666666666,
+        "paper_unfairness_sum": 32.08742287475616,
+        "absolute_tvf_sum": 64.17484582494944,
+        "maximum_l1_allocation_distance": 1.527421410079114,
+        "pca": null,
+        "entropy": 5.832122348248959,
+        "minimum_normalized_quota": 0.0027908568917079,
+        "tvf_constraint_satisfaction_1e3": 0.0
+      },
+      "truth_utility_float32_max_abs_error": 4.76837158203125e-07,
+      "family_max_abs_error": 2.0489096641540527e-07,
+      "basic_max_abs_error": 2.3201926491189795e-17,
+      "truthful_min_allocation": 5.272131176070616e-09,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 3.5987568480777554e-09,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 19032.48420882225,
+      "source_role": "controlled_ablation",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "CITransNetNoContext",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 2.7832651014905423,
+        "welfare": 3.721963794203475,
+        "regret_mean": 0.0001599208402159,
+        "regret_max": 0.0025979280471801,
+        "pmr": 0.9739583333333334,
+        "paper_unfairness_sum": 32.48354416852817,
+        "absolute_tvf_sum": 64.96708873007447,
+        "maximum_l1_allocation_distance": 1.5426693937915843,
+        "pca": null,
+        "entropy": 5.8186651626601815,
+        "minimum_normalized_quota": 0.0028104089475525,
+        "tvf_constraint_satisfaction_1e3": 0.0
+      },
+      "truth_utility_float32_max_abs_error": 4.76837158203125e-07,
+      "family_max_abs_error": 2.3283064365386963e-07,
+      "basic_max_abs_error": 7.589415207398531e-17,
+      "truthful_min_allocation": 8.574683185713639e-09,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 8.993083611130714e-09,
+      "training_epochs": 80,
+      "training_iterations": 16000,
+      "training_seconds": 19136.198626995087,
+      "source_role": "controlled_ablation",
+      "source_commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "test_profile_sha256": "991f30f354d3bd93c60855fbb21d77ba7bdecd7c2c0a43361d8d80fe08b18943",
+      "audit_inputs_sha256": "f53389c580f5c7cea8db497115a796d92d0f8775a84e97f2c8d99a1aa8522fc7",
+      "parameter_count": 202370
+    },
+    {
+      "method": "PreferenceNet",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8801240920541886,
+        "welfare": 1.1689711493854702,
+        "regret_mean": 0.0038473974655017,
+        "regret_max": 0.0297150015830993,
+        "pmr": 0.9521484375,
+        "paper_unfairness_sum": 0.0099522730735631,
+        "absolute_tvf_sum": 0.0199045461471262,
+        "maximum_l1_allocation_distance": 0.0099522730735631,
+        "pca": 0.994140625,
+        "entropy": 1.3854641325306147,
+        "minimum_normalized_quota": 0.0774676172075954,
+        "tvf_constraint_satisfaction_1e3": 0.45703125
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 4.6566128730773926e-09,
+      "basic_max_abs_error": 6.591949208711867e-17,
+      "truthful_min_allocation": 1.3986935165632985e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 6.661338147750939e-15,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 2425.0517036914825,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "PreferenceNet",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8751629919785273,
+        "welfare": 1.1677737886925,
+        "regret_mean": 0.0037121793420256,
+        "regret_max": 0.0212725400924682,
+        "pmr": 0.9619140625,
+        "paper_unfairness_sum": 0.0103928328227209,
+        "absolute_tvf_sum": 0.0207856656454418,
+        "maximum_l1_allocation_distance": 0.0103928328227209,
+        "pca": 1.0,
+        "entropy": 1.3852085242979228,
+        "minimum_normalized_quota": 0.0752246199499684,
+        "tvf_constraint_satisfaction_1e3": 0.421875
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 4.190951585769653e-09,
+      "basic_max_abs_error": 2.220446049250313e-16,
+      "truthful_min_allocation": 5.282330661771084e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 8.43769498715119e-14,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 2473.724354743957,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "PreferenceNet",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8756766486484366,
+        "welfare": 1.1651041540346796,
+        "regret_mean": 0.0052308032307583,
+        "regret_max": 0.028574138879776,
+        "pmr": 0.994140625,
+        "paper_unfairness_sum": 0.0171032377405637,
+        "absolute_tvf_sum": 0.0342064754811275,
+        "maximum_l1_allocation_distance": 0.0171032377405637,
+        "pca": 1.0,
+        "entropy": 1.3750336442608386,
+        "minimum_normalized_quota": 0.0830186356036981,
+        "tvf_constraint_satisfaction_1e3": 0.2265625
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 4.190951585769653e-09,
+      "basic_max_abs_error": 9.627715291671279e-17,
+      "truthful_min_allocation": 1.993468913497054e-06,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 1.375610736431554e-10,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 2424.0254356861115,
+      "source_role": "author_architecture_training_adapter",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "ProportionNet",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.858064543547826,
+        "welfare": 1.1657728811022563,
+        "regret_mean": 0.0020356807011189,
+        "regret_max": 0.0130133628845214,
+        "pmr": 0.94921875,
+        "paper_unfairness_sum": 0.0011454170885392,
+        "absolute_tvf_sum": 0.0022908341770785,
+        "maximum_l1_allocation_distance": 0.0011454170885392,
+        "pca": 1.0,
+        "entropy": 1.3862563546281308,
+        "minimum_normalized_quota": 0.0632608676165096,
+        "tvf_constraint_satisfaction_1e3": 0.7421875
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 3.259629011154175e-09,
+      "basic_max_abs_error": 2.220446049250313e-16,
+      "truthful_min_allocation": 1.7510885186311498e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 1.4477308241112041e-13,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 4892.042743444443,
+      "source_role": "paper_directed_reimplementation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    },
+    {
+      "method": "ProportionNet",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.856131844306617,
+        "welfare": 1.1655001702416428,
+        "regret_mean": 0.0015604790204328,
+        "regret_max": 0.0080644488334655,
+        "pmr": 0.951171875,
+        "paper_unfairness_sum": 0.0004298868353693,
+        "absolute_tvf_sum": 0.0008597736707386,
+        "maximum_l1_allocation_distance": 0.0004298868353693,
+        "pca": 1.0,
+        "entropy": 1.3862898063380271,
+        "minimum_normalized_quota": 0.0638673949245565,
+        "tvf_constraint_satisfaction_1e3": 0.837890625
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 3.725290298461914e-09,
+      "basic_max_abs_error": 7.632783294297951e-17,
+      "truthful_min_allocation": 7.629294884736737e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 1.3820056210533949e-12,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 3401.339267015457,
+      "source_role": "paper_directed_reimplementation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    },
+    {
+      "method": "ProportionNet",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8558674860393012,
+        "welfare": 1.168173865647418,
+        "regret_mean": 0.0019056322237171,
+        "regret_max": 0.010904848575592,
+        "pmr": 0.9375,
+        "paper_unfairness_sum": 0.0013713878341634,
+        "absolute_tvf_sum": 0.0027427756683269,
+        "maximum_l1_allocation_distance": 0.0013713878341634,
+        "pca": 1.0,
+        "entropy": 1.3862550414633006,
+        "minimum_normalized_quota": 0.0650567343978138,
+        "tvf_constraint_satisfaction_1e3": 0.666015625
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 4.6566128730773926e-09,
+      "basic_max_abs_error": 9.085614205428527e-17,
+      "truthful_min_allocation": 2.4022355660235917e-08,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 6.661338147750939e-14,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 4843.454293012619,
+      "source_role": "paper_directed_reimplementation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    },
+    {
+      "method": "RegretNetPreferenceBaseline",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.9362682997481216,
+        "welfare": 1.201983554493495,
+        "regret_mean": 0.0050955173227123,
+        "regret_max": 0.0253710746765136,
+        "pmr": 0.9775390625,
+        "paper_unfairness_sum": 0.3181158664560067,
+        "absolute_tvf_sum": 0.6362317329120135,
+        "maximum_l1_allocation_distance": 0.3181158664560067,
+        "pca": 0.560546875,
+        "entropy": 1.0512553415125296,
+        "minimum_normalized_quota": 0.0483593535018078,
+        "tvf_constraint_satisfaction_1e3": 0.162109375
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 2.153683453798294e-09,
+      "basic_max_abs_error": 1.1102230246251565e-16,
+      "truthful_min_allocation": 1.139384350756778e-10,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 2.4797941478027496e-12,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 1574.4138100147247,
+      "source_role": "controlled_ablation",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "RegretNetPreferenceBaseline",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.9320260733280747,
+        "welfare": 1.198719435635553,
+        "regret_mean": 0.004402947416205,
+        "regret_max": 0.0265262126922607,
+        "pmr": 0.978515625,
+        "paper_unfairness_sum": 0.3146622380045709,
+        "absolute_tvf_sum": 0.6293244760091418,
+        "maximum_l1_allocation_distance": 0.3146622380045709,
+        "pca": 0.521484375,
+        "entropy": 1.0426936462942376,
+        "minimum_normalized_quota": 0.0459466896168538,
+        "tvf_constraint_satisfaction_1e3": 0.1484375
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 1.0031442343461094e-09,
+      "basic_max_abs_error": 8.326672684688674e-17,
+      "truthful_min_allocation": 1.1116692147979806e-13,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 2.3998580900297384e-12,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 2193.5035841465,
+      "source_role": "controlled_ablation",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "RegretNetPreferenceBaseline",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.9268954428088988,
+        "welfare": 1.1986599137607357,
+        "regret_mean": 0.0040165931609563,
+        "regret_max": 0.0319623351097106,
+        "pmr": 0.9765625,
+        "paper_unfairness_sum": 0.331950483899229,
+        "absolute_tvf_sum": 0.6639009677984581,
+        "maximum_l1_allocation_distance": 0.331950483899229,
+        "pca": 0.517578125,
+        "entropy": 1.0283593368724269,
+        "minimum_normalized_quota": 0.0462030674111046,
+        "tvf_constraint_satisfaction_1e3": 0.15234375
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 2.7794158086180687e-09,
+      "basic_max_abs_error": 1.1102230246251565e-16,
+      "truthful_min_allocation": 1.1824063950172103e-10,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 1.2594369991347776e-12,
+      "training_epochs": 200,
+      "training_iterations": 15800,
+      "training_seconds": 2201.8199520111084,
+      "source_role": "controlled_ablation",
+      "source_commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 21508
+    },
+    {
+      "method": "RegretNetProportionBaseline",
+      "seed": 0,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8889966480612017,
+        "welfare": 1.1883691406035126,
+        "regret_mean": 0.001748213186628,
+        "regret_max": 0.0145835280418396,
+        "pmr": 0.951171875,
+        "paper_unfairness_sum": 0.2201724098235029,
+        "absolute_tvf_sum": 0.4403448196470059,
+        "maximum_l1_allocation_distance": 0.2201724098235029,
+        "pca": 0.66796875,
+        "entropy": 1.126759783709076,
+        "minimum_normalized_quota": 0.0512767940952284,
+        "tvf_constraint_satisfaction_1e3": 0.193359375
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 2.2118913367563664e-09,
+      "basic_max_abs_error": 8.651933336434325e-17,
+      "truthful_min_allocation": 3.758464459796551e-12,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 3.1243896359001155e-12,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 4458.89186167717,
+      "source_role": "controlled_ablation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    },
+    {
+      "method": "RegretNetProportionBaseline",
+      "seed": 1,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8855136366640863,
+        "welfare": 1.1880711592733917,
+        "regret_mean": 0.0014839554097993,
+        "regret_max": 0.0176459550857543,
+        "pmr": 0.9501953125,
+        "paper_unfairness_sum": 0.2628241524780954,
+        "absolute_tvf_sum": 0.5256483049561909,
+        "maximum_l1_allocation_distance": 0.2628241524780954,
+        "pca": 0.583984375,
+        "entropy": 1.112856140560325,
+        "minimum_normalized_quota": 0.0469586081008875,
+        "tvf_constraint_satisfaction_1e3": 0.158203125
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 1.8335413187742233e-09,
+      "basic_max_abs_error": 9.367506770274758e-17,
+      "truthful_min_allocation": 5.928788818394815e-14,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 1.092015367021304e-12,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 4001.73528265953,
+      "source_role": "controlled_ablation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    },
+    {
+      "method": "RegretNetProportionBaseline",
+      "seed": 2,
+      "checks": {
+        "completed": true,
+        "training_rows_match_epochs": true,
+        "raw_all_finite": true,
+        "512_profiles": true,
+        "no_negative_gains": true,
+        "nested_random_per_bidder": true,
+        "strong_equals_max_random_and_pgd": true,
+        "truth_utility_consistent_with_float32_reduction_tolerance_1e6": true,
+        "profile_revenue_consistent": true,
+        "profile_welfare_consistent": true,
+        "bidder_gains_consistent": true,
+        "saved_values_match_test": true,
+        "hash_checkpoint_sha256": true,
+        "hash_profiles_sha256": true,
+        "hash_test_profile_sha256": true,
+        "hash_audit_inputs_sha256": true,
+        "source_adapter_hashes": true,
+        "eval_source_hashes": true,
+        "reported_basic_metrics_match_raw": true,
+        "family_metrics_match_numpy": true,
+        "truthful_feasibility": true
+      },
+      "metrics": {
+        "revenue": 0.8833671555749447,
+        "welfare": 1.1898902979086756,
+        "regret_mean": 0.0012976828325735,
+        "regret_max": 0.0105265378952026,
+        "pmr": 0.9130859375,
+        "paper_unfairness_sum": 0.2466377742707285,
+        "absolute_tvf_sum": 0.493275548541457,
+        "maximum_l1_allocation_distance": 0.2466377742707285,
+        "pca": 0.623046875,
+        "entropy": 1.1631781777068682,
+        "minimum_normalized_quota": 0.0466523953435605,
+        "tvf_constraint_satisfaction_1e3": 0.181640625
+      },
+      "truth_utility_float32_max_abs_error": 0.0,
+      "family_max_abs_error": 1.206217348226346e-09,
+      "basic_max_abs_error": 9.150666335777657e-17,
+      "truthful_min_allocation": 7.868086043805178e-11,
+      "truthful_max_item_allocation": 1.0000001192092896,
+      "truthful_min_utility": 3.5936531528335536e-14,
+      "training_epochs": 120,
+      "training_iterations": 37560,
+      "training_seconds": 3430.9329953193665,
+      "source_role": "controlled_ablation",
+      "source_commit": "",
+      "test_profile_sha256": "5ca916916528de1f7756d4922f1774a37b37af8ec5626f4bdb8f3996083cadfb",
+      "audit_inputs_sha256": "f11ea61f06ea79e92f664d6846c12d6f614502025d8b8222e87a71596918017b",
+      "parameter_count": 11408
+    }
+  ],
+  "issues": [
+    {
+      "severity": "material_interpretation",
+      "method": "CITransNetNoContext",
+      "seed": 0,
+      "finding": "Training collapses around epoch 11; epoch 12 onward revenue near zero. Final revenue 5.19e-12, welfare 1.24e-11. All budgets completed, finite output, feasible. It is a failed optimization outcome, not missing data. Keep in aggregate and report instability. Do not claim the +56.19% pooled context gain is a stable causal benefit."
+    },
+    {
+      "severity": "scope",
+      "finding": "PreferenceNet objective is synthetic TVF; PCA compares a fixed synthetic threshold -0.1785513163. Neither PCA nor fairness is human understanding/trust/behavior evidence."
+    },
+    {
+      "severity": "scope",
+      "finding": "Shared audit uses 32/128 random candidates plus 8 starts x100 projected gradient updates. Not original papers' native evaluation or exact original-table recovery; empirical regrets remain search lower bounds."
+    },
+    {
+      "severity": "scope",
+      "finding": "Matched pairs: PreferenceNet 3 hidden layers/200 epochs vs its baseline; ProportionNet 2 hidden layers/120 epochs vs its baseline. Direct PreferenceNet-vs-ProportionNet differences cannot be attributed solely to objective."
+    },
+    {
+      "severity": "scope",
+      "finding": "Contextual valuation task differs from static iid uniform task; no cross-family revenue ranking."
+    },
+    {
+      "severity": "metadata",
+      "finding": "training/status.json evaluation_pending stays true because written at training completion; separate evaluation/status.json and suite_status.json confirm all 18 evaluations completed."
+    }
+  ],
+  "summary": {
+    "CITransNet": {
+      "revenue": {
+        "mean": 2.893825714786848,
+        "sd": 0.0181329826230367
+      },
+      "welfare": {
+        "mean": 3.718103979869435,
+        "sd": 0.0092872637155542
+      },
+      "regret_mean": {
+        "mean": 0.0002158919597948,
+        "sd": 0.0001517100646026
+      },
+      "regret_max": {
+        "mean": 0.003112514813741,
+        "sd": 0.0006584585978856
+      },
+      "pmr": {
+        "mean": 0.9871961805555556,
+        "sd": 0.0030767028816748
+      },
+      "parameter_count": {
+        "mean": 202370.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 842914.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.4929854701123437,
+        "sd": 0.0024042795013638
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 36.15319991779203,
+        "sd": 0.2060370307614269
+      },
+      "absolute_tvf_sum": {
+        "mean": 72.30639980671306,
+        "sd": 0.4120743263640764
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 1.65393090735112,
+        "sd": 0.0096212727805887
+      },
+      "entropy": {
+        "mean": 5.696166139096022,
+        "sd": 0.0222206630950797
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.0028872083139886,
+        "sd": 0.0003093163298516
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 10.009498552661038,
+        "sd": 0.0305731815998948
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 20.018997086057983,
+        "sd": 0.0611464638978586
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.304074024799553,
+        "sd": 0.0035222028231012
+      },
+      "entropy_profile_sd": {
+        "mean": 0.3763466504415333,
+        "sd": 0.0037151712582509
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.0049984363343584,
+        "sd": 0.0003163276551925
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0006476758793846,
+        "sd": 0.0004551301938078
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.0004336006778288,
+        "sd": 0.0001456512582156
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 0.0002158919597948,
+        "sd": 0.0001517100646026
+      },
+      "pca": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_ground_truth_score": {
+        "mean": null,
+        "sd": null
+      },
+      "pca_profile_sd": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability_profile_sd": {
+        "mean": null,
+        "sd": null
+      }
+    },
+    "CITransNetNoContext": {
+      "revenue": {
+        "mean": 1.8527728638163372,
+        "sd": 1.6045536205740305
+      },
+      "welfare": {
+        "mean": 2.478325896590111,
+        "sd": 2.1462978503477284
+      },
+      "regret_mean": {
+        "mean": 8.974197039098363e-05,
+        "sd": 8.173557604486681e-05
+      },
+      "regret_max": {
+        "mean": 0.0015024741838085,
+        "sd": 0.0013459407459128
+      },
+      "pmr": {
+        "mean": 0.6484375,
+        "sd": 0.5615648573189872
+      },
+      "parameter_count": {
+        "mean": 202370.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 844450.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 7.947285970052084e-08,
+        "sd": 6.88255154120476e-08
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3150705856903256,
+        "sd": 0.2728596735166561
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 21.52365568109748,
+        "sd": 18.64108482434467
+      },
+      "absolute_tvf_sum": {
+        "mean": 43.0473115183467,
+        "sd": 37.28216978560023
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 1.0233636012903806,
+        "sd": 0.886291667898134
+      },
+      "entropy": {
+        "mean": 6.186180644047757,
+        "sd": 0.6249374455921575
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.1129782030355671,
+        "sd": 0.1908331495456889
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.3333333333333333,
+        "sd": 0.5773502691896258
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 7.70257521476356,
+        "sd": 6.670727121255263
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 15.405150633507604,
+        "sd": 13.341454418222114
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.2754891590967392,
+        "sd": 0.2385935640478174
+      },
+      "entropy_profile_sd": {
+        "mean": 0.2864194401833002,
+        "sd": 0.2481505767102903
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.0039828609351445,
+        "sd": 0.003455927704666
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0002692259111729,
+        "sd": 0.0002452067281346
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.0002112770662002,
+        "sd": 0.0001848080749304
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 8.974197039098363e-05,
+        "sd": 8.173557604486681e-05
+      },
+      "pca": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_ground_truth_score": {
+        "mean": null,
+        "sd": null
+      },
+      "pca_profile_sd": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability_profile_sd": {
+        "mean": null,
+        "sd": null
+      }
+    },
+    "PreferenceNet": {
+      "revenue": {
+        "mean": 0.8769879108937175,
+        "sd": 0.0027281284788488
+      },
+      "welfare": {
+        "mean": 1.1672830307042166,
+        "sd": 0.0019796580040646
+      },
+      "regret_mean": {
+        "mean": 0.0042634600127619,
+        "sd": 0.0008404675254177
+      },
+      "regret_max": {
+        "mean": 0.0265205601851145,
+        "sd": 0.0045805761751741
+      },
+      "pmr": {
+        "mean": 0.9694010416666666,
+        "sd": 0.0219744646246584
+      },
+      "parameter_count": {
+        "mean": 21508.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 90082.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3180803635688266,
+        "sd": 0.0020456061269228
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 0.0124827812122826,
+        "sd": 0.0040074913749684
+      },
+      "absolute_tvf_sum": {
+        "mean": 0.0249655624245652,
+        "sd": 0.0080149827499368
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 0.0124827812122826,
+        "sd": 0.0040074913749684
+      },
+      "entropy": {
+        "mean": 1.381902100363125,
+        "sd": 0.0059496303090137
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.0785702909204206,
+        "sd": 0.0040123044488626
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.3684895833333333,
+        "sd": 0.1241630509295975
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 0.0171047469998615,
+        "sd": 0.0019761636150588
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 0.034209493999723,
+        "sd": 0.0039523272301177
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.0171047469998615,
+        "sd": 0.0019761636150588
+      },
+      "entropy_profile_sd": {
+        "mean": 0.0076560996900259,
+        "sd": 0.0111570411258039
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.1272499427829301,
+        "sd": 0.0006149572729337
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.4706652486197038,
+        "sd": 0.0447806405624607
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0085269200255238,
+        "sd": 0.0016809350508355
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.004610984045563,
+        "sd": 0.0005602850688434
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 0.0042634600127619,
+        "sd": 0.0008404675254177
+      },
+      "pca": {
+        "mean": 0.998046875,
+        "sd": 0.0033829117335329
+      },
+      "preference_ground_truth_score": {
+        "mean": -0.0249655624245652,
+        "sd": 0.0080149827499368
+      },
+      "pca_profile_sd": {
+        "mean": 0.0254655366796432,
+        "sd": 0.044107603371151
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": 0.034209493999723,
+        "sd": 0.0039523272301177
+      },
+      "preference_probability": {
+        "mean": 0.9870237777552878,
+        "sd": 0.0206610604648843
+      },
+      "preference_probability_profile_sd": {
+        "mean": 0.0086978872561106,
+        "sd": 0.0145878594674398
+      }
+    },
+    "ProportionNet": {
+      "revenue": {
+        "mean": 0.8566879579645814,
+        "sd": 0.0011994633068052
+      },
+      "welfare": {
+        "mean": 1.1664823056637723,
+        "sd": 0.001471266184984
+      },
+      "regret_mean": {
+        "mean": 0.0018339306484229,
+        "sd": 0.0002455809362643
+      },
+      "regret_max": {
+        "mean": 0.0106608867645263,
+        "sd": 0.002483460407401
+      },
+      "pmr": {
+        "mean": 0.9459635416666666,
+        "sd": 0.0073944119085941
+      },
+      "parameter_count": {
+        "mean": 11408.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 49124.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.326645811122255,
+        "sd": 0.0010624601580504
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 0.000982230586024,
+        "sd": 0.0004915062651024
+      },
+      "absolute_tvf_sum": {
+        "mean": 0.001964461172048,
+        "sd": 0.0009830125302049
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 0.000982230586024,
+        "sd": 0.0004915062651024
+      },
+      "entropy": {
+        "mean": 1.386267067476486,
+        "sd": 1.970337454858452e-05
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.0640616656462933,
+        "sd": 0.0009135590889707
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.7486979166666666,
+        "sd": 0.086122256415692
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 0.0017764479337328,
+        "sd": 0.0009665519428002
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 0.0035528958674656,
+        "sd": 0.0019331038856005
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.0017764479337328,
+        "sd": 0.0009665519428002
+      },
+      "entropy_profile_sd": {
+        "mean": 2.680773729765356e-05,
+        "sd": 1.5011328251620823e-05
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.1207597577031314,
+        "sd": 0.0015697691798112
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.4262883506278045,
+        "sd": 0.0525558962383812
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0036678612968459,
+        "sd": 0.0004911618725286
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.0021278886197831,
+        "sd": 0.00040614105714
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 0.0018339306484229,
+        "sd": 0.0002455809362643
+      },
+      "pca": {
+        "mean": 1.0,
+        "sd": 0.0
+      },
+      "preference_ground_truth_score": {
+        "mean": -0.001964461172048,
+        "sd": 0.0009830125302049
+      },
+      "pca_profile_sd": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": 0.0035528958674656,
+        "sd": 0.0019331038856005
+      },
+      "preference_probability": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability_profile_sd": {
+        "mean": null,
+        "sd": null
+      }
+    },
+    "RegretNetPreferenceBaseline": {
+      "revenue": {
+        "mean": 0.9317299386283652,
+        "sd": 0.00469344048871
+      },
+      "welfare": {
+        "mean": 1.199787634629928,
+        "sd": 0.0019019552436378
+      },
+      "regret_mean": {
+        "mean": 0.0045050192999578,
+        "sd": 0.0005466565089659
+      },
+      "regret_max": {
+        "mean": 0.0279532074928283,
+        "sd": 0.0035197179070477
+      },
+      "pmr": {
+        "mean": 0.9775390625,
+        "sd": 0.0009765625
+      },
+      "parameter_count": {
+        "mean": 21508.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 90082.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3570131311895034,
+        "sd": 0.0009506238868709
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 0.3215761961199355,
+        "sd": 0.0091488399573847
+      },
+      "absolute_tvf_sum": {
+        "mean": 0.6431523922398711,
+        "sd": 0.0182976799147695
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 0.3215761961199355,
+        "sd": 0.0091488399573847
+      },
+      "entropy": {
+        "mean": 1.0407694415597313,
+        "sd": 0.0115686507430695
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.0468363701765887,
+        "sd": 0.0013251569907062
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.154296875,
+        "sd": 0.0070420923348906
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 0.5211331106509072,
+        "sd": 0.0050005194045575
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 1.0422662213018143,
+        "sd": 0.0100010388091151
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.5211331106509072,
+        "sd": 0.0050005194045575
+      },
+      "entropy_profile_sd": {
+        "mean": 0.3582292531017012,
+        "sd": 0.0034622805674802
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.094566112047668,
+        "sd": 0.0017072936146493
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.3614992055278572,
+        "sd": 0.006698035782857
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0090100385999157,
+        "sd": 0.0010933130179319
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.0049975853006286,
+        "sd": 0.0003456076946059
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 0.0045050192999578,
+        "sd": 0.0005466565089659
+      },
+      "pca": {
+        "mean": 0.533203125,
+        "sd": 0.0237607911339774
+      },
+      "preference_ground_truth_score": {
+        "mean": -0.6431523922398711,
+        "sd": 0.0182976799147695
+      },
+      "pca_profile_sd": {
+        "mean": 0.499004100151236,
+        "sd": 0.0019051989965473
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": 1.0422662213018143,
+        "sd": 0.0100010388091151
+      },
+      "preference_probability": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability_profile_sd": {
+        "mean": null,
+        "sd": null
+      }
+    },
+    "RegretNetProportionBaseline": {
+      "revenue": {
+        "mean": 0.8859591467667443,
+        "sd": 0.0028410659710544
+      },
+      "welfare": {
+        "mean": 1.1887768659285267,
+        "sd": 0.0009757029768782
+      },
+      "regret_mean": {
+        "mean": 0.0015099504763336,
+        "sd": 0.0002263872955671
+      },
+      "regret_max": {
+        "mean": 0.0142520070075988,
+        "sd": 0.0035712679723578
+      },
+      "pmr": {
+        "mean": 0.9381510416666666,
+        "sd": 0.0217125080021514
+      },
+      "parameter_count": {
+        "mean": 11408.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": null,
+        "sd": null
+      },
+      "checkpoint_file_bytes": {
+        "mean": 49124.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": null,
+        "sd": null
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3482935937140938,
+        "sd": 0.0031597656136447
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "paper_unfairness_sum": {
+        "mean": 0.2432114455241089,
+        "sd": 0.0215313163642711
+      },
+      "absolute_tvf_sum": {
+        "mean": 0.4864228910482179,
+        "sd": 0.0430626327285422
+      },
+      "maximum_l1_allocation_distance": {
+        "mean": 0.2432114455241089,
+        "sd": 0.0215313163642711
+      },
+      "entropy": {
+        "mean": 1.1342647006587565,
+        "sd": 0.0259869138117768
+      },
+      "minimum_normalized_quota": {
+        "mean": 0.0482959325132255,
+        "sd": 0.002586038165125
+      },
+      "tvf_constraint_satisfaction_1e3": {
+        "mean": 0.177734375,
+        "sd": 0.0179006863084212
+      },
+      "paper_unfairness_sum_profile_sd": {
+        "mean": 0.4610519609710555,
+        "sd": 0.007550063765695
+      },
+      "absolute_tvf_sum_profile_sd": {
+        "mean": 0.9221039219421112,
+        "sd": 0.0151001275313901
+      },
+      "maximum_l1_allocation_distance_profile_sd": {
+        "mean": 0.4610519609710555,
+        "sd": 0.007550063765695
+      },
+      "entropy_profile_sd": {
+        "mean": 0.327652186870045,
+        "sd": 0.0078672932322623
+      },
+      "minimum_normalized_quota_profile_sd": {
+        "mean": 0.0985860795061157,
+        "sd": 0.0057786179219508
+      },
+      "tvf_constraint_satisfaction_1e3_profile_sd": {
+        "mean": 0.382177311628868,
+        "sd": 0.015361938660277
+      },
+      "paper_regret_sum_mean_strong": {
+        "mean": 0.0030199009526673,
+        "sd": 0.0004527745911343
+      },
+      "paper_regret_sum_profile_sd_strong": {
+        "mean": 0.0022179659318241,
+        "sd": 0.0002646406700883
+      },
+      "paper_regret_bidder_mean_strong": {
+        "mean": 0.0015099504763336,
+        "sd": 0.0002263872955671
+      },
+      "pca": {
+        "mean": 0.625,
+        "sd": 0.0420262398268554
+      },
+      "preference_ground_truth_score": {
+        "mean": -0.4864228910482179,
+        "sd": 0.0430626327285422
+      },
+      "pca_profile_sd": {
+        "mean": 0.4832926344340705,
+        "sd": 0.0110983010380823
+      },
+      "preference_ground_truth_score_profile_sd": {
+        "mean": 0.9221039219421112,
+        "sd": 0.0151001275313901
+      },
+      "preference_probability": {
+        "mean": null,
+        "sd": null
+      },
+      "preference_probability_profile_sd": {
+        "mean": null,
+        "sd": null
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "method": "PreferenceNet",
+      "baseline": "RegretNetPreferenceBaseline",
+      "metrics": {
+        "revenue": {
+          "method_mean": 0.8769879108937175,
+          "baseline_mean": 0.9317299386283652,
+          "absolute_difference": -0.05474202773464765,
+          "relative_change_percent": -5.875310587876514,
+          "paired_seed_differences": [
+            -0.056144207693933024,
+            -0.05686308134954743,
+            -0.051218794160462155
+          ]
+        },
+        "welfare": {
+          "method_mean": 1.1672830307042166,
+          "baseline_mean": 1.199787634629928,
+          "absolute_difference": -0.03250460392571153,
+          "relative_change_percent": -2.709196443397044,
+          "paired_seed_differences": [
+            -0.03301240510802472,
+            -0.03094564694305313,
+            -0.03355575972605607
+          ]
+        },
+        "regret_mean": {
+          "method_mean": 0.0042634600127619,
+          "baseline_mean": 0.0045050192999578,
+          "absolute_difference": -0.00024155928719589957,
+          "relative_change_percent": -5.362003381387559,
+          "paired_seed_differences": [
+            -0.0012481198572106005,
+            -0.0006907680741794001,
+            0.0012142100698019995
+          ]
+        },
+        "paper_unfairness_sum": {
+          "method_mean": 0.0124827812122826,
+          "baseline_mean": 0.3215761961199355,
+          "absolute_difference": -0.3090934149076529,
+          "relative_change_percent": -96.11825086467935,
+          "paired_seed_differences": [
+            -0.3081635933824436,
+            -0.30426940518185,
+            -0.3148472461586653
+          ]
+        },
+        "absolute_tvf_sum": {
+          "method_mean": 0.0249655624245652,
+          "baseline_mean": 0.6431523922398711,
+          "absolute_difference": -0.6181868298153059,
+          "relative_change_percent": -96.11825086467935,
+          "paired_seed_differences": [
+            -0.6163271867648873,
+            -0.6085388103637,
+            -0.6296944923173305
+          ]
+        },
+        "pca": {
+          "method_mean": 0.998046875,
+          "baseline_mean": 0.533203125,
+          "absolute_difference": 0.46484375,
+          "relative_change_percent": 87.17948717948718,
+          "paired_seed_differences": [
+            0.43359375,
+            0.478515625,
+            0.482421875
+          ]
+        },
+        "tvf_constraint_satisfaction_1e3": {
+          "method_mean": 0.3684895833333333,
+          "baseline_mean": 0.154296875,
+          "absolute_difference": 0.21419270833333331,
+          "relative_change_percent": 138.81856540084385,
+          "paired_seed_differences": [
+            0.294921875,
+            0.2734375,
+            0.07421875
+          ]
+        }
+      }
+    },
+    {
+      "method": "ProportionNet",
+      "baseline": "RegretNetProportionBaseline",
+      "metrics": {
+        "revenue": {
+          "method_mean": 0.8566879579645814,
+          "baseline_mean": 0.8859591467667443,
+          "absolute_difference": -0.02927118880216284,
+          "relative_change_percent": -3.3038982563683983,
+          "paired_seed_differences": [
+            -0.03093210451337569,
+            -0.029381792357469294,
+            -0.027499669535643534
+          ]
+        },
+        "welfare": {
+          "method_mean": 1.1664823056637723,
+          "baseline_mean": 1.1887768659285267,
+          "absolute_difference": -0.022294560264754404,
+          "relative_change_percent": -1.8754200980636182,
+          "paired_seed_differences": [
+            -0.02259625950125632,
+            -0.022570989031748923,
+            -0.021716432261257523
+          ]
+        },
+        "regret_mean": {
+          "method_mean": 0.0018339306484229,
+          "baseline_mean": 0.0015099504763336,
+          "absolute_difference": 0.0003239801720892998,
+          "relative_change_percent": 21.456344242228088,
+          "paired_seed_differences": [
+            0.0002874675144909002,
+            7.652361063349993e-05,
+            0.0006079493911435999
+          ]
+        },
+        "paper_unfairness_sum": {
+          "method_mean": 0.000982230586024,
+          "baseline_mean": 0.2432114455241089,
+          "absolute_difference": -0.24222921493808489,
+          "relative_change_percent": -99.59614129840504,
+          "paired_seed_differences": [
+            -0.21902699273496368,
+            -0.26239426564272605,
+            -0.2452663864365651
+          ]
+        },
+        "absolute_tvf_sum": {
+          "method_mean": 0.001964461172048,
+          "baseline_mean": 0.4864228910482179,
+          "absolute_difference": -0.4844584298761699,
+          "relative_change_percent": -99.59614129840504,
+          "paired_seed_differences": [
+            -0.4380539854699274,
+            -0.5247885312854522,
+            -0.4905327728731301
+          ]
+        },
+        "pca": {
+          "method_mean": 1.0,
+          "baseline_mean": 0.625,
+          "absolute_difference": 0.375,
+          "relative_change_percent": 60.00000000000001,
+          "paired_seed_differences": [
+            0.33203125,
+            0.416015625,
+            0.376953125
+          ]
+        },
+        "tvf_constraint_satisfaction_1e3": {
+          "method_mean": 0.7486979166666666,
+          "baseline_mean": 0.177734375,
+          "absolute_difference": 0.5709635416666666,
+          "relative_change_percent": 321.24542124542126,
+          "paired_seed_differences": [
+            0.548828125,
+            0.6796875,
+            0.484375
+          ]
+        }
+      }
+    },
+    {
+      "method": "CITransNet",
+      "baseline": "CITransNetNoContext",
+      "metrics": {
+        "revenue": {
+          "method_mean": 2.893825714786848,
+          "baseline_mean": 1.8527728638163372,
+          "absolute_difference": 1.0410528509705108,
+          "relative_change_percent": 56.18890859757912,
+          "paired_seed_differences": [
+            2.9011157003645107,
+            0.13212567730806768,
+            0.08991717523895204
+          ]
+        },
+        "welfare": {
+          "method_mean": 3.718103979869435,
+          "baseline_mean": 2.478325896590111,
+          "absolute_difference": 1.2397780832793242,
+          "relative_change_percent": 50.02482058494062,
+          "paired_seed_differences": [
+            3.7207499400122983,
+            0.012767239706590772,
+            -0.014182929880917072
+          ]
+        },
+        "regret_mean": {
+          "method_mean": 0.0002158919597948,
+          "baseline_mean": 8.974197039098363e-05,
+          "absolute_difference": 0.00012614998940381635,
+          "relative_change_percent": 140.5696675192354,
+          "paired_seed_differences": [
+            0.00012585129417222327,
+            2.147093682399999e-05,
+            0.0002311277372154
+          ]
+        },
+        "paper_unfairness_sum": {
+          "method_mean": 36.15319991779203,
+          "baseline_mean": 21.52365568109748,
+          "absolute_difference": 14.62954423669455,
+          "relative_change_percent": 67.96960727049037,
+          "paired_seed_differences": [
+            36.197918803422986,
+            4.245782182086259,
+            3.444931724574417
+          ]
+        },
+        "absolute_tvf_sum": {
+          "method_mean": 72.30639980671306,
+          "baseline_mean": 43.0473115183467,
+          "absolute_difference": 29.259088288366357,
+          "relative_change_percent": 67.96960659412186,
+          "paired_seed_differences": [
+            72.39583771301676,
+            8.491564439609647,
+            6.889862712472677
+          ]
+        },
+        "tvf_constraint_satisfaction_1e3": {
+          "method_mean": 0.0,
+          "baseline_mean": 0.3333333333333333,
+          "absolute_difference": -0.3333333333333333,
+          "relative_change_percent": -100.0,
+          "paired_seed_differences": [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  ],
+  "cpu_checkpoint_replay": {
+    "torch_version": "2.14.1+cpu",
+    "note": "Forward pass and saved best unilateral reports recomputed, not repeating search or training; original GPU and current CPU PyTorch differ.",
+    "runs": [
+      {
+        "method": "CITransNet",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 1.3709068298339844e-06,
+        "max_abs_truthful_payment_difference": 1.4007091522216797e-06,
+        "max_abs_strong_gain_difference": 1.1920928955078125e-06
+      },
+      {
+        "method": "CITransNet",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 1.2516975402832031e-06,
+        "max_abs_truthful_payment_difference": 9.5367431640625e-07,
+        "max_abs_strong_gain_difference": 1.1920928955078125e-06
+      },
+      {
+        "method": "CITransNet",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 1.1622905731201172e-06,
+        "max_abs_truthful_payment_difference": 9.834766387939453e-07,
+        "max_abs_strong_gain_difference": 1.1920928955078125e-06
+      },
+      {
+        "method": "CITransNetNoContext",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 5.0306980803327406e-17,
+        "max_abs_truthful_payment_difference": 4.0766001685454967e-17,
+        "max_abs_strong_gain_difference": 2.5326962749261384e-16
+      },
+      {
+        "method": "CITransNetNoContext",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 1.1324882507324219e-06,
+        "max_abs_truthful_payment_difference": 1.1324882507324219e-06,
+        "max_abs_strong_gain_difference": 1.6689300537109375e-06
+      },
+      {
+        "method": "CITransNetNoContext",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 1.5497207641601562e-06,
+        "max_abs_truthful_payment_difference": 1.4901161193847656e-06,
+        "max_abs_strong_gain_difference": 1.6689300537109375e-06
+      },
+      {
+        "method": "PreferenceNet",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 5.364418029785156e-07,
+        "max_abs_truthful_payment_difference": 4.76837158203125e-07,
+        "max_abs_strong_gain_difference": 5.960464477539062e-07
+      },
+      {
+        "method": "PreferenceNet",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 1.1622905731201172e-06,
+        "max_abs_truthful_payment_difference": 8.046627044677734e-07,
+        "max_abs_strong_gain_difference": 5.960464477539062e-07
+      },
+      {
+        "method": "PreferenceNet",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 5.364418029785156e-07,
+        "max_abs_truthful_payment_difference": 4.76837158203125e-07,
+        "max_abs_strong_gain_difference": 5.364418029785156e-07
+      },
+      {
+        "method": "ProportionNet",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 2.980232238769531e-07,
+        "max_abs_truthful_payment_difference": 3.5762786865234375e-07,
+        "max_abs_strong_gain_difference": 4.76837158203125e-07
+      },
+      {
+        "method": "ProportionNet",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 5.364418029785156e-07,
+        "max_abs_truthful_payment_difference": 5.662441253662109e-07,
+        "max_abs_strong_gain_difference": 3.5762786865234375e-07
+      },
+      {
+        "method": "ProportionNet",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 3.5762786865234375e-07,
+        "max_abs_truthful_payment_difference": 4.76837158203125e-07,
+        "max_abs_strong_gain_difference": 3.5762786865234375e-07
+      },
+      {
+        "method": "RegretNetPreferenceBaseline",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 8.344650268554688e-07,
+        "max_abs_truthful_payment_difference": 5.662441253662109e-07,
+        "max_abs_strong_gain_difference": 4.76837158203125e-07
+      },
+      {
+        "method": "RegretNetPreferenceBaseline",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 7.152557373046875e-07,
+        "max_abs_truthful_payment_difference": 5.364418029785156e-07,
+        "max_abs_strong_gain_difference": 4.172325134277344e-07
+      },
+      {
+        "method": "RegretNetPreferenceBaseline",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 6.556510925292969e-07,
+        "max_abs_truthful_payment_difference": 5.960464477539062e-07,
+        "max_abs_strong_gain_difference": 4.76837158203125e-07
+      },
+      {
+        "method": "RegretNetProportionBaseline",
+        "seed": 0,
+        "max_abs_truthful_allocation_difference": 8.940696716308594e-07,
+        "max_abs_truthful_payment_difference": 4.76837158203125e-07,
+        "max_abs_strong_gain_difference": 3.5762786865234375e-07
+      },
+      {
+        "method": "RegretNetProportionBaseline",
+        "seed": 1,
+        "max_abs_truthful_allocation_difference": 8.344650268554688e-07,
+        "max_abs_truthful_payment_difference": 4.172325134277344e-07,
+        "max_abs_strong_gain_difference": 3.5762786865234375e-07
+      },
+      {
+        "method": "RegretNetProportionBaseline",
+        "seed": 2,
+        "max_abs_truthful_allocation_difference": 5.960464477539062e-07,
+        "max_abs_truthful_payment_difference": 4.76837158203125e-07,
+        "max_abs_strong_gain_difference": 4.76837158203125e-07
+      }
+    ]
+  }
+}

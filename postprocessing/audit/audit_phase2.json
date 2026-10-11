@@ -1,0 +1,2416 @@
+{
+  "suite": {
+    "state": "COMPLETED",
+    "phase": "phase2",
+    "scope": "paper_reference_training_and_shared_evaluation",
+    "wall_seconds": 10166.629107236862,
+    "completed_evaluations": 24,
+    "expected_evaluations": 24
+  },
+  "units": [
+    {
+      "directory": "evaluation/AMenuNet_2x2/seed0",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 0,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "affd6f9164d52b650bc3b0ef2dcbe9c8ec4ffa26fb1c600e74588e03ba5734d4",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 1.6301934719085693,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 3.232764811400557e-08,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.8773052680116152,
+          "revenue_profile_sd": 0.3778814560771669,
+          "welfare": 1.2090794179263156,
+          "regret_mean": 3.301395615218361e-17,
+          "regret_max": 4.996003610813204e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.8773052680116152,
+          "revenue_profile_sd": 0.3778814560771669,
+          "welfare": 1.2090794179263156,
+          "regret_mean": 4.6241222656506764e-17,
+          "regret_max": 4.996003610813204e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.8773052680116152,
+          "revenue_profile_sd": 0.3778814560771669,
+          "welfare": 1.2090794179263156,
+          "regret_mean": 4.6241222656506764e-17,
+          "regret_max": 4.996003610813204e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/AMenuNet_2x2/seed1",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 1,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "64b99c331230977e31430a872c4ae2f9d71bbeed816b4acc94e0f7cda7ae39ff",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 1.3767855167388916,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 3.000942427888731e-08,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.873773267412066,
+          "revenue_profile_sd": 0.3876047839008244,
+          "welfare": 1.185224522069846,
+          "regret_mean": 4.130810277169772e-17,
+          "regret_max": 4.440892098500626e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.873773267412066,
+          "revenue_profile_sd": 0.3876047839008244,
+          "welfare": 1.185224522069846,
+          "regret_mean": 5.410168840702667e-17,
+          "regret_max": 4.440892098500626e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.873773267412066,
+          "revenue_profile_sd": 0.3876047839008244,
+          "welfare": 1.185224522069846,
+          "regret_mean": 5.410168840702667e-17,
+          "regret_max": 4.440892098500626e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/AMenuNet_2x2/seed2",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 2,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "8134761446a04fd8686177ffb6bc8ff4b83730e2a6268afd5bec0711b037d331",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 1.6152453422546387,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 3.669783055215703e-08,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.874216436462381,
+          "revenue_profile_sd": 0.37238453844295805,
+          "welfare": 1.2168736344516964,
+          "regret_mean": 2.6834003769016235e-17,
+          "regret_max": 3.3306690738754696e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.874216436462381,
+          "revenue_profile_sd": 0.37238453844295805,
+          "welfare": 1.2168736344516964,
+          "regret_mean": 3.4640259410911867e-17,
+          "regret_max": 3.3306690738754696e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.874216436462381,
+          "revenue_profile_sd": 0.37238453844295805,
+          "welfare": 1.2168736344516964,
+          "regret_mean": 3.4640259410911867e-17,
+          "regret_max": 3.3306690738754696e-16,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/AMenuNet_3x10/seed0",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 0,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "31a0e0c1860246c8a85c325aa834ab8afbd31da36b4b388167e44e045160cfc5",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.088487148284912,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.0131994088169449e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 1.444157293750692e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 2.531250672029491e-16,
+          "regret_max": 2.7755575615628914e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 2.531250672029491e-16,
+          "regret_max": 2.7755575615628914e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/AMenuNet_3x10/seed1",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 1,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "31b8b95336253491756bb6964f0a5f9662919ffcc8c1baa7f5a996521741c8de",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.0727269649505615,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 9.59171728709407e-08,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 1.423918853197629e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 2.47198095326695e-16,
+          "regret_max": 3.552713678800501e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 2.47198095326695e-16,
+          "regret_max": 3.552713678800501e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/AMenuNet_3x10/seed2",
+      "method": "AMenuNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 2,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "872c6d31b487fad1807ccb939bb7cd79116f05f71f49562851fb76b4e93e497a",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.089434862136841,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.0247421755593678e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 1.3986208025063007e-16,
+          "regret_max": 2.220446049250313e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 2.5413698923060224e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 2.5413698923060224e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/GemNet_2x2/seed0",
+      "method": "GemNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 0,
+      "source_role": "paper_reimplementation_with_price_transform",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "b8d954fda0d0ea4287b2baff9e0ebabbb8577845d2dd03728dd4d5bdc2765af3",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 5.844756603240967,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 1.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/GemNet_2x2/seed1",
+      "method": "GemNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 1,
+      "source_role": "paper_reimplementation_with_price_transform",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "b2f25134c0099ad9399793787f1010cd8e4b5e41c8a84df27ae4a43d38d589ec",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 5.234058618545532,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 1.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/GemNet_2x2/seed2",
+      "method": "GemNet_PaperReimplementation",
+      "setting": "2x2",
+      "seed": 2,
+      "source_role": "paper_reimplementation_with_price_transform",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "e4249bfee7ff86d0b3830451f9ffb3f2a572a784b6a92d961df1c9859a684094",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 5.80073356628418,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 1.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.0,
+          "revenue_profile_sd": 0.0,
+          "welfare": 0.0,
+          "regret_mean": 0.0,
+          "regret_max": 0.0,
+          "pmr": 0.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_2x2/seed0",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "2x2",
+      "seed": 0,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "4d4ab24cc0a5240d2522bed2af6cbfd586574e41682c8af6933ba506a5d5d526",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 94.44636797904968,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.9131381944274439,
+          "revenue_profile_sd": 0.348566568708026,
+          "welfare": 1.2085130050083128,
+          "regret_mean": 0.0004015162462332614,
+          "regret_max": 0.054669857025146484,
+          "pmr": 0.4775390625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.9131381944274439,
+          "revenue_profile_sd": 0.348566568708026,
+          "welfare": 1.2085130050083128,
+          "regret_mean": 0.0008340996392386586,
+          "regret_max": 0.05787914991378784,
+          "pmr": 0.701171875,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.9131381944274439,
+          "revenue_profile_sd": 0.348566568708026,
+          "welfare": 1.2085130050083128,
+          "regret_mean": 0.001317981182562828,
+          "regret_max": 0.05787914991378784,
+          "pmr": 0.9072265625,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_2x2/seed1",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "2x2",
+      "seed": 1,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "be390777331209c087efbbdb0644ffc01df1b48ea0872629828490c84690b770",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 97.12167310714722,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.9140448889171604,
+          "revenue_profile_sd": 0.3473064350630009,
+          "welfare": 1.2135485623267908,
+          "regret_mean": 0.0003729677870923662,
+          "regret_max": 0.014388501644134521,
+          "pmr": 0.4931640625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.9140448889171604,
+          "revenue_profile_sd": 0.3473064350630009,
+          "welfare": 1.2135485623267908,
+          "regret_mean": 0.0007797346025131928,
+          "regret_max": 0.022956013679504395,
+          "pmr": 0.701171875,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.9140448889171604,
+          "revenue_profile_sd": 0.3473064350630009,
+          "welfare": 1.2135485623267908,
+          "regret_mean": 0.0015165685130751243,
+          "regret_max": 0.04512545466423035,
+          "pmr": 0.890625,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_2x2/seed2",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "2x2",
+      "seed": 2,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "841a78349e4e5d002b16323054f86c102b6808d25852b41bc6b0bc23790830e9",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 93.77665162086487,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.9192883338959643,
+          "revenue_profile_sd": 0.3543091709641188,
+          "welfare": 1.2098096522959774,
+          "regret_mean": 0.0005065302411484691,
+          "regret_max": 0.019379526376724243,
+          "pmr": 0.5322265625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.9192883338959643,
+          "revenue_profile_sd": 0.3543091709641188,
+          "welfare": 1.2098096522959774,
+          "regret_mean": 0.0013024782359328754,
+          "regret_max": 0.0921698808670044,
+          "pmr": 0.7490234375,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.9192883338959643,
+          "revenue_profile_sd": 0.3543091709641188,
+          "welfare": 1.2098096522959774,
+          "regret_mean": 0.0022833099422363947,
+          "regret_max": 0.0921698808670044,
+          "pmr": 0.904296875,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_3x10/seed0",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "3x10",
+      "seed": 0,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "29486579cb74f031a0e6b594a20b10de4ed4c3ef4c1d2d11ffd3d343eb9f5d40",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 195.36212587356567,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 6.182452624663711,
+          "revenue_profile_sd": 0.6110195982416406,
+          "welfare": 7.226245234720409,
+          "regret_mean": 3.726396189781175e-05,
+          "regret_max": 0.02843564748764038,
+          "pmr": 0.020833333333333332,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 6.182452624663711,
+          "revenue_profile_sd": 0.6110195982416406,
+          "welfare": 7.226245234720409,
+          "regret_mean": 9.767153685806089e-05,
+          "regret_max": 0.044527411460876465,
+          "pmr": 0.057291666666666664,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 6.182452624663711,
+          "revenue_profile_sd": 0.6110195982416406,
+          "welfare": 7.226245234720409,
+          "regret_mean": 0.006758630953790294,
+          "regret_max": 0.4367784261703491,
+          "pmr": 0.98828125,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_3x10/seed1",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "3x10",
+      "seed": 1,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "b407616d507ec3b57d02cfab4d5d4166c64e24949ca24bfba791c5ddc3bf8a46",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 201.0811586380005,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 6.185183643363416,
+          "revenue_profile_sd": 0.5876532828493876,
+          "welfare": 7.230841328855604,
+          "regret_mean": 1.7169184438614593e-05,
+          "regret_max": 0.020321369171142578,
+          "pmr": 0.011067708333333334,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 6.185183643363416,
+          "revenue_profile_sd": 0.5876532828493876,
+          "welfare": 7.230841328855604,
+          "regret_mean": 0.0004901072236963936,
+          "regret_max": 0.3392922878265381,
+          "pmr": 0.041015625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 6.185183643363416,
+          "revenue_profile_sd": 0.5876532828493876,
+          "welfare": 7.230841328855604,
+          "regret_mean": 0.010278786469018067,
+          "regret_max": 0.4323723316192627,
+          "pmr": 0.994140625,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretFormer_AuthorsCheckpoint_3x10/seed2",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "setting": "3x10",
+      "seed": 2,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "9907daa2361f946a2aed1a4e5f982ef4371c9ffa4b70fcdc159ce7ffbfa9a4a1",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 196.8756902217865,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 6.238270661793649,
+          "revenue_profile_sd": 0.6122635246525008,
+          "welfare": 7.2281847698614,
+          "regret_mean": 2.2096250302657456e-05,
+          "regret_max": 0.015517383813858032,
+          "pmr": 0.01953125,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 6.238270661793649,
+          "revenue_profile_sd": 0.6122635246525008,
+          "welfare": 7.2281847698614,
+          "regret_mean": 0.00017068004293493053,
+          "regret_max": 0.11476492881774902,
+          "pmr": 0.061848958333333336,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 6.238270661793649,
+          "revenue_profile_sd": 0.6122635246525008,
+          "welfare": 7.2281847698614,
+          "regret_mean": 0.011512116586090748,
+          "regret_max": 0.20186638832092285,
+          "pmr": 0.9856770833333334,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_3x10/seed0",
+      "method": "RegretNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 0,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "eb6075defe6407688bd261b0ca1174c15b9ccae1a96a5f3bb191867d2e06f52c",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 76.987788438797,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 1.3973325015588975e-08,
+          "regret_max": 2.1463027223944664e-05,
+          "pmr": 0.0006510416666666666,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 5.922386208112584e-07,
+          "regret_max": 0.0007733944803476334,
+          "pmr": 0.0032552083333333335,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 0.0016142414916089365,
+          "regret_max": 0.015325784683227539,
+          "pmr": 0.9993489583333334,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_3x10/seed1",
+      "method": "RegretNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 1,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "d1a789c808ccb025fc3e4fcbf0fb839d31233541858594617592656e44f58f14",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 69.7192804813385,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 3.8791843811244085e-08,
+          "regret_max": 4.3097970774397254e-05,
+          "pmr": 0.001953125,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 5.460879037855193e-08,
+          "regret_max": 4.3097970774397254e-05,
+          "pmr": 0.0026041666666666665,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 0.0014349317868228202,
+          "regret_max": 0.02544534206390381,
+          "pmr": 0.9986979166666666,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_3x10/seed2",
+      "method": "RegretNet_PaperReimplementation",
+      "setting": "3x10",
+      "seed": 2,
+      "source_role": "paper_reimplementation",
+      "seed_role": "new_training_seed",
+      "checkpoint_sha256": "32b403b1a58d4bddc6accbb310f1f1cc1c806e17ca5d72891b9cfd7202a78307",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 69.25385165214539,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 2.4551942109004205e-08,
+          "regret_max": 2.6245572371408343e-05,
+          "pmr": 0.0013020833333333333,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 3.183214876874748e-08,
+          "regret_max": 2.6245572371408343e-05,
+          "pmr": 0.0026041666666666665,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 0.0013683887276177604,
+          "regret_max": 0.013657525181770325,
+          "pmr": 0.9993489583333334,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_2x2/seed0",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "2x2",
+      "seed": 0,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "6a992306528109ccb96585c3e6e96b8defe26468e5b2f6849624d4dbc174d6ee",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 33.437265396118164,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.8990980768075474,
+          "revenue_profile_sd": 0.3382525372209361,
+          "welfare": 1.203147990343659,
+          "regret_mean": 0.00020139895964529572,
+          "regret_max": 0.006170302629470825,
+          "pmr": 0.4326171875,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.8990980768075474,
+          "revenue_profile_sd": 0.3382525372209361,
+          "welfare": 1.203147990343659,
+          "regret_mean": 0.0004463847242394134,
+          "regret_max": 0.006430491805076599,
+          "pmr": 0.673828125,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.8990980768075474,
+          "revenue_profile_sd": 0.3382525372209361,
+          "welfare": 1.203147990343659,
+          "regret_mean": 0.0008078382680402002,
+          "regret_max": 0.007580220699310303,
+          "pmr": 0.9169921875,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_2x2/seed1",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "2x2",
+      "seed": 1,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "3046d8cfc02ba17bd03ed5d1801ae3385faaf7542d8cffb5008f1d7f88147901",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 33.06547498703003,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.8970730574470593,
+          "revenue_profile_sd": 0.3476765474227927,
+          "welfare": 1.1911132785306684,
+          "regret_mean": 0.0001974215465088058,
+          "regret_max": 0.006961807608604431,
+          "pmr": 0.4306640625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.8970730574470593,
+          "revenue_profile_sd": 0.3476765474227927,
+          "welfare": 1.1911132785306684,
+          "regret_mean": 0.00041327116687601365,
+          "regret_max": 0.006961807608604431,
+          "pmr": 0.6767578125,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.8970730574470593,
+          "revenue_profile_sd": 0.3476765474227927,
+          "welfare": 1.1911132785306684,
+          "regret_mean": 0.0007447526958613169,
+          "regret_max": 0.008117526769638062,
+          "pmr": 0.9208984375,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_2x2/seed2",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "2x2",
+      "seed": 2,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "89c8491e973d484534b0e831926fcf85cd6b33dd09ee2173b1df00d21e31e664",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 32.901928186416626,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        2,
+        2
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 0.0,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 0.8987040421233612,
+          "revenue_profile_sd": 0.3454870120568345,
+          "welfare": 1.1944808253973633,
+          "regret_mean": 0.00027629723394613417,
+          "regret_max": 0.007444977760314941,
+          "pmr": 0.4306640625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 0.8987040421233612,
+          "revenue_profile_sd": 0.3454870120568345,
+          "welfare": 1.1944808253973633,
+          "regret_mean": 0.0005544067169246224,
+          "regret_max": 0.007444977760314941,
+          "pmr": 0.6943359375,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 0.8987040421233612,
+          "revenue_profile_sd": 0.3454870120568345,
+          "welfare": 1.1944808253973633,
+          "regret_mean": 0.0009694208438023088,
+          "regret_max": 0.007987737655639648,
+          "pmr": 0.912109375,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_3x10/seed0",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "3x10",
+      "seed": 0,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "c4fcb3cbf2305b8a5971f40b6b467f9c29bb11337687c694792dc459bd4f3d81",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 73.21761655807495,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.77418511826545,
+          "revenue_profile_sd": 0.5487926745857904,
+          "welfare": 6.965279281139374,
+          "regret_mean": 2.7987450342455605e-07,
+          "regret_max": 0.00013757840497419238,
+          "pmr": 0.00390625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.77418511826545,
+          "revenue_profile_sd": 0.5487926745857904,
+          "welfare": 6.965279281139374,
+          "regret_mean": 1.2270122908830672e-06,
+          "regret_max": 0.0004142187535762787,
+          "pmr": 0.010416666666666666,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.77418511826545,
+          "revenue_profile_sd": 0.5487926745857904,
+          "welfare": 6.965279281139374,
+          "regret_mean": 0.0025506775250505598,
+          "regret_max": 0.047897398471832275,
+          "pmr": 0.9993489583333334,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_3x10/seed1",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "3x10",
+      "seed": 1,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "d38c9d0edca564f2ac2786e5185ec3a93629eab62f52aa1ee0877ac9a3be987b",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 71.17537307739258,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.774238109588623,
+          "revenue_profile_sd": 0.5411562709026175,
+          "welfare": 6.946001795120537,
+          "regret_mean": 1.3966790390895767e-07,
+          "regret_max": 0.00012601667549461126,
+          "pmr": 0.004557291666666667,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.774238109588623,
+          "revenue_profile_sd": 0.5411562709026175,
+          "welfare": 6.946001795120537,
+          "regret_mean": 6.806081339997642e-07,
+          "regret_max": 0.00020156428217887878,
+          "pmr": 0.013671875,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.774238109588623,
+          "revenue_profile_sd": 0.5411562709026175,
+          "welfare": 6.946001795120537,
+          "regret_mean": 0.002684067560996558,
+          "regret_max": 0.037918686866760254,
+          "pmr": 1.0,
+          "max_summary_error": 0.0
+        }
+      ]
+    },
+    {
+      "directory": "evaluation/RegretNet_OptimalerBudget_3x10/seed2",
+      "method": "RegretNet_OptimalerBudget",
+      "setting": "3x10",
+      "seed": 2,
+      "source_role": "released_author_checkpoint",
+      "seed_role": "author_checkpoint_directory_label",
+      "checkpoint_sha256": "02b7c6086abb66acc01ab274e538504c46cf5776892b2f15f5b1b583f1ff35c9",
+      "status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 72.1680269241333,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "shape": [
+        512,
+        3,
+        10
+      ],
+      "profiles_sha_matches": true,
+      "test_sha_matches": true,
+      "audit_input_sha_matches": true,
+      "all_finite": true,
+      "raw_null_allocation_fraction": 0.0,
+      "max_truthful_ir_violation": 0.0,
+      "max_truthful_allocation_excess": 1.1920928955078125e-07,
+      "gains_nonnegative": true,
+      "nested_random_monotone": true,
+      "strong_monotone": true,
+      "strong_equals_max": true,
+      "summary": [
+        {
+          "audit": "random_32",
+          "revenue": 5.759692455641925,
+          "revenue_profile_sd": 0.5490697398527363,
+          "welfare": 6.943465852178633,
+          "regret_mean": 3.2275392906437145e-07,
+          "regret_max": 0.00024658371694386005,
+          "pmr": 0.00390625,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.759692455641925,
+          "revenue_profile_sd": 0.5490697398527363,
+          "welfare": 6.943465852178633,
+          "regret_mean": 1.1311674749473848e-06,
+          "regret_max": 0.00043880660086870193,
+          "pmr": 0.011067708333333334,
+          "max_summary_error": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.759692455641925,
+          "revenue_profile_sd": 0.5490697398527363,
+          "welfare": 6.943465852178633,
+          "regret_mean": 0.00262472117735039,
+          "regret_max": 0.04504084587097168,
+          "pmr": 0.9993489583333334,
+          "max_summary_error": 0.0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "gemnet": [
+    {
+      "seed": 0,
+      "training_steps": 20000,
+      "validation_checks": 200,
+      "selected": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.0,
+        "revenue_sample_std": 0.0,
+        "welfare_mean": 0.0,
+        "incompatibility_rate": 0.0,
+        "allocation_excess_max": 0.0,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": true,
+        "global_dsic_certified": false,
+        "step": 100,
+        "validation_seed": 1000003,
+        "qualified": true
+      },
+      "last_validation": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.4473498463630676,
+        "revenue_sample_std": 0.4159035384654999,
+        "welfare_mean": 0.5469661355018616,
+        "incompatibility_rate": 0.11598,
+        "allocation_excess_max": 0.4134206771850586,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": false,
+        "global_dsic_certified": false,
+        "step": 20000,
+        "validation_seed": 1000003
+      },
+      "qualified_validation_count": 30,
+      "qualified_positive_revenue_count": 0,
+      "max_validation_revenue": 0.4482061266899109,
+      "final_learning_rate": 5.000000000000002e-12,
+      "final_lambda": 200.95423445425877,
+      "transform_diagnostics": {
+        "before": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "after": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "test_seed": 376557,
+        "global_dsic_certified": false,
+        "degenerate_allocation_rate": 1.0,
+        "before_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "after_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "revenue_retention_ratio": null,
+        "full_grid": {
+          "checked": true,
+          "n_profiles": 2401,
+          "allocation_excess_max": 0.0,
+          "violations": 0,
+          "finite_grid_feasible": true
+        },
+        "valid_for_empirical_revenue_comparison": true,
+        "status": "FINITE_CHECKS_PASSED_NOT_GLOBAL_CERTIFICATE"
+      },
+      "number_grid_contexts": 49,
+      "solver_counts": {
+        "paper_zero_violation_skip": 49
+      },
+      "nonzero_price_adjustments": 0,
+      "prepost_raw_all_zero": true,
+      "paper_use": "diagnostic_only_degenerate_reimplementation"
+    },
+    {
+      "seed": 1,
+      "training_steps": 20000,
+      "validation_checks": 200,
+      "selected": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.0,
+        "revenue_sample_std": 0.0,
+        "welfare_mean": 0.0,
+        "incompatibility_rate": 0.0,
+        "allocation_excess_max": 0.0,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": true,
+        "global_dsic_certified": false,
+        "step": 100,
+        "validation_seed": 1000004,
+        "qualified": true
+      },
+      "last_validation": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.5022748708724976,
+        "revenue_sample_std": 0.4565068781375885,
+        "welfare_mean": 0.608919084072113,
+        "incompatibility_rate": 0.11092,
+        "allocation_excess_max": 0.5297805070877075,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": false,
+        "global_dsic_certified": false,
+        "step": 20000,
+        "validation_seed": 1000004
+      },
+      "qualified_validation_count": 30,
+      "qualified_positive_revenue_count": 0,
+      "max_validation_revenue": 0.5052196979522705,
+      "final_learning_rate": 5.000000000000002e-12,
+      "final_lambda": 200.9582996677602,
+      "transform_diagnostics": {
+        "before": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "after": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "test_seed": 376557,
+        "global_dsic_certified": false,
+        "degenerate_allocation_rate": 1.0,
+        "before_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "after_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "revenue_retention_ratio": null,
+        "full_grid": {
+          "checked": true,
+          "n_profiles": 2401,
+          "allocation_excess_max": 0.0,
+          "violations": 0,
+          "finite_grid_feasible": true
+        },
+        "valid_for_empirical_revenue_comparison": true,
+        "status": "FINITE_CHECKS_PASSED_NOT_GLOBAL_CERTIFICATE"
+      },
+      "number_grid_contexts": 49,
+      "solver_counts": {
+        "paper_zero_violation_skip": 49
+      },
+      "nonzero_price_adjustments": 0,
+      "prepost_raw_all_zero": true,
+      "paper_use": "diagnostic_only_degenerate_reimplementation"
+    },
+    {
+      "seed": 2,
+      "training_steps": 20000,
+      "validation_checks": 200,
+      "selected": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.0,
+        "revenue_sample_std": 0.0,
+        "welfare_mean": 0.0,
+        "incompatibility_rate": 0.0,
+        "allocation_excess_max": 0.0,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": true,
+        "global_dsic_certified": false,
+        "step": 100,
+        "validation_seed": 1000005,
+        "qualified": true
+      },
+      "last_validation": {
+        "n_profiles": 50000,
+        "revenue_mean": 0.5525988340377808,
+        "revenue_sample_std": 0.46929672360420227,
+        "welfare_mean": 0.661725640296936,
+        "incompatibility_rate": 0.09576,
+        "allocation_excess_max": 0.519038200378418,
+        "ir_violation_max": 0.0,
+        "payment_negative_max": 0.0,
+        "tolerance": 1e-06,
+        "feasible_on_evaluated_profiles": false,
+        "global_dsic_certified": false,
+        "step": 20000,
+        "validation_seed": 1000005
+      },
+      "qualified_validation_count": 30,
+      "qualified_positive_revenue_count": 0,
+      "max_validation_revenue": 0.5670739412307739,
+      "final_learning_rate": 5.000000000000002e-12,
+      "final_lambda": 200.9715596143896,
+      "transform_diagnostics": {
+        "before": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "after": {
+          "n_profiles": 2048,
+          "revenue_mean": 0.0,
+          "revenue_sample_std": 0.0,
+          "welfare_mean": 0.0,
+          "incompatibility_rate": 0.0,
+          "allocation_excess_max": 0.0,
+          "ir_violation_max": 0.0,
+          "payment_negative_max": 0.0,
+          "tolerance": 1e-06,
+          "feasible_on_evaluated_profiles": true,
+          "global_dsic_certified": false
+        },
+        "test_seed": 376557,
+        "global_dsic_certified": false,
+        "degenerate_allocation_rate": 1.0,
+        "before_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "after_null_choice_rate_by_bidder": [
+          1.0,
+          1.0
+        ],
+        "revenue_retention_ratio": null,
+        "full_grid": {
+          "checked": true,
+          "n_profiles": 2401,
+          "allocation_excess_max": 0.0,
+          "violations": 0,
+          "finite_grid_feasible": true
+        },
+        "valid_for_empirical_revenue_comparison": true,
+        "status": "FINITE_CHECKS_PASSED_NOT_GLOBAL_CERTIFICATE"
+      },
+      "number_grid_contexts": 49,
+      "solver_counts": {
+        "paper_zero_violation_skip": 49
+      },
+      "nonzero_price_adjustments": 0,
+      "prepost_raw_all_zero": true,
+      "paper_use": "diagnostic_only_degenerate_reimplementation"
+    }
+  ],
+  "notes": [
+    "24 completed checkpoint evaluations, 72 audit rows. 6 checkpoint evaluations reuse Phase I models; these are not additional independent runs.",
+    "All raw arrays, reported summary metrics, nested random and strong gains, and local profile/input hashes pass independent consistency checks.",
+    "Author directory labels 0/1/2 are not verified fresh training seeds. Source checkpoint hashes differ; report across-checkpoint sample SD.",
+    "All three GemNet selected models are all-null before and after transformation; zero regret and constraint validity are vacuous, not evidence of successful GemNet replication.",
+    "GemNet trained 20,000 steps but its validator selected step 100 in all seeds because qualified checks had zero revenue while later positive-revenue checks were incompatible.",
+    "All GemNet 49 context transformation calls per seed were zero-violation skips with zero price adjustments, so no nontrivial repair by MILP was demonstrated.",
+    "GemNet source is an independent paper-based implementation; do not attribute this failure to the published algorithm or remove it silently.",
+    "Main tables should stratify 3x10 vs 2x2 and fresh reimplementations vs author checkpoints; publish GemNet failure in separate diagnostics.",
+    "No full rerun is necessary to report the completed nondegenerate experiments. A valid GemNet performance comparison requires a targeted repaired training/selection/transform experiment before such a claim.",
+    "Regret is a finite-search lower bound, PMR denominator is profile-bidder pairs at threshold 1e-6, and near-zero regret is not continuous-domain DSIC certification.",
+    "Reported max-regret mean±SD is across unit-specific maxima; it is not the maximum over all units. A paper table must label the aggregation explicitly."
+  ],
+  "strong_paper_table": [
+    {
+      "setting": "2x2",
+      "method": "AMenuNet_PaperReimplementation",
+      "unit_role": "training seeds",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 0.8750983239620207,
+        "sd": 0.0019240715242214155
+      },
+      "welfare": {
+        "mean": 1.203725858149286,
+        "sd": 0.016489755315177337
+      },
+      "regret_mean": {
+        "mean": 4.4994390158148434e-17,
+        "sd": 9.790441670421534e-18
+      },
+      "regret_max": {
+        "mean": 4.255854927729767e-16,
+        "sd": 8.479468414379335e-17
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "parameter_count": {
+        "mean": 252753.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": 128.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 1047944.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 3.3011634315016636e-08,
+        "sd": 3.396258597553873e-09
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3792902594736498,
+        "sd": 0.00770730258954985
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "2x2",
+      "method": "GemNet_PaperReimplementation",
+      "unit_role": "training seeds",
+      "n": 3,
+      "paper_use": "diagnostic_only_degenerate_reimplementation",
+      "revenue": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "welfare": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "regret_mean": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "regret_max": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "parameter_count": {
+        "mean": 6049538.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": 300.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 72713330.0,
+        "sd": 0.0
+      },
+      "price_transform_file_bytes": {
+        "mean": 2550.0,
+        "sd": 4.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "2x2",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "unit_role": "author checkpoints",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 0.915490472413523,
+        "sd": 0.0033201412024610848
+      },
+      "welfare": {
+        "mean": 1.210623739877027,
+        "sd": 0.002614624890712544
+      },
+      "regret_mean": {
+        "mean": 0.0017059532126247822,
+        "sd": 0.0005097693859784661
+      },
+      "regret_max": {
+        "mean": 0.06505816181500752,
+        "sd": 0.024329984958800403
+      },
+      "pmr": {
+        "mean": 0.9007161458333334,
+        "sd": 0.008861105201052214
+      },
+      "parameter_count": {
+        "mean": 49985.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 205242.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3500607249117152,
+        "sd": 0.003732821264937367
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "2x2",
+      "method": "RegretNet_OptimalerBudget",
+      "unit_role": "author checkpoints",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 0.8982917254593227,
+        "sd": 0.0010736291846679478
+      },
+      "welfare": {
+        "mean": 1.1962473647572303,
+        "sd": 0.006208789583155758
+      },
+      "regret_mean": {
+        "mean": 0.000840670602567942,
+        "sd": 0.00011587672681653984
+      },
+      "regret_max": {
+        "mean": 0.007895161708196005,
+        "sd": 0.0002803608083106141
+      },
+      "pmr": {
+        "mean": 0.9166666666666666,
+        "sd": 0.004403564211741108
+      },
+      "parameter_count": {
+        "mean": 22008.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 90156.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.3438053655668544,
+        "sd": 0.004931930986857065
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "3x10",
+      "method": "AMenuNet_PaperReimplementation",
+      "unit_role": "training seeds",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 5.623575698863185,
+        "sd": 0.013471446530873425
+      },
+      "welfare": {
+        "mean": 6.765429997938019,
+        "sd": 0.021954025958505107
+      },
+      "regret_mean": {
+        "mean": 2.514867172534154e-16,
+        "sd": 3.748360317561919e-18
+      },
+      "regret_max": {
+        "mean": 2.9976021664879227e-15,
+        "sd": 4.839349969133127e-16
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "parameter_count": {
+        "mean": 795105.0,
+        "sd": 0.0
+      },
+      "menu_size": {
+        "mean": 512.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 3217224.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.0541613804093686e-07,
+        "sd": 3.4823085734080455e-09
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.6862232347759334,
+        "sd": 0.012847098586800894
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "3x10",
+      "method": "RegretFormer_AuthorsCheckpoint",
+      "unit_role": "author checkpoints",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 6.201968976606925,
+        "sd": 0.0314678228724445
+      },
+      "welfare": {
+        "mean": 7.228423777812471,
+        "sd": 0.002307349978958508
+      },
+      "regret_mean": {
+        "mean": 0.009516511336299703,
+        "sd": 0.002466719268095239
+      },
+      "regret_max": {
+        "mean": 0.3570057153701782,
+        "sd": 0.1343726591061967
+      },
+      "pmr": {
+        "mean": 0.9893663194444445,
+        "sd": 0.004334849035468339
+      },
+      "parameter_count": {
+        "mean": 362753.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 1459804.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.6036454685811764,
+        "sd": 0.01386359771447982
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "3x10",
+      "method": "RegretNet_OptimalerBudget",
+      "unit_role": "author checkpoints",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 5.769371894498666,
+        "sd": 0.00838268181765958
+      },
+      "welfare": {
+        "mean": 6.951582309479515,
+        "sd": 0.011929502342486218
+      },
+      "regret_mean": {
+        "mean": 0.0026198220877991694,
+        "sd": 6.682983039961888e-05
+      },
+      "regret_max": {
+        "mean": 0.043618977069854736,
+        "sd": 0.005139061635161818
+      },
+      "pmr": {
+        "mean": 0.9995659722222223,
+        "sd": 0.00037587908150364126
+      },
+      "parameter_count": {
+        "mean": 91343.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 369246.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.5463395617803815,
+        "sd": 0.004490998723354272
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    },
+    {
+      "setting": "3x10",
+      "method": "RegretNet_PaperReimplementation",
+      "unit_role": "training seeds",
+      "n": 3,
+      "paper_use": "limited_source_stratified_empirical_comparison",
+      "revenue": {
+        "mean": 5.561350284609944,
+        "sd": 0.014008837959594862
+      },
+      "welfare": {
+        "mean": 6.811598376370966,
+        "sd": 0.003558528244211139
+      },
+      "regret_mean": {
+        "mean": 0.0014725206686831722,
+        "sd": 0.00012716362852702366
+      },
+      "regret_max": {
+        "mean": 0.018142883976300556,
+        "sd": 0.006378886504081427
+      },
+      "pmr": {
+        "mean": 0.9991319444444445,
+        "sd": 0.00037587908150370534
+      },
+      "parameter_count": {
+        "mean": 91747.0,
+        "sd": 0.0
+      },
+      "checkpoint_file_bytes": {
+        "mean": 376502.0,
+        "sd": 0.0
+      },
+      "max_truthful_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_overallocation": {
+        "mean": 1.1920928955078125e-07,
+        "sd": 0.0
+      },
+      "max_negative_allocation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "max_negative_payment": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "revenue_profile_sd": {
+        "mean": 0.536260013487892,
+        "sd": 0.006575200788447104
+      },
+      "max_bidder_ir_violation": {
+        "mean": 0.0,
+        "sd": 0.0
+      },
+      "ir_violation_fraction": {
+        "mean": 0.0,
+        "sd": 0.0
+      }
+    }
+  ],
+  "gemnet_cpu_replay": {
+    "torch_version": "2.14.1+cpu",
+    "purpose": "Independent inference on same 2048 diagnostic profiles using saved selected weights read directly from original tar; not retraining.",
+    "units": [
+      {
+        "seed": 0,
+        "n_profiles": 2048,
+        "checkpoint_sha256": "b8d954fda0d0ea4287b2baff9e0ebabbb8577845d2dd03728dd4d5bdc2765af3",
+        "allocation_nonzero": 0,
+        "payment_nonzero": 0
+      },
+      {
+        "seed": 1,
+        "n_profiles": 2048,
+        "checkpoint_sha256": "b2f25134c0099ad9399793787f1010cd8e4b5e41c8a84df27ae4a43d38d589ec",
+        "allocation_nonzero": 0,
+        "payment_nonzero": 0
+      },
+      {
+        "seed": 2,
+        "n_profiles": 2048,
+        "checkpoint_sha256": "e4249bfee7ff86d0b3830451f9ffb3f2a572a784b6a92d961df1c9859a684094",
+        "allocation_nonzero": 0,
+        "payment_nonzero": 0
+      }
+    ]
+  },
+  "local_extraction_issue": "Resolved: transient local extracted seed1 GemNet checkpoint was incomplete; original uploaded archive member always complete and hash verified. Root restored exact archive member. No user extra upload needed.",
+  "source_snapshot": {
+    "included_modules": [
+      "phase1",
+      "common",
+      "gemnet",
+      "phase3_author"
+    ],
+    "not_in_feedback": "vendor/optimaler original author implementations and 12 author checkpoints are in original V5 code bundle, not duplicated in feedback archive. Checkpoint paths/hash/source commit retained.",
+    "gemnet_last_weights": "checkpoint_last.pt for step20000 intentionally excluded by packer; saved checkpoint.pt is selected step100. Final validation metrics available in validation.jsonl, not full final-weight replay evidence."
+  },
+  "gemnet_incompatibility_definition": "Fraction of 50,000 validation profiles where maximum item over-allocation max_j max(sum_i x_ij -1,0) exceeds1e-6; not average overload."
+}

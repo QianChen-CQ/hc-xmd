@@ -1,0 +1,44 @@
+Phase II V5 result audit
+Status: COMPLETED; 24/24 evaluations; 72 audit rows
+Suite wall time: 2.8241 hours
+Independent consistency errors: 0
+
+STRONG AUDIT (mean ± sample SD across 3 labelled units)
+2x2 AMenuNet_PaperReimplementation [limited_source_stratified_empirical_comparison]
+revenue=0.875098324 ± 0.001924071524; welfare=1.203725858 ± 0.01648975532; regret_mean=4.499439016e-17 ± 9.79044167e-18; regret_max=4.255854928e-16 ± 8.479468414e-17; pmr=0 ± 0
+2x2 GemNet_PaperReimplementation [diagnostic_only_degenerate_reimplementation]
+revenue=0 ± 0; welfare=0 ± 0; regret_mean=0 ± 0; regret_max=0 ± 0; pmr=0 ± 0
+2x2 RegretFormer_AuthorsCheckpoint [limited_source_stratified_empirical_comparison]
+revenue=0.9154904724 ± 0.003320141202; welfare=1.21062374 ± 0.002614624891; regret_mean=0.001705953213 ± 0.000509769386; regret_max=0.06505816182 ± 0.02432998496; pmr=0.9007161458 ± 0.008861105201
+2x2 RegretNet_OptimalerBudget [limited_source_stratified_empirical_comparison]
+revenue=0.8982917255 ± 0.001073629185; welfare=1.196247365 ± 0.006208789583; regret_mean=0.0008406706026 ± 0.0001158767268; regret_max=0.007895161708 ± 0.0002803608083; pmr=0.9166666667 ± 0.004403564212
+3x10 AMenuNet_PaperReimplementation [limited_source_stratified_empirical_comparison]
+revenue=5.623575699 ± 0.01347144653; welfare=6.765429998 ± 0.02195402596; regret_mean=2.514867173e-16 ± 3.748360318e-18; regret_max=2.997602166e-15 ± 4.839349969e-16; pmr=0 ± 0
+3x10 RegretFormer_AuthorsCheckpoint [limited_source_stratified_empirical_comparison]
+revenue=6.201968977 ± 0.03146782287; welfare=7.228423778 ± 0.002307349979; regret_mean=0.009516511336 ± 0.002466719268; regret_max=0.3570057154 ± 0.1343726591; pmr=0.9893663194 ± 0.004334849035
+3x10 RegretNet_OptimalerBudget [limited_source_stratified_empirical_comparison]
+revenue=5.769371894 ± 0.008382681818; welfare=6.951582309 ± 0.01192950234; regret_mean=0.002619822088 ± 6.68298304e-05; regret_max=0.04361897707 ± 0.005139061635; pmr=0.9995659722 ± 0.0003758790815
+3x10 RegretNet_PaperReimplementation [limited_source_stratified_empirical_comparison]
+revenue=5.561350285 ± 0.01400883796; welfare=6.811598376 ± 0.003558528244; regret_mean=0.001472520669 ± 0.0001271636285; regret_max=0.01814288398 ± 0.006378886504; pmr=0.9991319444 ± 0.0003758790815
+
+GEMNET DIAGNOSTIC
+Seed 0: selected step 100; all-null before/after; grid=2401, off-grid=2048; final validation revenue 0.447349846, incompatibility 0.11598; 0 eligible positive-revenue validations; {'paper_zero_violation_skip': 49}.
+Seed 1: selected step 100; all-null before/after; grid=2401, off-grid=2048; final validation revenue 0.502274871, incompatibility 0.11092; 0 eligible positive-revenue validations; {'paper_zero_violation_skip': 49}.
+Seed 2: selected step 100; all-null before/after; grid=2401, off-grid=2048; final validation revenue 0.552598834, incompatibility 0.09576; 0 eligible positive-revenue validations; {'paper_zero_violation_skip': 49}.
+
+INTERPRETATION
+24 completed checkpoint evaluations, 72 audit rows. 6 checkpoint evaluations reuse Phase I models; these are not additional independent runs.
+All raw arrays, reported summary metrics, nested random and strong gains, and local profile/input hashes pass independent consistency checks.
+Author directory labels 0/1/2 are not verified fresh training seeds. Source checkpoint hashes differ; report across-checkpoint sample SD.
+All three GemNet selected models are all-null before and after transformation; zero regret and constraint validity are vacuous, not evidence of successful GemNet replication.
+GemNet trained 20,000 steps but its validator selected step 100 in all seeds because qualified checks had zero revenue while later positive-revenue checks were incompatible.
+All GemNet 49 context transformation calls per seed were zero-violation skips with zero price adjustments, so no nontrivial repair by MILP was demonstrated.
+GemNet source is an independent paper-based implementation; do not attribute this failure to the published algorithm or remove it silently.
+Main tables should stratify 3x10 vs 2x2 and fresh reimplementations vs author checkpoints; publish GemNet failure in separate diagnostics.
+No full rerun is necessary to report the completed nondegenerate experiments. A valid GemNet performance comparison requires a targeted repaired training/selection/transform experiment before such a claim.
+Regret is a finite-search lower bound, PMR denominator is profile-bidder pairs at threshold 1e-6, and near-zero regret is not continuous-domain DSIC certification.
+Reported max-regret mean±SD is across unit-specific maxima; it is not the maximum over all units. A paper table must label the aggregation explicitly.
+
+INDEPENDENT CHECKPOINT REPLAY: all three selected GemNet saved models produced exactly zero allocation/payment on all 2048 diagnostic profiles on CPU PyTorch 2.14.1+cpu. Read directly from original tar because local extracted seed1 checkpoint was truncated; original archive member complete and hash verified, not user error.
+
+Local extraction issue resolved by root; original uploaded archive complete. GemNet last checkpoints at step20000 intentionally excluded by packer; validation records retained. Feedback includes phase1/common/gemnet/phase3_author source snapshots, but original Optimaler vendor source+12weights are in original V5 code bundle.

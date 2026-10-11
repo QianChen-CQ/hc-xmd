@@ -1,0 +1,221 @@
+HC-XMD Phase I V5 — independent source and mathematical audit
+Date: 2026-10-04
+
+Scope
+-----
+This is a reconstruction of RegretNet (2019) and AMenuNet (2023), not a
+recovery of the review authors' missing old checkpoints. Architecture and
+mechanism equations were independently checked against primary papers and
+local snapshots of the authors' repositories. This document does not certify
+new training performance; that evidence must come from the server runs.
+
+Primary sources and inspected snapshots
+--------------------------------------
+RegretNet paper:
+  https://proceedings.mlr.press/v97/duetting19a.html
+  https://proceedings.mlr.press/v97/duetting19a/duetting19a.pdf
+Author repository:
+  https://github.com/saisrivatsan/deep-opt-auctions
+  commit 466e154b123921c142ee811216d0e64415bf31a5
+  MIT license present.
+Files checked:
+  regretNet/nets/additive_net.py
+  regretNet/cfgs/additive_3x10_uniform_config.py
+  regretNet/trainer/trainer.py
+  regretNet/base/base_generator.py
+  regretNet/data/uniform_01_generator.py
+
+AMenuNet paper:
+  https://arxiv.org/html/2305.12162v3
+  Sections 3–4 and Appendix B/Table 3.
+Author repository:
+  https://github.com/Haoran0301/AMenuNet
+  commit a62ec44e9280ec7a87313d1b8036ccfa5402091e
+  No redistribution license was found in this snapshot. The author files
+  are used for local verification and are not redistributed in this package.
+Files checked:
+  code/net.py, code/auction.py, code/experiments.py,
+  code/gen_values.py, code/ablation3x10C.sh, code/settingC.sh.
+
+Shared experiment object
+------------------------
+Three additive bidders and ten items; each value independently uniform on
+[0,1]. Utilities use TRUE values, u_i = sum_j v_ij a_ij(b) - p_i(b).
+Only bidder i's report changes during a deviation test. Other bidders'
+reports and all public IDs/context remain fixed. Revenue is the sum of
+payments; expected welfare is sum_ij v_ij a_ij, with fractional allocation
+probabilities retained. Empirical searched regret is a lower bound on the
+maximum obtainable gain, not a certificate of approximate DSIC.
+
+RegretNet: verified source specification
+---------------------------------------
+The original 3x10 configuration uses separate allocation and payment MLPs.
+Each has five hidden layers, width 100, tanh activations, Glorot-uniform
+weights, and zero biases. The source's num_layers=6 includes the output.
+The allocation head has (n+1)*(m+1)=44 outputs, reshaped to [4,11]. Softmax
+is applied along the bidder dimension, then the first 3 bidders and first
+10 items are retained. The dummy-item outputs are present in the original
+code even though they are discarded. This implementation keeps them.
+Payment is sigmoid(payment_head_i(b)) * sum_j b_ij a_ij(b). Thus truthful
+utility is nonnegative for nonnegative values, but DSIC is not automatic.
+Expected parameter count at the stated dimensions: 91,747.
+
+The reference training configuration is FIXED data, not fresh online data:
+640,000 profiles = 5,000 batches * 128; randomized traversal each epoch;
+one cached misreport per profile, reused after optimization. It runs
+400,000 network updates. Network Adam learning rate is 0.001. Misreport
+optimization uses Adam, learning rate 0.1, 25 projected steps, and resets
+the inner Adam state for each batch. All reports stay within [0,1].
+
+Let r_i be batch-mean positive unilateral gain after inner optimization.
+The network objective is -mean_revenue + sum_i lambda_i*r_i
+                         + (rho/2)*sum_i r_i^2.
+The source initializes lambda_i=5 and rho=1; updates lambda every 100
+network steps and increments rho by 1 every 10,000 steps. Its initial
+iteration also invokes a multiplier update before assigning that batch's
+cached reports, an ambiguous implementation detail that the new code
+does not reproduce; the first scheduled update is after 100 steps.
+
+Original validation settings: 20 batches of 128, one start, 2,000 inner
+Adam steps, learning rate 0.1, validation every 10,000 network updates.
+Original test settings: 10,000 profiles, 1,000 starts, 2,000 inner Adam
+steps, learning rate 0.1. The new shared audit has its own explicit budget
+and must not be described as exactly reproducing this original test.
+PyTorch RNG and Adam floating-point details also prevent bitwise equivalence
+to the original TensorFlow implementation.
+
+AMenuNet: verified paper/source specification
+--------------------------------------------
+The learned menu generator receives public bidder/item representations,
+not reported values. Fixed IDs implement the classic non-contextual case.
+It uses bidder/item embeddings; two pointwise linear maps with a ReLU;
+three axial interaction blocks combining item attention, bidder attention,
+and the global mean; and a final output dimension 2*K+1 for K=512.
+Each attention encoder uses 64 channels, 4 heads, feedforward width 64,
+and zero dropout in the inspected author source. Per-block merge maps
+3*64 channels through 64 with ReLU, then to the block's output size.
+
+The first K channels form allocation logits. Softmax with multiplier 10
+across the 4 bidders produces feasible allocation probabilities; the
+dummy bidder is removed. The last channel, averaged across items and
+passed through sigmoid, produces strictly positive bidder weights.
+The remaining K channels, averaged across bidders/items, feed a K-to-K
+ReLU K-to-K MLP to produce boosts. A no-sale menu entry with allocation
+zero and boost zero is appended, as in the authors' mechanism code.
+Report learned menu entries as 512 and total candidates including this
+explicit no-sale option as 513; do not conflate the two counts.
+
+For each profile choose k* maximizing sum_i w_i sum_j b_ij A_kij + boost_k.
+The exact payment to i is
+ [max_k (sum_{l!=i} w_l sum_j b_lj A_klj + boost_k)
+  - (sum_{l!=i} w_l sum_j b_lj A_k*lj + boost_k*)] / w_i.
+Both maximizations use the same full menu. During training only, both
+choices use softmax expectations with score multiplier 500. Testing uses
+hard argmax/max, preserving the paper's actual AMA mechanism. A direct
+softmax allocation at test time is not the claimed exact-DSIC mechanism.
+
+The 3x10 classic setting in paper Table 3 uses menu size 512, allocation
+temperature 10, and 2,000 outer rounds. Each round draws 32,768 fresh
+profiles and uses minibatches of 2,048, i.e. 16 network updates per round.
+The loss is negative mean revenue, without a regret penalty. Adam uses
+learning rate 0.0003 after linear warmup from 1e-8 over 100 rounds.
+The author's 3,000/6,000-round learning-rate decays do not activate in
+the 2,000-round configuration. Paper evaluation uses 100,000 profiles
+and five runs; three V5 seeds or a smaller common audit is a declared
+review replication protocol, not a reproduction of that full experiment.
+
+Explicit paper/source differences
+---------------------------------
+1. Paper Appendix B says non-contextual ID embeddings have dimension 16;
+   code/experiments.py defaults to 10 and the inspected 3x10 shell does
+   not override it. The paper preset uses 16. The model supports 10 for
+   source parity checks. Parameter counts are 795,105 (16) and 794,253 (10).
+2. The paper's phrase 2^15=32784 contains an arithmetic typo. 2^15 and
+   the released code are 32768, which is the value used here.
+3. The public code increments the learning rate at rounds i<=100 after
+   training, overshooting the desired warmup slightly. The new preset
+   explicitly implements the stated 100-round linear warmup.
+4. The public experiment saves its last checkpoint before training the
+   final outer round, while evaluating the in-memory model after that
+   round. The new code must save the actually completed training state.
+5. Generating the non-contextual public menu once per batch and broadcasting
+   it is mathematically equivalent to repeating identical IDs across all
+   examples; it saves substantial computation. It must retain gradients
+   during training and may cache detached menus only for evaluation.
+
+Independent model tests completed on CPU
+---------------------------------------
+Tests use seed 141, PyTorch float64. AMenuNet K=512, three blocks, embedding
+10, eight examples. Every new parameter was mapped by its architecture role
+to the original author's model and loaded with strict=True. The only change
+to the author code for this in-memory test was removing an unused IPython
+debug import; no model or mechanism operation was modified.
+
+New-vs-author maximum absolute differences:
+  Hard allocation: 0
+  Hard payment: 2.886579864025407e-15
+  Soft training allocation: 4.3798298321462426e-14
+  Soft training payment: 1.5842882561400984e-13
+
+AMenuNet exact-mechanism check with 64 fresh profiles and 128 independently
+sampled unilateral reports per bidder:
+  Largest gain: 2.7755575615628914e-15
+  Minimum truthful utility: 0.11804462754231818
+  Minimum payment: 0
+  Largest item allocation probability summed over bidders: 0.9985133962395019
+These are software checks on random weights, not trained-model results.
+
+RegretNet forward was recomputed independently in NumPy from the network
+parameters, including dummy-item slice and fractional payment:
+  Allocation maximum absolute difference: 1.6653345369377348e-16
+  Payment maximum absolute difference: 3.3306690738754696e-16
+The unilateral-utility routine was compared against explicit nested loops
+over five profiles, seven reports, and all three bidders:
+  Maximum absolute difference across bidders: 5.551115123125783e-16
+
+Numerical and manuscript boundaries
+----------------------------------
+Floating-point cancellation can produce tiny positive gains for an exact
+AMA. Retain raw values, record dtype and the PMR tolerance, and distinguish
+roundoff from a mathematical DSIC counterexample. The finite search tests
+above do not themselves prove DSIC; the property follows from the exact
+AMA allocation/payment with a report-independent menu and positive weights.
+
+The submitted review claims three independent runs and 64 evaluation
+profiles per run, with 32 random candidate misreports in Phase I. Its old
+two-row CSV alone does not establish the runs, weights, or standard
+deviations. V5 results must be newly labeled and replace unsupported old
+empirical claims. Do not fabricate rule-card length, branch count, human
+comprehensibility, or participant evidence from a network's name. Missing
+human/proxy annotations remain unavailable until an explicit artifact and
+measurement procedure exist.
+
+Independent training and continuation tests
+------------------------------------------
+The completed train.py was checked against the source specification above.
+Its batched unilateral utilities were independently recomputed using loops
+over 9 profiles and all bidders: maximum absolute error 5.55e-16. The
+augmented-Lagrangian objective matched an independent expression exactly
+in that float64 check. Three Adam misreport updates stayed within [0,1],
+returned detached reports, and accumulated no network-parameter gradients.
+The scheduled multiplier update recomputes regret after the network update,
+consistent with the original training order.
+
+Independent interrupted-run tests saved at step/round 2, disturbed global
+random state, restored model/optimizer/cache/shuffle or sample RNG, and
+continued training. RegretNet reached step 6 and AMenuNet reached round 4.
+Every final model tensor was bitwise equal to its uninterrupted-run counterpart
+for both methods (maximum difference zero). These tests used CPU; GPU
+execution and numerical reproducibility must be confirmed on the server.
+
+One integration correction was made during this audit: after interruption,
+training log entries newer than the restored checkpoint are removed from the
+active trajectory before appending, avoiding duplicated or conflicting steps.
+Independent rollback tests passed both at an intermediate saved step and at
+step zero when restarting before the first checkpoint. Resume history records
+the restored step and current source hashes.
+
+The implementation now promotes the frozen AMenuNet menu to float64 for exact
+AMA evaluation arithmetic; model generation/training remains float32. This
+avoids evaluating DSIC roundoff at the float32 cancellation scale. It does not
+change the learned parameters or replace hard maximization by a surrogate.

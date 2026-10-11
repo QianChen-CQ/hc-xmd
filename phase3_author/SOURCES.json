@@ -1,0 +1,58 @@
+{
+  "retrieved_utc": "2026-10-04",
+  "sources": [
+    {
+      "method": "CITransNet",
+      "url": "https://github.com/zjduan/CITransNet",
+      "commit": "b33e34058d1e3febe1f0fbeb1d5d799c268cd928",
+      "paper": "https://proceedings.mlr.press/v162/duan22a/duan22a.pdf",
+      "license": "MIT; included in vendor/CITransNet/LICENSE",
+      "source_role": "Exact original network class definitions; portable training adapter follows Setting H."
+    },
+    {
+      "method": "PreferenceNet",
+      "url": "https://github.com/neeharperi/PreferenceNet",
+      "commit": "1419a4654a4c6a5aabffd7eb2a89d077979cd965",
+      "paper": "https://proceedings.neurips.cc/paper/2021/file/92977ae4d2ba21425a59afb269c2a14e-Paper.pdf",
+      "license": "No explicit repository LICENSE found. This supplied research working bundle is not a declaration of permission to republish upstream code. Resolve permission before GitHub redistribution.",
+      "source_role": "Exact original RegretNet mechanism and PreferenceNet classifier class definitions; training adapter ports author loss and self-training."
+    },
+    {
+      "method": "ProportionNet",
+      "paper": "https://arxiv.org/pdf/2010.06398",
+      "source_role": "Independent implementation of original paper Eq.(4),(5), Algorithm 1. RegretNet neural architecture from cited PreferenceNet author code; not the different absolute-TVF baseline."
+    }
+  ],
+  "files": [
+    {
+      "path": "vendor/CITransNet/LICENSE",
+      "sha256": "1a40c5bf8de05af73f0060c7dfd0dfcc382c42dae580dc0f5e41387ef7dd3e1e",
+      "bytes": 1069
+    },
+    {
+      "path": "vendor/CITransNet/README.md",
+      "sha256": "8ff659eb9e9696f8719cedaf23dd0c25c74e26bb5a023435a1aa9df9e373a516",
+      "bytes": 910
+    },
+    {
+      "path": "vendor/CITransNet/network.py",
+      "sha256": "b5b58c7cec5605e87caebfcd44d6ceebf3c9d6d6681807d0034fb6f19f5bdaf2",
+      "bytes": 4091
+    },
+    {
+      "path": "vendor/PreferenceNet/README.md",
+      "sha256": "fe90fd38ddca03adfb1c2ed203f16d16bb948e2bd63e76e45890028a75fdfab7",
+      "bytes": 3577
+    },
+    {
+      "path": "vendor/PreferenceNet/learnable_preferences/network.py",
+      "sha256": "bceca30800969dda544f94bee51ce20a0d19293f80ac9a61e30839747201de76",
+      "bytes": 972
+    },
+    {
+      "path": "vendor/PreferenceNet/learnable_preferences/regretnet.py",
+      "sha256": "39bf69999f15ec5ee9352ac1faecde0793fca67bdd6885227dbbb9684bfc232b",
+      "bytes": 31464
+    }
+  ]
+}

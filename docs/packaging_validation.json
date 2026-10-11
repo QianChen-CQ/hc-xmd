@@ -1,0 +1,28 @@
+{
+  "bash_syntax": true,
+  "help": true,
+  "invalid_mode_rejected": true,
+  "output_override_rejected": true,
+  "python_ast_failures": [],
+  "original_python_unchanged_count": 100,
+  "original_python_changed": [],
+  "fetch_tests": {
+    "missing_files_rejected": true,
+    "offline_restore_success": true,
+    "exact_check_success": true,
+    "modified_file_rejected": true,
+    "live_network_tested": false
+  },
+  "wrapper_mock_tests": {
+    "success_exit": 0,
+    "explicit_phase1_dependency_correct": true,
+    "console_log_retained": true,
+    "feedback_archive_created": true,
+    "failure_exit_preserved": true,
+    "failure_console_retained": true,
+    "feedback_has_output_under_source": false,
+    "models_executed": false
+  },
+  "public_preferencenet_files_present": [],
+  "runtime_limitation": "No torch installed in current document runtime: no model smoke/GPU experiment executed in this packaging task; wrapper dispatch tested with an explicit mock only."
+}

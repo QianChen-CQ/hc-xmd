@@ -1,0 +1,1223 @@
+{
+  "phase": "Phase I",
+  "source_root": "/workspace/scratch/9217d3ede1fe/work/results_v5_audit/hc_xmd_phase1_v5_results",
+  "checks": {
+    "manifest": {
+      "entries": 138,
+      "dedup_resolved": 15,
+      "failures": []
+    },
+    "run_plan_source_hash_mismatches": [],
+    "aggregate_summary_mismatches": []
+  },
+  "per_run": [
+    {
+      "method": "RegretNet",
+      "seed": 0,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "RegretNet",
+        "preset": "paper",
+        "seed": 0,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 400000,
+        "optimizer_updates": 400000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/RegretNet_3x10/seed0/model_final.pt",
+        "checkpoint_sha256": "c1b25dadd1ef5e5bd32ba8b8f569d00ec1577c13e33155701ddacee14d7c2c7b",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 75.09538316726685,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "400000",
+        "optimizer_updates": "400000",
+        "sample_exposures": "51200000",
+        "revenue_train_batch": "5.525862693786621",
+        "regret_bidder_mean_train_batch": "0.0008989977650344372",
+        "loss": "-5.298588752746582",
+        "constraint_quadratic": "4.9004262109519914e-05",
+        "constraint_lagrangian": "0.22722464799880981",
+        "rho_used": "40.0",
+        "lambda_mean": "84.28326416015625",
+        "rho": "41.0",
+        "elapsed_this_process_seconds": "67485.61271523777"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "hidden": 100,
+          "hidden_layers": 5
+        },
+        "seed": 0,
+        "steps": 400000,
+        "batch_size": 128,
+        "train_profiles": 640000,
+        "learning_rate": 0.001,
+        "inner_steps": 25,
+        "inner_lr": 0.1,
+        "lambda_initial": 5.0,
+        "rho_initial": 1.0,
+        "lambda_frequency": 100,
+        "rho_frequency": 10000,
+        "rho_increment": 1.0,
+        "save_every": 50000,
+        "log_every": 1000
+      },
+      "source": {
+        "paper": "https://proceedings.mlr.press/v97/duetting19a.html",
+        "repository": "https://github.com/saisrivatsan/deep-opt-auctions",
+        "commit": "466e154b123921c142ee811216d0e64415bf31a5",
+        "implementation": "New PyTorch port of original 2019 additive architecture and augmented-Lagrangian algorithm; not original TF code or weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 9.5367431640625e-07,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 1.3973325015588975e-08,
+          "regret_max": 2.1463027223944664e-05,
+          "pmr": 0.0006510416666666666,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 5.922386208112584e-07,
+          "regret_max": 0.0007733944803476334,
+          "pmr": 0.0032552083333333335,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.556284348014742,
+          "revenue_profile_sd": 0.543504269919883,
+          "welfare": 6.809324285946786,
+          "regret_mean": 0.0016142414916089365,
+          "regret_max": 0.015325784683227539,
+          "pmr": 0.9993489583333334,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 91747,
+      "menu_size": "",
+      "checkpoint_hash": "eb6075defe6407688bd261b0ca1174c15b9ccae1a96a5f3bb191867d2e06f52c",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float32",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/RegretNet_3x10/seed0",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 8.940696716308594e-07,
+        "payment_max_abs_delta": 2.1457672119140625e-06,
+        "stored_strong_witness_gain_max_abs_delta": 1.9073486328125e-06,
+        "cpu_revenue": 5.556284339167178,
+        "cpu_strong_witness_mean_gain": 0.00161417341073881,
+        "cpu_strong_witness_pmr": 0.9993489583333334,
+        "checkpoint_completed": true,
+        "checkpoint_step": 400000,
+        "checkpoint_seed": 0
+      }
+    },
+    {
+      "method": "RegretNet",
+      "seed": 1,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "RegretNet",
+        "preset": "paper",
+        "seed": 1,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 400000,
+        "optimizer_updates": 400000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/RegretNet_3x10/seed1/model_final.pt",
+        "checkpoint_sha256": "a1ef7dcb37154596dfcbd629d4e4603f09a70d6cf1c69efff48f3a2b269aa658",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 80.56484723091125,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "400000",
+        "optimizer_updates": "400000",
+        "sample_exposures": "51200000",
+        "revenue_train_batch": "5.6294355392456055",
+        "regret_bidder_mean_train_batch": "0.0008771896245889366",
+        "loss": "-5.407251834869385",
+        "constraint_quadratic": "4.846360388910398e-05",
+        "constraint_lagrangian": "0.22213512659072876",
+        "rho_used": "40.0",
+        "lambda_mean": "84.41773986816406",
+        "rho": "41.0",
+        "elapsed_this_process_seconds": "68751.77151199616"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "hidden": 100,
+          "hidden_layers": 5
+        },
+        "seed": 1,
+        "steps": 400000,
+        "batch_size": 128,
+        "train_profiles": 640000,
+        "learning_rate": 0.001,
+        "inner_steps": 25,
+        "inner_lr": 0.1,
+        "lambda_initial": 5.0,
+        "rho_initial": 1.0,
+        "lambda_frequency": 100,
+        "rho_frequency": 10000,
+        "rho_increment": 1.0,
+        "save_every": 50000,
+        "log_every": 1000
+      },
+      "source": {
+        "paper": "https://proceedings.mlr.press/v97/duetting19a.html",
+        "repository": "https://github.com/saisrivatsan/deep-opt-auctions",
+        "commit": "466e154b123921c142ee811216d0e64415bf31a5",
+        "implementation": "New PyTorch port of original 2019 additive architecture and augmented-Lagrangian algorithm; not original TF code or weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 9.5367431640625e-07,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 3.8791843811244085e-08,
+          "regret_max": 4.3097970774397254e-05,
+          "pmr": 0.001953125,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 5.460879037855193e-08,
+          "regret_max": 4.3097970774397254e-05,
+          "pmr": 0.0026041666666666665,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.577187378425151,
+          "revenue_profile_sd": 0.5346060892676913,
+          "welfare": 6.815699288621545,
+          "regret_mean": 0.0014349317868228202,
+          "regret_max": 0.02544534206390381,
+          "pmr": 0.9986979166666666,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 91747,
+      "menu_size": "",
+      "checkpoint_hash": "d1a789c808ccb025fc3e4fcbf0fb839d31233541858594617592656e44f58f14",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float32",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/RegretNet_3x10/seed1",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 7.152557373046875e-07,
+        "payment_max_abs_delta": 1.9073486328125e-06,
+        "stored_strong_witness_gain_max_abs_delta": 1.6689300537109375e-06,
+        "cpu_revenue": 5.577187403570861,
+        "cpu_strong_witness_mean_gain": 0.0014348445844139708,
+        "cpu_strong_witness_pmr": 0.9986979166666666,
+        "checkpoint_completed": true,
+        "checkpoint_step": 400000,
+        "checkpoint_seed": 1
+      }
+    },
+    {
+      "method": "RegretNet",
+      "seed": 2,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "RegretNet",
+        "preset": "paper",
+        "seed": 2,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 400000,
+        "optimizer_updates": 400000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/RegretNet_3x10/seed2/model_final.pt",
+        "checkpoint_sha256": "a8c67335082f59d3e4493c87e4cf49309e3e4133aee11373204fe358a0b7fe6f",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 79.50063180923462,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "400000",
+        "optimizer_updates": "400000",
+        "sample_exposures": "51200000",
+        "revenue_train_batch": "5.478630065917969",
+        "regret_bidder_mean_train_batch": "0.0010690251365303993",
+        "loss": "-5.2062788009643555",
+        "constraint_quadratic": "7.395938882837072e-05",
+        "constraint_lagrangian": "0.2722775340080261",
+        "rho_used": "40.0",
+        "lambda_mean": "84.7791519165039",
+        "rho": "41.0",
+        "elapsed_this_process_seconds": "67656.73424514383"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "hidden": 100,
+          "hidden_layers": 5
+        },
+        "seed": 2,
+        "steps": 400000,
+        "batch_size": 128,
+        "train_profiles": 640000,
+        "learning_rate": 0.001,
+        "inner_steps": 25,
+        "inner_lr": 0.1,
+        "lambda_initial": 5.0,
+        "rho_initial": 1.0,
+        "lambda_frequency": 100,
+        "rho_frequency": 10000,
+        "rho_increment": 1.0,
+        "save_every": 50000,
+        "log_every": 1000
+      },
+      "source": {
+        "paper": "https://proceedings.mlr.press/v97/duetting19a.html",
+        "repository": "https://github.com/saisrivatsan/deep-opt-auctions",
+        "commit": "466e154b123921c142ee811216d0e64415bf31a5",
+        "implementation": "New PyTorch port of original 2019 additive architecture and augmented-Lagrangian algorithm; not original TF code or weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 9.5367431640625e-07,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 2.4551942109004205e-08,
+          "regret_max": 2.6245572371408343e-05,
+          "pmr": 0.0013020833333333333,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 3.183214876874748e-08,
+          "regret_max": 2.6245572371408343e-05,
+          "pmr": 0.0026041666666666665,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.550579127389938,
+          "revenue_profile_sd": 0.5306696812761016,
+          "welfare": 6.809771554544568,
+          "regret_mean": 0.0013683887276177604,
+          "regret_max": 0.013657525181770325,
+          "pmr": 0.9993489583333334,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.1920928955078125e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 91747,
+      "menu_size": "",
+      "checkpoint_hash": "32b403b1a58d4bddc6accbb310f1f1cc1c806e17ca5d72891b9cfd7202a78307",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float32",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/RegretNet_3x10/seed2",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 7.450580596923828e-07,
+        "payment_max_abs_delta": 1.9073486328125e-06,
+        "stored_strong_witness_gain_max_abs_delta": 1.9073486328125e-06,
+        "cpu_revenue": 5.550579171162099,
+        "cpu_strong_witness_mean_gain": 0.0013683002995321658,
+        "cpu_strong_witness_pmr": 0.9993489583333334,
+        "checkpoint_completed": true,
+        "checkpoint_step": 400000,
+        "checkpoint_seed": 2
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "seed": 0,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "AMenuNet",
+        "preset": "paper",
+        "seed": 0,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 2000,
+        "optimizer_updates": 32000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/AMenuNet_3x10/seed0/model_final.pt",
+        "checkpoint_sha256": "f19c1b070082a5c3c483e51a3b05ce34c168494c9d287f79cbf1df00036bc38c",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.6610825061798096,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "2000",
+        "optimizer_updates": "32000",
+        "sample_exposures": "65536000",
+        "surrogate_revenue_train_round": "5.607590734958649",
+        "loss": "-5.607590734958649",
+        "learning_rate": "0.0003",
+        "elapsed_this_process_seconds": "1153.6845790948719"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "menu_size": 512,
+          "embed_dim": 16,
+          "width": 64,
+          "layers": 3,
+          "heads": 4,
+          "allocation_temperature": 10.0,
+          "choice_temperature": 500.0
+        },
+        "seed": 0,
+        "steps": 2000,
+        "batch_size": 2048,
+        "profiles_per_round": 32768,
+        "learning_rate": 0.0003,
+        "warmup_start": 1e-08,
+        "warmup_rounds": 100,
+        "save_every": 100,
+        "log_every": 1
+      },
+      "source": {
+        "paper": "https://papers.nips.cc/paper_files/paper/2023/hash/af31604708f3e44b4de9fdfa6dcaa9d1-Abstract-Conference.html",
+        "repository": "https://github.com/Haoran0301/AMenuNet",
+        "commit": "a62ec44e9280ec7a87313d1b8036ccfa5402091e",
+        "implementation": "Independent NeurIPS 2023 paper implementation, architecture and AMA equations cross-checked against author code; not author weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 8.881784197001252e-16,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 1.444157293750692e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0926097715469041e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 2.531250672029491e-16,
+          "regret_max": 2.7755575615628914e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0926097715469041e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.631955609257001,
+          "revenue_profile_sd": 0.6724387737341065,
+          "welfare": 6.7791272130541325,
+          "regret_mean": 2.531250672029491e-16,
+          "regret_max": 2.7755575615628914e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0926097715469041e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 795105,
+      "menu_size": "512",
+      "checkpoint_hash": "31a0e0c1860246c8a85c325aa834ab8afbd31da36b4b388167e44e045160cfc5",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float64",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/AMenuNet_3x10/seed0",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 4.0745362639427185e-09,
+        "payment_max_abs_delta": 7.46727337741504e-08,
+        "stored_strong_witness_gain_max_abs_delta": 2.7755575615628914e-15,
+        "cpu_revenue": 5.631955618113493,
+        "cpu_strong_witness_mean_gain": 5.984795992119984e-17,
+        "cpu_strong_witness_pmr": 0.0,
+        "checkpoint_completed": true,
+        "checkpoint_step": 2000,
+        "checkpoint_seed": 0
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "seed": 1,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "AMenuNet",
+        "preset": "paper",
+        "seed": 1,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 2000,
+        "optimizer_updates": 32000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/AMenuNet_3x10/seed1/model_final.pt",
+        "checkpoint_sha256": "322675875cf816ad0959242abcafd11e2a63f006c5d7863581cdcc04589391ea",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.542675256729126,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "2000",
+        "optimizer_updates": "32000",
+        "sample_exposures": "65536000",
+        "surrogate_revenue_train_round": "5.603800505399704",
+        "loss": "-5.603800505399704",
+        "learning_rate": "0.0003",
+        "elapsed_this_process_seconds": "1031.4991573346779"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "menu_size": 512,
+          "embed_dim": 16,
+          "width": 64,
+          "layers": 3,
+          "heads": 4,
+          "allocation_temperature": 10.0,
+          "choice_temperature": 500.0
+        },
+        "seed": 1,
+        "steps": 2000,
+        "batch_size": 2048,
+        "profiles_per_round": 32768,
+        "learning_rate": 0.0003,
+        "warmup_start": 1e-08,
+        "warmup_rounds": 100,
+        "save_every": 100,
+        "log_every": 1
+      },
+      "source": {
+        "paper": "https://papers.nips.cc/paper_files/paper/2023/hash/af31604708f3e44b4de9fdfa6dcaa9d1-Abstract-Conference.html",
+        "repository": "https://github.com/Haoran0301/AMenuNet",
+        "commit": "a62ec44e9280ec7a87313d1b8036ccfa5402091e",
+        "implementation": "Independent NeurIPS 2023 paper implementation, architecture and AMA equations cross-checked against author code; not author weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 8.881784197001252e-16,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 1.423918853197629e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0451321941218339e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 2.47198095326695e-16,
+          "regret_max": 3.552713678800501e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0451321941218339e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.6307353118509225,
+          "revenue_profile_sd": 0.6978630349318021,
+          "welfare": 6.777054857280732,
+          "regret_mean": 2.47198095326695e-16,
+          "regret_max": 3.552713678800501e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0451321941218339e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 795105,
+      "menu_size": "512",
+      "checkpoint_hash": "31b8b95336253491756bb6964f0a5f9662919ffcc8c1baa7f5a996521741c8de",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float64",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/AMenuNet_3x10/seed1",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 1.1920928955078125e-07,
+        "payment_max_abs_delta": 1.0379126669235461e-07,
+        "stored_strong_witness_gain_max_abs_delta": 3.552713678800501e-15,
+        "cpu_revenue": 5.630735312923385,
+        "cpu_strong_witness_mean_gain": 5.890831803837908e-17,
+        "cpu_strong_witness_pmr": 0.0,
+        "checkpoint_completed": true,
+        "checkpoint_step": 2000,
+        "checkpoint_seed": 1
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "seed": 2,
+      "training_status": {
+        "state": "COMPLETED",
+        "method": "AMenuNet",
+        "preset": "paper",
+        "seed": 2,
+        "is_smoke": false,
+        "custom_budget": false,
+        "training_steps": 2000,
+        "optimizer_updates": 32000,
+        "checkpoint": "/root/hc_xmd_phase1_v5_results/training/AMenuNet_3x10/seed2/model_final.pt",
+        "checkpoint_sha256": "5a36f0b9fcd2f1c7b38db201f4c3be08290fdf1f733a2d1da8ff82023f14b6fb",
+        "evaluation_state": "NOT_RUN_USE_SHARED_EVALUATOR"
+      },
+      "evaluation_status": {
+        "state": "COMPLETED",
+        "scope": "requested_evaluation",
+        "wall_seconds": 2.5707004070281982,
+        "mechanism_valid_on_checked_reports": true,
+        "result_use": "limited_empirical_comparison"
+      },
+      "final_log": {
+        "step": "2000",
+        "optimizer_updates": "32000",
+        "sample_exposures": "65536000",
+        "surrogate_revenue_train_round": "5.5855089128017426",
+        "loss": "-5.5855089128017426",
+        "learning_rate": "0.0003",
+        "elapsed_this_process_seconds": "1038.2109151668847"
+      },
+      "training_config": {
+        "distribution": "iid Uniform[0,1], additive",
+        "preset": "paper",
+        "setting": "3x10",
+        "model": {
+          "n": 3,
+          "m": 10,
+          "menu_size": 512,
+          "embed_dim": 16,
+          "width": 64,
+          "layers": 3,
+          "heads": 4,
+          "allocation_temperature": 10.0,
+          "choice_temperature": 500.0
+        },
+        "seed": 2,
+        "steps": 2000,
+        "batch_size": 2048,
+        "profiles_per_round": 32768,
+        "learning_rate": 0.0003,
+        "warmup_start": 1e-08,
+        "warmup_rounds": 100,
+        "save_every": 100,
+        "log_every": 1
+      },
+      "source": {
+        "paper": "https://papers.nips.cc/paper_files/paper/2023/hash/af31604708f3e44b4de9fdfa6dcaa9d1-Abstract-Conference.html",
+        "repository": "https://github.com/Haoran0301/AMenuNet",
+        "commit": "a62ec44e9280ec7a87313d1b8036ccfa5402091e",
+        "implementation": "Independent NeurIPS 2023 paper implementation, architecture and AMA equations cross-checked against author code; not author weights"
+      },
+      "checks": {
+        "finite_arrays": true,
+        "shape_profiles": [
+          512,
+          3,
+          10
+        ],
+        "csv_rows": {
+          "profiles": 512,
+          "bidders": 1536
+        },
+        "raw_truth_utility_max_error": 8.881784197001252e-16,
+        "nested_gain_violations": 0,
+        "strong_gain_violations": 0,
+        "strong_equals_max": true,
+        "gain_nonnegative": true,
+        "checkpoint_sha_match_provenance": true,
+        "profile_npz_sha_match_provenance": true,
+        "max_abs_summary_error": 0.0,
+        "max_abs_profile_error": 0.0,
+        "max_abs_bidder_csv_error": 0.0
+      },
+      "metrics": [
+        {
+          "audit": "random_32",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 1.3986208025063007e-16,
+          "regret_max": 2.220446049250313e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0247421755593678e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "random_128",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 2.5413698923060224e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0247421755593678e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        },
+        {
+          "audit": "strong",
+          "revenue": 5.608036175481633,
+          "revenue_profile_sd": 0.6883678956618916,
+          "welfare": 6.74010792347919,
+          "regret_mean": 2.5413698923060224e-16,
+          "regret_max": 2.6645352591003757e-15,
+          "pmr": 0.0,
+          "max_truthful_ir_violation": 0.0,
+          "max_bidder_ir_violation": 0.0,
+          "ir_violation_fraction": 0.0,
+          "logged_max_overallocation_all_checked_reports": 1.0247421755593678e-07,
+          "logged_max_negative_allocation_all_checked_reports": 0.0,
+          "logged_max_negative_payment_all_checked_reports": 0.0
+        }
+      ],
+      "parameter_count": 795105,
+      "menu_size": "512",
+      "checkpoint_hash": "872c6d31b487fad1807ccb939bb7cd79116f05f71f49562851fb76b4e93e497a",
+      "test_profile_hash": "bf927224c643e9da48a2e0ef65a4de7cbda282d55798869bb6ead45ff3f6ebcd",
+      "audit_inputs_hash": "de7394aaafcb1b19810d2df5c2173d4d0e057d411259ca727500779970ccea7d",
+      "evaluation_dtype": "float64",
+      "phase2_reuse_matches": [
+        {
+          "path": "hc_xmd_phase2_v5_results/evaluation/AMenuNet_3x10/seed2",
+          "raw_arrays_identical": true
+        }
+      ],
+      "cpu_checkpoint_and_witness_replay": {
+        "torch_version": "2.14.1+cpu",
+        "note": "CPU v2.14.1 replay against GPU v2.5.1 originals; original arrays unchanged",
+        "allocation_max_abs_delta": 6.693881005048752e-10,
+        "payment_max_abs_delta": 8.97094674101595e-08,
+        "stored_strong_witness_gain_max_abs_delta": 2.6645352591003757e-15,
+        "cpu_revenue": 5.6080361959717955,
+        "cpu_strong_witness_mean_gain": 6.317284658348872e-17,
+        "cpu_strong_witness_pmr": 0.0,
+        "checkpoint_completed": true,
+        "checkpoint_step": 2000,
+        "checkpoint_seed": 2
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "method": "RegretNet",
+      "audit": "random_32",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.561350284609944,
+        "sample_sd": 0.014008837959594862,
+        "min": 5.550579127389938,
+        "max": 5.577187378425151
+      },
+      "welfare": {
+        "mean": 6.811598376370966,
+        "sample_sd": 0.003558528244211139,
+        "min": 6.809324285946786,
+        "max": 6.815699288621545
+      },
+      "regret_mean": {
+        "mean": 2.5772370311945753e-08,
+        "sample_sd": 1.245418815304606e-08,
+        "min": 1.3973325015588975e-08,
+        "max": 3.8791843811244085e-08
+      },
+      "regret_max": {
+        "mean": 3.0268856789916754e-05,
+        "sample_sd": 1.1364761710743298e-05,
+        "min": 2.1463027223944664e-05,
+        "max": 4.3097970774397254e-05
+      },
+      "pmr": {
+        "mean": 0.0013020833333333333,
+        "sample_sd": 0.0006510416666666667,
+        "min": 0.0006510416666666666,
+        "max": 0.001953125
+      }
+    },
+    {
+      "method": "RegretNet",
+      "audit": "random_128",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.561350284609944,
+        "sample_sd": 0.014008837959594862,
+        "min": 5.550579127389938,
+        "max": 5.577187378425151
+      },
+      "welfare": {
+        "mean": 6.811598376370966,
+        "sample_sd": 0.003558528244211139,
+        "min": 6.809324285946786,
+        "max": 6.815699288621545
+      },
+      "regret_mean": {
+        "mean": 2.2622651998618596e-07,
+        "sample_sd": 3.171802914960869e-07,
+        "min": 3.183214876874748e-08,
+        "max": 5.922386208112584e-07
+      },
+      "regret_max": {
+        "mean": 0.000280912674497813,
+        "sample_sd": 0.0004265849829199434,
+        "min": 2.6245572371408343e-05,
+        "max": 0.0007733944803476334
+      },
+      "pmr": {
+        "mean": 0.0028211805555555555,
+        "sample_sd": 0.0003758790815036628,
+        "min": 0.0026041666666666665,
+        "max": 0.0032552083333333335
+      }
+    },
+    {
+      "method": "RegretNet",
+      "audit": "strong",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.561350284609944,
+        "sample_sd": 0.014008837959594862,
+        "min": 5.550579127389938,
+        "max": 5.577187378425151
+      },
+      "welfare": {
+        "mean": 6.811598376370966,
+        "sample_sd": 0.003558528244211139,
+        "min": 6.809324285946786,
+        "max": 6.815699288621545
+      },
+      "regret_mean": {
+        "mean": 0.0014725206686831722,
+        "sample_sd": 0.00012716362852702366,
+        "min": 0.0013683887276177604,
+        "max": 0.0016142414916089365
+      },
+      "regret_max": {
+        "mean": 0.018142883976300556,
+        "sample_sd": 0.006378886504081427,
+        "min": 0.013657525181770325,
+        "max": 0.02544534206390381
+      },
+      "pmr": {
+        "mean": 0.9991319444444445,
+        "sample_sd": 0.00037587908150370534,
+        "min": 0.9986979166666666,
+        "max": 0.9993489583333334
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "audit": "random_32",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.623575698863185,
+        "sample_sd": 0.013471446530873425,
+        "min": 5.608036175481633,
+        "max": 5.631955609257001
+      },
+      "welfare": {
+        "mean": 6.765429997938019,
+        "sample_sd": 0.021954025958505107,
+        "min": 6.74010792347919,
+        "max": 6.7791272130541325
+      },
+      "regret_mean": {
+        "mean": 1.4222323164848737e-16,
+        "sample_sd": 2.281504576535476e-18,
+        "min": 1.3986208025063007e-16,
+        "max": 1.444157293750692e-16
+      },
+      "regret_max": {
+        "mean": 2.5165055224836883e-15,
+        "sample_sd": 2.563950248511419e-16,
+        "min": 2.220446049250313e-15,
+        "max": 2.6645352591003757e-15
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "audit": "random_128",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.623575698863185,
+        "sample_sd": 0.013471446530873425,
+        "min": 5.608036175481633,
+        "max": 5.631955609257001
+      },
+      "welfare": {
+        "mean": 6.765429997938019,
+        "sample_sd": 0.021954025958505107,
+        "min": 6.74010792347919,
+        "max": 6.7791272130541325
+      },
+      "regret_mean": {
+        "mean": 2.514867172534154e-16,
+        "sample_sd": 3.748360317561919e-18,
+        "min": 2.47198095326695e-16,
+        "max": 2.5413698923060224e-16
+      },
+      "regret_max": {
+        "mean": 2.9976021664879227e-15,
+        "sample_sd": 4.839349969133127e-16,
+        "min": 2.6645352591003757e-15,
+        "max": 3.552713678800501e-15
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    },
+    {
+      "method": "AMenuNet",
+      "audit": "strong",
+      "n_training_seeds": 3,
+      "revenue": {
+        "mean": 5.623575698863185,
+        "sample_sd": 0.013471446530873425,
+        "min": 5.608036175481633,
+        "max": 5.631955609257001
+      },
+      "welfare": {
+        "mean": 6.765429997938019,
+        "sample_sd": 0.021954025958505107,
+        "min": 6.74010792347919,
+        "max": 6.7791272130541325
+      },
+      "regret_mean": {
+        "mean": 2.514867172534154e-16,
+        "sample_sd": 3.748360317561919e-18,
+        "min": 2.47198095326695e-16,
+        "max": 2.5413698923060224e-16
+      },
+      "regret_max": {
+        "mean": 2.9976021664879227e-15,
+        "sample_sd": 4.839349969133127e-16,
+        "min": 2.6645352591003757e-15,
+        "max": 3.552713678800501e-15
+      },
+      "pmr": {
+        "mean": 0.0,
+        "sample_sd": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "512 shared held-out profiles, three new training seeds; SD is between training seeds, not a confidence interval.",
+    "Finite unilateral search is a lower bound on worst-case regret, not a global DSIC certificate.",
+    "No human understanding or behavioral participant measurement was performed; parameter count/menu size measure structure only.",
+    "Saved max allocation/no-positive-transfer diagnostics cover all checked reports; recomputation from profiles alone covers truthful outcomes, plus optional stored-witness CPU replay.",
+    "Final checkpoints present; optimizer-resume states, duplicate model_final.pt and RegretNet train_values.npy omitted from compact feedback intentionally. Training-data generator/config/hash remain.",
+    "Training status hashes refer to separately serialized model_final.pt; evaluation provenance and manifest correctly hash checkpoint.pt. Different byte hashes do not imply different weights.",
+    "AMenuNet frozen menu evaluation uses float64 while RegretNet uses float32; machine-precision regret must not be interpreted as human transparency evidence.",
+    "RegretNet and AMenuNet are new independent paper-based implementations, not recovered historical author training runs."
+  ],
+  "findings": [
+    "All 6 intended trainings and evaluations completed; formal paper preset, seeds 0/1/2.",
+    "RegretNet 400000 updates per seed; AMenuNet 2000 rounds = 32000 updates per seed.",
+    "All per-run raw metrics and exported CSV aggregates recompute exactly; nested random/strong gain monotonicity verified elementwise.",
+    "AMenuNet revenue slightly exceeds RegretNet under this shared evaluation; RegretNet welfare is slightly higher.",
+    "Strong audit detects small positive RegretNet gains in almost every bidder-profile despite random-search PMR near zero.",
+    "AMenuNet max gain around floating-point roundoff, PMR=0 at 1e-6; exact affine-maximizer structure, not weak search alone, supplies theoretical rationale.",
+    "AMenuNet has 795105 trainable neural parameters versus RegretNet91747; configured menu512 learned options plus1 no-sale. These do not establish lower computational description size or better human understanding."
+  ],
+  "suite_status": {
+    "state": "COMPLETED",
+    "phase": "phase1",
+    "scope": "paper_reference_training_and_shared_evaluation",
+    "wall_seconds": 207404.24967575073,
+    "completed_evaluations": 6,
+    "expected_evaluations": 6
+  },
+  "comparisons": {
+    "AMenuNet_revenue_pct_vs_RegretNet": 1.1188903965542174,
+    "AMenuNet_welfare_pct_vs_RegretNet": -0.677790672349432,
+    "RegretNet_strong_vs_random128_mean_regret_ratio": 6509.0541496774495,
+    "AMenuNet_vs_RegretNet_parameter_ratio": 8.666277916444134
+  }
+}

@@ -1,0 +1,73 @@
+Independent GemNet scientific implementation review
+Review date: 2026-10-04
+
+Scope
+The reviewer independently read the GemNet v3 paper and PDF, examined model.py,
+transform.py and the training/evaluation logic in run.py, and executed tests
+against the implemented network and MILP. This review does not claim a full
+20,000-step run, GPU verification, equality with author checkpoints, or a
+continuous-domain feasibility certificate.
+
+Verified in executable checks
+1. Changing a bidder's own report leaves that bidder's complete neural menu
+   exactly unchanged; hard selection uses the same index for allocation and
+   payment. The fixed null option gives nonnegative truthful utility.
+2. After transformation, the offered menu remains independent of own bids.
+   The nearest-context adjustment lookup agrees with the Cartesian index
+   ordering. Bundle values remain those of the unrounded original network;
+   no across-bidder rescaling or allocation repair is introduced.
+3. A highest-utility incompatible option is made less attractive than an
+   available compatible option by actual price adjustments.
+4. IR screening retains a separation constraint for an option with utility
+   -0.01 when the required margin is 0.1. The solver correctly adds 0.09 to
+   its price rather than incorrectly dropping the near-zero option.
+5. An explicit negative-base-price example reaches nonnegative final prices
+   and meets the declared separation constraints under the finite Big-M.
+6. For three independently generated small problems, all compatible winner
+   patterns were enumerated (4, 27, and 24 patterns). A separate linear
+   program was solved for each fixed pattern, without Big-M constraints.
+   The best enumerated objectives matched the mixed-integer solver:
+     1.329567808097164 vs 1.329567808097164
+     0.13585229842248642 vs 0.13585229842248664
+     0.05318935927572921 vs 0.05318935927572954
+   This tests the finite formulation's integer selection and optimization,
+   independently of merely checking the implementation against itself.
+7. The zero-violation acceleration preserves an already compatible menu with
+   zero adjustments, including its non-null choices. Explicit keep-choice
+   constraints do the same. A mixed keep-choice/strict example corrected an
+   incompatible choice while preserving compatible choices; adjustments
+   were [0.1, 0, 0.5, 0] within numerical tolerance.
+
+Material issue found and addressed
+A literal strict positive gap against every competing option at EVERY point
+of a full own-type Cartesian grid is degenerate when twice the gap exceeds
+the grid spacing. A winner cannot switch between neighboring points, because
+the utility difference between two allocation vectors changes by at most
+the spacing when only one own-value coordinate changes. At zero own values,
+nonnegative prices make the null option win, hence it wins everywhere.
+
+This was confirmed numerically with a one-item price-0.2 menu plus a null
+option: q=3,5,7 and margin equal to spacing caused every grid choice to become
+null. The primary implementation therefore includes the paper's explicit
+zero-violation and keep-choice accelerations, rather than silently treating
+the literal degenerate formulation as a successful revenue reproduction.
+Strict mode is retained as a diagnostic. This finding concerns the literal
+reconstruction and does not establish the authors' exact experimental code.
+
+Scientific boundaries retained
+- This is an independent paper-based implementation, not recovered author
+  code or recovered historical experiments.
+- The directly replicated transformation setting is 2x2 additive Uniform.
+  Three-bidder/ten-item sampled grids are explicitly an extension.
+- No continuous-domain DSIC certificate is asserted. Finite-grid checks,
+  independent off-grid tests, unilateral regret, and the source paper's
+  theoretical statements remain separate evidence.
+- Price-head activation, penalty-update frequency, training safety margin,
+  learning-rate interpretation and validation split are disclosed choices.
+- The HiGHS solver implements the finite formulation; it need not produce
+  the same equally optimal solution as Gurobi.
+- Checkpoint qualification and transformed feasibility are reported. A job
+  finishing execution does not establish reproduction of the paper's
+  revenue, or that its outputs qualify for a final comparison table.
+
+Read SPEC.txt for formulas, derivations, source anchors, and limitations.

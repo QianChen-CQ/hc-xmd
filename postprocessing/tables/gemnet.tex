@@ -1,0 +1,16 @@
+\begin{table*}[!t]
+\centering\footnotesize
+\revcaption{GemNet reimplementation diagnostics: selected checkpoints and the separate final-step validation record.}
+\label{tab:gemnet-diagnostic}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rrcccc}
+\toprule
+Seed & Selected step & Pre/post revenue & Pre/post null (\%) & Final validation revenue & Incompatible (\%) \\
+\midrule
+0 & 100 & 0 / 0 & 100 / 100 & 0.447350 & 11.598 \\
+1 & 100 & 0 / 0 & 100 / 100 & 0.502275 & 11.092 \\
+2 & 100 & 0 / 0 & 100 / 100 & 0.552599 & 9.576 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.98\textwidth}\footnotesize Selected-model pre/post diagnostics use the same 2,048 profiles per seed and both yield zero welfare. All 2,401 finite-grid profiles also yield null allocations. All 49 transformation contexts per seed require no price adjustment; the MILP branch is skipped. Final-step columns refer to the unselected 20,000-step model on 50,000 validation profiles; incompatibility means that any item's summed allocation exceeds $1+10^{-6}$. They must not be combined with the selected model's audited regret.\end{minipage}
+\end{table*}

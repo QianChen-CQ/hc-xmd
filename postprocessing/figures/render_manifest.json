@@ -1,0 +1,22 @@
+{
+  "data_sha256": "6e1264a307ebfc91da15ffefd2722cdd32394abd57e986fb6fe376793073158d",
+  "matplotlib_version": "3.10.8",
+  "figure_numbers": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "figure1": "original retained by manuscript editor",
+  "data_rows": 144,
+  "palette": {
+    "RegretNet": "#1f77b4",
+    "AMenuNet": "#ff7f0e",
+    "GemNet": "#2ca02c",
+    "audit_variant_original": "#d62728",
+    "RegretFormer": "#9467bd",
+    "heatmap": "Blues"
+  },
+  "constraint": "No fabricated human scores, no cross-task normalization, no erased collapsed seed."
+}

@@ -1,0 +1,234 @@
+GemNet independent implementation specification and review notes
+===============================================================
+Primary source: Wang, Jiang and Parkes, GemNet: Menu-Based, Strategy-Proof
+Multi-Bidder Auctions Through Deep Learning, arXiv:2406.07428v3 (2024).
+https://arxiv.org/html/2406.07428v3
+https://arxiv.org/pdf/2406.07428v3
+Source checked: 2026-10-04. This is an independently written implementation
+specification, not author code or a transcription of the paper.
+
+Purpose and scope
+-----------------
+Implement the neural menu learning AND post-training price adjustment stages.
+An independently trained menu network without the price adjustment stage is
+only the pre-transformation component. It must not be relabeled a complete
+GemNet reproduction. Two additive bidders and two items with independent
+Uniform[0,1] values are a directly published setting that permits a full finite
+Cartesian-grid transformation. The original Table 2 does not contain a
+three-bidder, ten-item additive case. Such a case is an extension, not recovery
+of a published GemNet result.
+
+Core representation (Sec. 3.1 and Appendix A.5)
+---------------------------------------------
+For each bidder i, two distinct networks take flattened b_-i, excluding b_i.
+One outputs K-1 bundle vectors a_i[k] in [0,1]^m. The other outputs K-1 prices.
+Append the Kth option a_i[K]=0, p_i[K]=0, which remains fixed throughout.
+Own bids may enter utility maximization but must never enter either network,
+the transformed-price lookup key, training-state selection, or an online
+price solver. With others fixed, the entire offered menu must stay fixed.
+
+The reported architecture has two hidden layers of 1024 units, GELU hidden
+activations and spectral normalization of every linear layer. Additive bundle
+outputs use element-wise sigmoid. Unit-demand outputs have m+1 logits per
+bundle; a row softmax followed by dropping the dummy coordinate defines a
+lottery over at most one item. This package's directly replicated task is
+additive; do not apply sum_j v_j*a_j to arbitrary multi-item allocations under
+unit-demand preferences.
+
+For a fixed menu, u_i[k]=sum_j b_ij*a_i[k,j]-p_i[k]. Training uses soft choices
+z_i=softmax(tau*u_i), but deployment uses an exact argmax and deterministic
+tie breaking. Allocation and payment must come from the SAME chosen option.
+Do not select price and bundle independently. Do not proportionally rescale
+over-allocated bundles across bidders: that generally changes self-bid
+independent menus and is not the paper's transformation.
+
+The paper's diagram and definition permit a raw real-valued price head; its
+experiment appendix says charged prices are nonnegative but does not specify
+the output activation that enforces this. If this reconstruction uses ReLU
+or softplus for nonnegative prices, record it as an implementation choice.
+The null option proves individual rationality of hard utility maximization,
+but it alone does not prove nonnegative payments.
+
+Learning objective and reported settings
+---------------------------------------
+For batch D define x_ij=sum_k z_i[k]*a_i[k,j]. Optimize
+  loss = -mean_D sum_i sum_k z_i[k]*p_i[k]
+         + lambda_inc * mean_D sum_j max(0, sum_i x_ij-(1-s_f)).
+The item reduction is explicit here because the displayed incompatibility
+expression in the paper is vector valued before reduction.
+
+Reported values: Adam learning rate 0.005; minibatch 8192; about 20,000 steps;
+K=300 total menu options for small m and example K=1000 when m>5. Start tau=5
+and double every 3000 steps, capped at 2000. Start lambda_inc=0.1 and increase
+by max(0.01, current incompatibility loss); the frequency of this increment
+is not specified and MUST be recorded in the implementation. Per-step
+increments are a reasonable explicit choice, not a known author setting.
+
+The paper selects highest-revenue checkpoints meeting a 0.1% or 0.5%
+feasibility-violation cap, evaluates every 100 iterations/epochs, and mentions
+50,000 evaluation samples. In this reconstruction use a validation split for
+selection and a distinct held-out test split. Save both seeds and counts.
+Record which cap is used. If no checkpoint qualifies, retain diagnostic
+checkpoints with selection_status=NO_ELIGIBLE_CHECKPOINT, rather than silently
+claiming successful paper-criterion selection.
+
+The paper's learning-rate description combines a linear decay with a factor
+of one tenth per 2000 iterations after two stable validations (revenue change
+<=0.03, violation-rate change <=0.01). This is ambiguous. Choose, implement,
+and disclose one precise schedule. Do not label an arbitrary fixed schedule
+the recovered original one. Smaller smoke settings are not paper results.
+
+Price adjustment MILP (Sec. 3.2)
+-------------------------------
+For each bidder i in increasing index order and each fixed context c=b_-i
+on the context grid, solve ONE MILP with a price-adjustment vector delta[k]
+shared over ALL own-type grid points t_l. Null-option adjustment is zero.
+For each t_l compute other bidders' hard menu choices: predecessors use their
+already transformed menus, successors their untransformed menus. Define
+  other_j = sum_{r<i} transformed_a_r[j] + sum_{r>i} original_a_r[j]
+  C_l = {k: a_i[k,j] + min(1-s_f,other_j) <= 1-s_f for all j}.
+The clipping is coordinate-wise. Null must belong to C_l. Do not replace this
+criterion with global proportional allocation normalization.
+
+Let h_lk=t_l dot a_i[k]-p_i[k]. Decision variables: delta[k], U[l], binary
+z[l,k] for k in C_l. A direct formulation is
+  minimize sum_{k<K} abs(delta[k])
+  sum_{k in C_l} z[l,k] = 1
+  U[l] >= h_lk-delta[k]+(1-z[l,k])*s_m       for k in C_l
+  U[l] <= h_lk-delta[k]+(1-z[l,k])*M         for k in C_l
+  U[l] >= h_lk-delta[k]+s_m                  for k not in C_l.
+Together these make U the utility of a compatible selected option and keep
+all competing options below it by the specified margin. Validate the solved
+primal inequalities numerically; a solver status alone is insufficient.
+
+The paper recommends delta>=0 to permit IR screening. Under this restriction
+the absolute-value objective becomes sum(delta). An option with negative
+unadjusted utility cannot beat the null option after adjustment; it cannot
+be a selected option. However a STRICT margin against that option may still
+need enforcement if its utility lies between -s_m and zero. Safe screening
+must distinguish exclusion from the binary selection set from removal of
+all separation constraints. Dropping every negative-utility option from all
+constraints does not establish the same strict margin certificate.
+
+If bounding price adjustments for a finite M, derive M from the actual
+allowed utility range. The appendix's M=10 is an experimental choice, not
+a universally valid bound under arbitrary unbounded delta. For nonnegative
+prices and a finite bound P_max on all transformed prices, utilities lie in
+[-P_max,m*v_max], so M >= P_max+m*v_max is a valid conservative bound. An
+adjustment upper bound that can always price every non-null option above
+m*v_max+s_m provides a feasible all-null solution. Do not hide degeneracy
+if this is what the MILP produces; report revenue and allocation rates.
+
+Replacing Gurobi with scipy.optimize.milp/HiGHS is a solver substitution,
+not a change of the objective or constraints. Declare identical variable
+bounds, binary integrality, row lower/upper bounds and objective. Save solve
+statuses, primal residuals, gap, time limit and objective where available.
+Different solvers may select different equally optimal deltas. No promise
+of bit-identical transformed mechanisms or revenue is justified.
+
+Acceleration and deployment
+---------------------------
+The paper's optional accelerations include skipping already compatible
+contexts, keep-choice linear constraints, screening, and adaptive grids.
+Using the direct formulation without these is transparent but can be
+degenerate, as explained below; it is not a reliable substitute for the
+paper's accelerated experimental pipeline.
+Skipping a context solely because sampled allocations are feasible does
+not verify safety margins for a continuous-domain certificate. Keep-choice
+heuristics may be relaxed until feasible. Record any acceleration actually
+implemented; do not claim Table 1 runtime reproduction otherwise.
+
+Independent strict-formulation diagnostic, derived during this audit:
+Consider a fixed menu with nonnegative prices on a connected Cartesian own-
+value grid of spacing epsilon. If EVERY grid point requires a unique winner
+with gap at least s_m and 2*s_m>epsilon, that winner cannot change between
+neighboring grid points. Indeed, when one value coordinate changes by epsilon,
+the utility difference of any two menu options changes by at most epsilon,
+because each allocation coordinate lies in [0,1]. Changing winners would
+require that difference to go from at least s_m to at most -s_m. The zero-
+value grid point chooses the null option, so every grid point must choose
+null. The displayed main-text s_m is at least epsilon, satisfying the
+condition. This applies to the literal strict constraints on every own-grid
+row, not to the paper's complete accelerated implementation.
+
+Numerical check: one-item menu {(allocation 1, price 0.2), null}, all options
+compatible, q=3/5/7, margin=1/(q-1). Solving the literal MILP returns price
+increments 1.3/1.05/0.9666666667 and null choice at EVERY grid point. A caller
+must not call this a successful revenue reproduction merely because the
+MILP is optimal. The paper's zero-violation skip and keep-choice constraints
+do not impose that strict competitor gap everywhere. Record which variant
+is run, retain pre/post results and null-choice diagnostics, and test actual
+argmax compatibility after any constraint relaxation. This audit does not
+establish what exact settings the authors used for their numerical tables.
+
+At deployment, evaluate the original neural menu at actual other bids,
+then add the adjustment stored for their nearest context-grid point.
+Do NOT round the bidder's own report before utility maximization. Other
+bids can be rounded only for selecting the price-adjustment table entry;
+the original menu is evaluated at the unrounded other bids. Store the grid,
+distance metric, deterministic ties and complete adjustment table.
+
+Grid size and validity boundary
+------------------------------
+For q values per scalar, full profiles number q^(n*m), each bidder has
+q^((n-1)*m) contexts and q^m own types. Even q=2 gives more than a billion
+profiles in 3x10. Randomly sampling contexts/types changes what is checked.
+It is useful empirically but cannot be described as full-domain certification.
+For 2x2, q=7 gives 2401 complete grid profiles, 49 contexts per bidder and
+49 own types per MILP. Larger q remains configurable; report actual q.
+
+The paper's main-text margins are
+  s_f = n*epsilon*L_a/2
+  s_m = L_a*(m*v_max*epsilon + m*epsilon^2/2)+epsilon*L_p+epsilon.
+epsilon denotes spacing, and each covered point is at infinity-distance
+epsilon/2 from a grid point. L_a and L_p must be valid bounds in the norm
+used in the proof. A spectral 2-norm estimate is not automatically an
+infinity-to-infinity Lipschitz bound; account for dimension conversion.
+For d=(n-1)*m inputs, a valid conservative scalar/component bound is
+sqrt(d) times a valid network Euclidean Lipschitz bound. Include all GELU
+activation derivatives (a bound near 1.129, not 1) and sigmoid factor 1/4.
+Power-iteration spectral normalization is an approximation, so certify
+against the actual effective trained matrices if a bound is reported.
+
+Independent mathematical caution: in additive auctions, perturbing own
+values by epsilon/2 changes dot(v,a) by at most m*epsilon/2 in general,
+because sum_j a_j can be m. The paper's displayed proof uses epsilon/2 for
+this term. A conservative implementation can use m*epsilon instead of
+epsilon in s_m. This is a disclosed strengthening, not a claim about the
+author implementation. Also the appendix prints different safety-margin
+factors from the main text. Preserve the exact implemented formula.
+
+Successful MILPs and zero observed off-grid violations do NOT, on their own,
+establish every premise of the paper's continuous-domain theorem. In
+particular, utility-gap conditions are required for every bidder whose
+choice stability the argument relies upon; only transforming bidder 1
+does not directly verify gaps of untransformed bidder 2. Do not automatically
+set continuous_domain_certified=true. Exhaustive finite-grid verification,
+independent off-grid evaluation, and empirical regret are distinct evidence.
+
+Required evaluation and truthful labels
+--------------------------------------
+Save pre- and post-transformation outcomes on identical held-out values.
+Report revenue, welfare, item over-allocation mean/max/rate, individual
+rationality violation, negative-payment diagnostics, null-choice rates,
+menu sizes, price adjustment magnitudes and MILP runtime/status summaries.
+Compute unilateral regret with others' reports held fixed. Self-bid menu
+invariance provides an exact optimization check over the finite offered
+menu; empirical search is a separate sanity check. A menu system may have
+zero unilateral regret while still over-allocating, so zero regret never
+substitutes for joint allocation feasibility.
+
+Paper comparison anchor: Table 2's 2x2 additive uniform setting reports
+GemNet revenue 0.878 and AMenuNet 0.8628. Its row labeled RegretNet uses the
+better performer of RegretNet and RegretFormer, so the row is not an
+unambiguous pure-RegretNet checkpoint target. Preserve author-reported
+numbers in a separately identified reference table, never as newly run
+results or a training stopping target. Fig. 3's interpretable slices hold
+bidder 2 at (0,0.6) and vary bidder 1's two values; plot bidder 1's two
+allocation probabilities and payment, before and after transformation.
+
+Use labels such as GemNet-paper-reimplementation (pre-transform) and
+GemNet-paper-reimplementation (grid-MILP transform). State author code was
+not available to this reconstruction, list all disclosed choices, and
+separate source-paper theoretical guarantees from properties verified for
+these saved checkpoints. Do not rename this a new proposed mechanism.
