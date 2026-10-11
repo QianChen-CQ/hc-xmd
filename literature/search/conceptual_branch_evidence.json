@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-10",
+  "purpose": "Targeted primary-source verification for HC-XMD conceptual revision; not a reconstructed historical systematic search",
+  "search_queries": [
+    {
+      "engine": "system2",
+      "query": "site.nist.gov AI RMF 1.0 trustworthy characteristics explainability transparency accountability 2023",
+      "purpose": "Trustworthiness/alignment distinctions"
+    },
+    {
+      "engine": "system2",
+      "query": "site.aeaweb.org Obviously Strategy-Proof Mechanisms Shengwu Li 2017",
+      "purpose": "Original OSP model and its behavioral interpretation"
+    },
+    {
+      "engine": "system2",
+      "query": "site.arxiv.org Strategyproofness-Exposing Descriptions Gonczarowski 2023 matching",
+      "purpose": "Mechanism-description distinction"
+    },
+    {
+      "engine": "system1",
+      "query": "site.nist.gov \"Artificial Intelligence Risk Management Framework\" \"AI RMF 1.0\" January 2023",
+      "purpose": "Verify authoritative framework report"
+    },
+    {
+      "engine": "system1",
+      "query": "site.aeaweb.org \"Obviously Strategy-Proof Mechanisms\" Li 2017",
+      "purpose": "Verify primary OSP publisher source; query gave irrelevant results, DOI opened directly"
+    },
+    {
+      "engine": "system1",
+      "query": "site.arxiv.org \"Human-Centered Explainable AI\" evaluation explanations user study Liao 2020",
+      "purpose": "Locate contextual explanation and HCI evidence; Liao/Rong/Ehsan results not added by this subtask"
+    },
+    {
+      "engine": "system2",
+      "query": "Suryanarayana 2022 explainability mechanism design survey arxiv",
+      "purpose": "Check existing XMD survey scope"
+    },
+    {
+      "engine": "system2",
+      "query": "Conitzer Sandholm 2002 complexity mechanism design arxiv",
+      "purpose": "Check original AMD objective and strategic-report role"
+    },
+    {
+      "engine": "system2",
+      "query": "NIST Four Principles Explainable Artificial Intelligence 2021 Phillips Hahn Fontana explanation meaningful accuracy knowledge limits",
+      "purpose": "Separate meaningful/fidelity requirement from value alignment"
+    },
+    {
+      "engine": "system2",
+      "query": "\"Closing the AI accountability gap\" arxiv 2020 internal algorithmic auditing Raji",
+      "purpose": "Original responsible AI auditing framework"
+    }
+  ],
+  "sources": [
+    {
+      "key": "nist2023airmf",
+      "new_reference": true,
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "year": 2023,
+      "authors": "Elham Tabassi",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+      "doi": "10.6028/NIST.AI.100-1",
+      "evidence_type": "official framework",
+      "review_role": "Alignment definition / neighboring frameworks / omitted risk dimensions",
+      "read": "Official 48-page PDF text; executive summary, 1.2, 3.4–3.7, MAP/MEASURE excerpts",
+      "supported_claims": [
+        "Trustworthiness covers multiple sociotechnical properties.",
+        "Criteria and trade-offs depend on context and stakeholder roles.",
+        "Transparency, explainability and interpretability have distinct roles.",
+        "Risk management encompasses governance and properties beyond this review's four questions."
+      ],
+      "not_claimed": "No equivalence between the manuscript's four axes and NIST's four functions."
+    },
+    {
+      "key": "phillips2021four",
+      "new_reference": true,
+      "title": "Four Principles of Explainable Artificial Intelligence",
+      "year": 2021,
+      "authors": "P. Jonathon Phillips; Carina A. Hahn; Peter C. Fontana; Amy N. Yates; Kristen Greene; David A. Broniatowski; Mark A. Przybocki",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=933399",
+      "doi": "10.6028/NIST.IR.8312",
+      "evidence_type": "official conceptual/measurement report",
+      "review_role": "Explainability working distinction",
+      "read": "Official publication metadata and full-PDF text abstract, executive summary and introduction",
+      "supported_claims": [
+        "Explanations should be meaningful to their intended audience and accurate to system processes.",
+        "Explanation needs depend on recipient and task."
+      ],
+      "not_claimed": "Not a mechanism-specific alignment theorem or a new human study."
+    },
+    {
+      "key": "raji2020auditing",
+      "new_reference": true,
+      "title": "Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing",
+      "year": 2020,
+      "authors": "Inioluwa Deborah Raji; Andrew Smart; Rebecca N. White; Margaret Mitchell; Timnit Gebru; Ben Hutchinson; Jamila Smith-Loud; Daniel Theron; Parker Barnes",
+      "url": "https://arxiv.org/abs/2001.00973",
+      "doi": "10.1145/3351095.3372873",
+      "evidence_type": "original auditing-framework paper",
+      "review_role": "Responsible-AI comparison / structural auditability",
+      "read": "Author-deposited abstract, original ACM bibliographic record and Google Research author publication page",
+      "supported_claims": [
+        "Auditing connects lifecycle decisions to organization principles via documented artifacts and audit reports.",
+        "Responsible AI auditing addresses organizational accountability."
+      ],
+      "author_synthesis": "The claim-to-rule/code/check checklist for auctions is proposed in this review; not reported as Raji's tested auction measure."
+    },
+    {
+      "key": "gonczarowski2024experiment",
+      "new_reference": true,
+      "title": "Describing Deferred Acceptance and Strategyproofness to Participants: Experimental Analysis",
+      "year": 2024,
+      "authors": "Yannai A. Gonczarowski; Ori Heffetz; Guy Ishai; Clayton Thomas",
+      "url": "https://arxiv.org/html/2409.18166v1",
+      "doi": "10.48550/arXiv.2409.18166",
+      "evidence_type": "original incentivized participant experiment",
+      "review_role": "Separate mechanical understanding, strategyproofness understanding and behavior",
+      "read": "arXiv v1 abstract plus full HTML structure and results",
+      "supported_claims": [
+        "Understanding calculation of DA outcomes did not imply understanding strategyproofness.",
+        "A menu-based strategyproofness description improved understanding in the reported experiment.",
+        "Average behavioral effects were small; not a universal claim that menus solve comprehension."
+      ],
+      "not_claimed": "No extrapolation to our learned auction menu of 512 slots."
+    },
+    {
+      "key": "li2017osp",
+      "new_reference": false,
+      "title": "Obviously Strategy-Proof Mechanisms",
+      "year": 2017,
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20160425",
+      "doi": "10.1257/aer.20160425",
+      "evidence_type": "original theory",
+      "read": "Publisher abstract and citation",
+      "supported_claims": [
+        "OSP is defined by an extensive-form deviation comparison.",
+        "Its bounded-cognition interpretation is model-specific."
+      ],
+      "not_claimed": "Not direct behavioral validation for every population."
+    },
+    {
+      "key": "gonczarowski2023descriptions",
+      "new_reference": false,
+      "title": "Strategyproofness-Exposing Descriptions of Matching Mechanisms",
+      "year": 2023,
+      "url": "https://arxiv.org/abs/2209.13148",
+      "evidence_type": "original theory / description",
+      "read": "Author arXiv abstract; metadata notes v4 September 2026. Existing paper remains cited under NBER2023 key.",
+      "supported_claims": [
+        "Equivalent rule descriptions expose strategic properties differently.",
+        "Menu for one participant depends on other reports, with own report choosing favorite outcome."
+      ],
+      "not_claimed": "No new bibliographic claim that 2026v4 was the 2023 version."
+    },
+    {
+      "key": "suryanarayana2022explainability",
+      "new_reference": false,
+      "title": "Explainability in Mechanism Design: Recent Advances and the Road Ahead",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2206.03031",
+      "evidence_type": "authors' own survey/framework",
+      "read": "Author arXiv abstract and metadata",
+      "supported_claims": [
+        "Explaining mechanism outcomes involves strategic agents and potentially conflicting preferences.",
+        "XMD covers specific explanation goals and challenges."
+      ],
+      "not_claimed": "No claim that this existing survey has no human-centered content."
+    },
+    {
+      "key": "conitzer2002complexity",
+      "new_reference": false,
+      "title": "Complexity of Mechanism Design",
+      "year": 2002,
+      "url": "https://arxiv.org/abs/cs/0205075",
+      "evidence_type": "original theory / AMD",
+      "read": "Author arXiv abstract and conference metadata",
+      "supported_claims": [
+        "AMD computes rules for a specified aggregation setting under incentive and objective requirements."
+      ]
+    }
+  ],
+  "provenance_note": "Source-based claims are paraphrased. Operational definitions, the four-axis derivation and equation g_k in B_k are explicitly this review's synthesis. Queries above are exact calls made in this subtask; full search-hit counts are not asserted. Sources not selected from web results are not represented as screened full papers.",
+  "obligations": {
+    "R1-1": [
+      "axes_derivation.tex",
+      "axis_operational_table.tex"
+    ],
+    "R2-1": [
+      "alignment_definition.tex"
+    ],
+    "R2-2": [
+      "axes_derivation.tex"
+    ],
+    "R2-3": [
+      "axes_derivation.tex",
+      "axis_operational_table.tex"
+    ],
+    "R2-9": [
+      "framework_comparison_table.tex",
+      "alignment_definition.tex"
+    ],
+    "R2-10": [
+      "alignment_definition.tex",
+      "axes_derivation.tex"
+    ]
+  }
+}

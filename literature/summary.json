@@ -1,0 +1,90 @@
+{
+  "verification_date": "2026-10-11",
+  "upload_status_at_preparation": "prepared_for_upload_not_yet_independently_confirmed_online",
+  "target_unit": "canonical URL/DOI audit target, not a count of distinct research papers",
+  "target_count": 182,
+  "target_coverage": 182,
+  "raw_hit_count": 115,
+  "raw_hits_mapped": 115,
+  "bibliography_record_count": 68,
+  "bibliography_records_mapped": 68,
+  "merged_evidence_map_rows": 79,
+  "merged_evidence_map_rows_mapped": 79,
+  "historical_confirmatory_retained_families": 54,
+  "historical_merged_distinct_evidence_families": 74,
+  "historical_bibliography_study_groups": 66,
+  "target_publication_status_counts": {
+    "published": 153,
+    "preprint": 23,
+    "report": 2,
+    "web_record": 3,
+    "working_paper": 1
+  },
+  "target_document_type_counts": {
+    "conference_paper": 78,
+    "preprint": 23,
+    "book_chapter": 3,
+    "journal_article": 53,
+    "journal_essay": 2,
+    "student_abstract": 3,
+    "technical_report": 2,
+    "whole_issue_or_contents": 1,
+    "one_page_conference_abstract": 2,
+    "edited_reference_work": 3,
+    "senior_member_bridge_sky_paper": 2,
+    "review_web_page": 2,
+    "selected_conference_paper": 2,
+    "newsletter_survey": 1,
+    "authored_book": 1,
+    "working_paper": 1,
+    "senior_member_blue_sky_paper": 1,
+    "conference_extended_abstract": 1,
+    "senior_member_presentation": 1
+  },
+  "target_review_status_counts": {
+    "venue_level_peer_review": 134,
+    "not_established": 43,
+    "not_applicable": 5
+  },
+  "target_verification_status_counts": {
+    "verified_primary_metadata": 87,
+    "verified_primary_indexed_metadata_with_corroboration": 5,
+    "verified_metadata": 43,
+    "verified_with_version_link_mismatch": 1,
+    "verified_nonpaper_search_hit": 1,
+    "verified": 42,
+    "verified_with_metadata_correction": 2,
+    "verified_with_source_discrepancy": 1
+  },
+  "targets_with_unverified_fields": [],
+  "resolved_metadata_fields": [
+    {
+      "target_id": "doi:10.1145/3580507.3597744",
+      "initially_unverified_fields": "bibliography_page_range",
+      "resolution": "Supplementary publisher-deposited Crossref metadata confirms the bibliography page range; source URL and range are retained in the source row.",
+      "supplementary_primary_url": "https://api.crossref.org/works/10.1145/3580507.3597744"
+    },
+    {
+      "target_id": "doi:10.1145/3670865.3673532",
+      "initially_unverified_fields": "bibliography_page_range",
+      "resolution": "Supplementary publisher-deposited Crossref metadata confirms the bibliography page range; source URL and range are retained in the source row.",
+      "supplementary_primary_url": "https://api.crossref.org/works/10.1145/3670865.3673532"
+    }
+  ],
+  "current_coding_rows_with_substantive_clarifications": [
+    "R2_15",
+    "R3_11",
+    "R4_06",
+    "R5_14",
+    "R6_16"
+  ],
+  "scope": "All 182 target identities have primary-source metadata evidence. Verification is not a claim that all are peer-reviewed full papers, that all papers were read line by line, or that scientific results were independently validated.",
+  "historical_record_policy": "Preserve historical search titles, decisions, coding, access limits and counts; metadata corrections and later publication status are recorded in separate linked tables. Internal tool locators removed from public copies.",
+  "limitations": [
+    "Search counts are observed result records, not engine-total estimates or systematic-review denominators.",
+    "Different source targets can represent the same work or different versions. Do not add target counts to historical family counts.",
+    "A live primary page, indexed primary metadata or a corroborating primary version verifies identity; source-specific access and version limitations are retained in notes.",
+    "Review status is independent of formal publication status and document length/type.",
+    "No publisher paper PDFs, full-text article copies, or credentials are distributed."
+  ]
+}

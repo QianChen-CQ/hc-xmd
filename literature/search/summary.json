@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-10",
+  "branch": "confirmatory",
+  "visible_records": 115,
+  "query_visible_counts": {
+    "R1": 22,
+    "R2": 18,
+    "R3": 18,
+    "R4": 19,
+    "R5": 21,
+    "R6": 17
+  },
+  "decision_counts": {
+    "retain_in_evidence_map": 54,
+    "exclude_scope_or_record_type": 29,
+    "exclude_access_unavailable": 2,
+    "duplicate_page_or_version": 28,
+    "merge_overlapping_study_family": 2
+  },
+  "advanced_to_primary_access": 58,
+  "primary_access_succeeded": 56,
+  "retained_evidence_families": 54,
+  "scope": "Counts refer only to six confirmatory queries; exploratory and specialist branches are separately logged. Not total engine hits and not a systematic-review denominator.",
+  "all_visible_records_have_decision": true,
+  "full_text_screening_claimed": false
+}

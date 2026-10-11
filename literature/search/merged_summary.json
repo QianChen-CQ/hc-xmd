@@ -1,0 +1,8 @@
+{
+  "confirmatory_retained_families": 54,
+  "additional_exploratory_records_not_repeated_in_confirmation": 9,
+  "specialist_included_records_before_cross_branch_deduplication": 16,
+  "specialist_cross_branch_duplicates": 5,
+  "merged_distinct_evidence_families": 74,
+  "caution": "This is the supplementary evidence map, not a count of new references or completed full-text reviews. Confirmation counts remain unchanged. Specialist excluded candidates are in branch logs."
+}

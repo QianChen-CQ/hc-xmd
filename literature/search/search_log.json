@@ -1,0 +1,656 @@
+{
+  "date": "2026-10-10",
+  "timezone": "Asia/Shanghai",
+  "approach": "revision-stage targeted supplementary search for a structured narrative review; not exhaustive",
+  "confirmatory_protocol": {
+    "stage": "confirmatory_visible_results_screen",
+    "date": "2026-10-10",
+    "set_before_execution": true,
+    "rule": "For each of six topic queries, inventory EVERY result visibly returned by the search tool. No total engine-hit estimate is used. Merge exact URLs; then merge publication versions by normalized title and authors/DOI. Exclude non-scholarly pages, generic profiles, and explicit topic mismatches using title/metadata. Attempt to open the primary abstract/paper for every remaining distinct scholarly work; classify inaccessible sources separately. Record each decision, access level and mapping. No ranking cutoff or positive-result criterion.",
+    "domains": [
+      "arxiv.org",
+      "link.springer.com",
+      "nature.com",
+      "aeaweb.org",
+      "ojs.aaai.org",
+      "proceedings.mlr.press",
+      "proceedings.neurips.cc",
+      "dl.acm.org",
+      "sigecom.org"
+    ],
+    "queries": [
+      {
+        "id": "R1",
+        "q": "explainability mechanism design social choice"
+      },
+      {
+        "id": "R2",
+        "q": "obviously strategyproof mechanisms simplicity human"
+      },
+      {
+        "id": "R3",
+        "q": "human centred mechanism design explanations governance"
+      },
+      {
+        "id": "R4",
+        "q": "human evaluation explanation interpretability simulatability"
+      },
+      {
+        "id": "R5",
+        "q": "learned auction mechanism design affine maximizer RegretNet"
+      },
+      {
+        "id": "R6",
+        "q": "verification certification learned auction mechanism strategyproof"
+      }
+    ]
+  },
+  "exploration_queries": [
+    {
+      "id": "Q1",
+      "theme": "Mechanism explanation",
+      "q": "\"explainability\" \"mechanism design\""
+    },
+    {
+      "id": "Q2",
+      "theme": "Behavioral simplicity",
+      "q": "\"obviously strategy-proof\" \"simple\" mechanisms"
+    },
+    {
+      "id": "Q3",
+      "theme": "Human-centered design",
+      "q": "\"human-centred mechanism design\" OR \"explaining\" \"matching\" mechanisms"
+    },
+    {
+      "id": "Q4",
+      "theme": "Explanation evaluation",
+      "q": "\"evaluating\" \"explanations\" \"human\" interpretability"
+    },
+    {
+      "id": "Q5",
+      "theme": "Learning mechanisms",
+      "q": "\"learning\" \"mechanism design\" RegretNet AMenuNet"
+    },
+    {
+      "id": "Q6",
+      "theme": "Reliability and verification",
+      "q": "\"mechanism design\" \"verification\" \"strategyproof\""
+    }
+  ],
+  "exploration_refinement": {
+    "id": "Q3a",
+    "theme": "Human-centered design refinement",
+    "q": "\"human-centred mechanism design\""
+  },
+  "fallback_queries": [
+    [
+      "A1",
+      "\"A revelation principle for obviously strategy-proof implementation\" Mackenzie"
+    ],
+    [
+      "A2",
+      "\"Formal verification and synthesis of mechanisms for social choice\""
+    ],
+    [
+      "A3",
+      "\"Human-centred mechanism design with Democratic AI\" arxiv"
+    ]
+  ],
+  "pilot_queries": [
+    {
+      "id": "Q1",
+      "q": "\"explainability\" \"mechanism design\""
+    },
+    {
+      "id": "Q2",
+      "q": "\"obviously strategy-proof\" \"simple\" mechanisms"
+    },
+    {
+      "id": "Q3",
+      "q": "\"human\" \"mechanism design\" \"explanations\""
+    },
+    {
+      "id": "Q4",
+      "q": "\"evaluating\" \"explanations\" \"human\" interpretability"
+    },
+    {
+      "id": "Q5",
+      "q": "\"learning\" \"mechanism design\" RegretNet AMenuNet"
+    },
+    {
+      "id": "Q6",
+      "q": "\"mechanism design\" \"verification\" \"strategyproof\""
+    }
+  ],
+  "exploration_candidates": [
+    [
+      "C01",
+      "Q1",
+      "https://link.springer.com/chapter/10.1007/978-3-031-20614-6_21"
+    ],
+    [
+      "C02",
+      "Q1",
+      "https://arxiv.org/abs/2206.03031"
+    ],
+    [
+      "C03",
+      "Q1",
+      "https://arxiv.org/abs/2603.29791"
+    ],
+    [
+      "C04",
+      "Q2",
+      "https://www.aeaweb.org/articles?id=10.1257/aer.20160425"
+    ],
+    [
+      "C05",
+      "Q2",
+      "https://arxiv.org/abs/2502.11148"
+    ],
+    [
+      "C06",
+      "Q2",
+      "https://www.sciencedirect.com/science/article/pii/S0899825620301408"
+    ],
+    [
+      "C07",
+      "Q2",
+      "https://arxiv.org/abs/2311.02589"
+    ],
+    [
+      "C08",
+      "Q3a",
+      "https://www.nature.com/articles/s41562-022-01383-x"
+    ],
+    [
+      "C09",
+      "Q4",
+      "https://arxiv.org/abs/2112.03184"
+    ],
+    [
+      "C10",
+      "Q4",
+      "https://princetonvisualai.github.io/HIVE/"
+    ],
+    [
+      "C11",
+      "Q4",
+      "https://arxiv.org/abs/2005.01831"
+    ],
+    [
+      "C12",
+      "Q4",
+      "https://arxiv.org/abs/2407.03545"
+    ],
+    [
+      "C13",
+      "Q4",
+      "https://arxiv.org/abs/1907.06831"
+    ],
+    [
+      "C14",
+      "Q5",
+      "https://openreview.net/forum?id=cNb5hkTfGC"
+    ],
+    [
+      "C15",
+      "Q5",
+      "https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf"
+    ],
+    [
+      "C16",
+      "Q5",
+      "https://arxiv.org/abs/2601.13489"
+    ],
+    [
+      "C17",
+      "Q5;Q6",
+      "https://arxiv.org/abs/2006.08742"
+    ],
+    [
+      "C18",
+      "Q6",
+      "https://arxiv.org/html/1804.10512v1"
+    ],
+    [
+      "C19",
+      "Q6",
+      "https://onlinelibrary.wiley.com/doi/full/10.3982/TE6266"
+    ],
+    [
+      "C20",
+      "Q6",
+      "https://www.sciencedirect.com/science/article/pii/S000437022400208X"
+    ],
+    [
+      "C21",
+      "Q6",
+      "https://ojs.aaai.org/index.php/AAAI/article/view/26373/26145"
+    ],
+    [
+      "C22",
+      "Q3",
+      "https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin"
+    ],
+    [
+      "C23",
+      "Q4",
+      "https://arxiv.org/html/1902.00006v2"
+    ],
+    [
+      "C24",
+      "P0-Q2",
+      "https://link.springer.com/article/10.1007/s00199-025-01684-y"
+    ]
+  ],
+  "confirmatory_candidates": [
+    {
+      "id": "R1_01",
+      "position": 1,
+      "title": "Explainability in Mechanism Design: Recent Advances and the Road Ahead",
+      "url": "https://arxiv.org/abs/2206.03031",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_03",
+      "position": 3,
+      "title": "Social Preferences over Ordinal Outcomes - American Economic Association",
+      "url": "https://pubs.aeaweb.org/doi/10.1257/aer.20211491",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_04",
+      "position": 4,
+      "title": "Responsible Mechanism Design | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41330",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_06",
+      "position": 6,
+      "title": "Justifying Social-Choice Mechanism Outcome for Improving Participant Satisfaction",
+      "url": "https://arxiv.org/abs/2205.15863",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_09",
+      "position": 9,
+      "title": "Evaluating explainable social choice-based aggregation strategies for group recommendation | User Modeling and User-Adapted Interaction | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11257-023-09363-0",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_10",
+      "position": 10,
+      "title": "The Fairness Fair: Bringing Human Perception into Collective Decision-Making | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/30272",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_13",
+      "position": 13,
+      "title": "Contextually Private Mechanisms - American Economic Association",
+      "url": "https://www.aeaweb.org/articles?id=10.1257%2Faer.20240579",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_15",
+      "position": 15,
+      "title": "Start Using Justifications When Explaining AI Systems to Decision Subjects | Springer Nature Link",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-11108-1_14",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_20",
+      "position": 20,
+      "title": "Explainable Voting",
+      "url": "https://proceedings.neurips.cc/paper/2020/file/10c72a9d42dd07a028ee910f7854da5d-Paper.pdf",
+      "query_id": "R1"
+    },
+    {
+      "id": "R1_22",
+      "position": 22,
+      "title": "Fairness and Explainability: Bridging the Gap towards Fair Model Explanations",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/26344/26116",
+      "query_id": "R1"
+    },
+    {
+      "id": "R2_01",
+      "position": 1,
+      "title": "Obviously Strategy-Proof Mechanisms - American Economic Association",
+      "url": "https://swlb2.aeaweb.org/articles?id=10.1257%2Faer.20160425",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_02",
+      "position": 2,
+      "title": "Testing the simplicity of strategy-proof mechanisms | Economic Theory | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00199-025-01684-y",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_05",
+      "position": 5,
+      "title": "Strategically Simple Mechanisms",
+      "url": "https://arxiv.org/abs/1812.00849",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_06",
+      "position": 6,
+      "title": "On the Power of Randomization for Obviously Strategy-Proof Mechanisms | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33540",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_07",
+      "position": 7,
+      "title": "Sampling and Optimal Preference Elicitation in Simple Mechanisms | Theory of Computing Systems | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00224-026-10264-z",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_08",
+      "position": 8,
+      "title": "Obvious Strategyproofness, Bounded Rationality and Approximation | Theory of Computing Systems | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00224-022-10071-2",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_09",
+      "position": 9,
+      "title": "On the approximation guarantee of obviously strategyproof mechanisms",
+      "url": "https://arxiv.org/abs/1805.04190",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_11",
+      "position": 11,
+      "title": "Obviousness around the clock | Experimental Economics | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s10683-021-09720-z",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_12",
+      "position": 12,
+      "title": "Designing Simple Mechanisms - American Economic Association",
+      "url": "https://swlb2.aeaweb.org/articles?id=10.1257%2Fjep.38.4.175",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_13",
+      "position": 13,
+      "title": "Probabilistic Verification for Obviously Strategyproof Mechanisms",
+      "url": "https://arxiv.org/abs/1804.10512",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_14",
+      "position": 14,
+      "title": "Approximation Guarantee of OSP Mechanisms: The Case of Machine Scheduling and Facility Location | Algorithmica | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00453-020-00771-x",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_15",
+      "position": 15,
+      "title": "Breaking Barriers, Finding Boundaries: Not Obviously Manipulable Budget-Feasible Mechanism Design | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38724",
+      "query_id": "R2"
+    },
+    {
+      "id": "R2_18",
+      "position": 18,
+      "title": "Obvious manipulations in cake-cutting | Social Choice and Welfare | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s00355-022-01416-4",
+      "query_id": "R2"
+    },
+    {
+      "id": "R3_01",
+      "position": 1,
+      "title": "Beyond Technocratic XAI: The Who, What & How in Explanation Design | Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society",
+      "url": "https://ojs.aaai.org/index.php/AIES/article/view/36586",
+      "query_id": "R3"
+    },
+    {
+      "id": "R3_09",
+      "position": 9,
+      "title": "Human-centered mechanism design with Democratic AI",
+      "url": "https://arxiv.org/abs/2201.11441",
+      "query_id": "R3"
+    },
+    {
+      "id": "R3_11",
+      "position": 11,
+      "title": "Human-centred explanation of rule-based decision-making systems in the legal domain",
+      "url": "https://arxiv.org/abs/2310.16704",
+      "query_id": "R3"
+    },
+    {
+      "id": "R3_15",
+      "position": 15,
+      "title": "An Appraisal-Based Approach to Human-Centred Explanations",
+      "url": "https://arxiv.org/abs/2508.01388",
+      "query_id": "R3"
+    },
+    {
+      "id": "R3_16",
+      "position": 16,
+      "title": "Human-centered Explainable AI: Towards a Reflective Sociotechnical Approach",
+      "url": "https://arxiv.org/abs/2002.01092",
+      "query_id": "R3"
+    },
+    {
+      "id": "R4_01",
+      "position": 1,
+      "title": "How do Humans Understand Explanations from Machine Learning Systems? An Evaluation of the Human-Interpretability of Explanation",
+      "url": "https://arxiv.org/abs/1802.00682",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_02",
+      "position": 2,
+      "title": "An Evaluation of the Human-Interpretability of Explanation",
+      "url": "https://arxiv.org/abs/1902.00006",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_03",
+      "position": 3,
+      "title": "From Human Explanation to Model Interpretability: A Framework Based on Weight of Evidence | Proceedings of the AAAI Conference on Human Computation and Crowdsourcing",
+      "url": "https://ojs.aaai.org/index.php/HCOMP/article/view/18938",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_04",
+      "position": 4,
+      "title": "Evaluating Explainable AI: Which Algorithmic Explanations Help Users Predict Model Behavior?",
+      "url": "https://arxiv.org/abs/2005.01831",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_05",
+      "position": 5,
+      "title": "Assessing the Local Interpretability of Machine Learning Models",
+      "url": "https://arxiv.org/abs/1902.03501",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_06",
+      "position": 6,
+      "title": "Human Evaluation of Models Built for Interpretability",
+      "url": "https://ojs.aaai.org/index.php/HCOMP/article/download/5280/5132/8381",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_09",
+      "position": 9,
+      "title": "Benchmarking XAI Explanations with Human-Aligned Evaluations | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41082",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_10",
+      "position": 10,
+      "title": "Do Models Explain Themselves? Counterfactual Simulatability of Natural Language Explanations",
+      "url": "https://proceedings.mlr.press/v235/chen24bl.html",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_11",
+      "position": 11,
+      "title": "Defining Explanation and Explanatory Depth in XAI | Minds and Machines | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s11023-022-09607-9",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_12",
+      "position": 12,
+      "title": "Evaluating Explainable Machine Learning Models for Clinicians | Cognitive Computation | Springer Nature Link",
+      "url": "https://link.springer.com/article/10.1007/s12559-024-10297-x",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_15",
+      "position": 15,
+      "title": "Directly Optimizing Natural Language Explanations for Behavioral Faithfulness: Simulatability and Recoverability",
+      "url": "https://proceedings.mlr.press/v306/malladi26a.html",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_16",
+      "position": 16,
+      "title": "Evaluation Principles | Springer Nature Link",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-96-5290-7_26",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_17",
+      "position": 17,
+      "title": "Explanations are a Means to an End: Decision Theoretic Explanation Evaluation",
+      "url": "https://proceedings.mlr.press/v306/guo26u.html",
+      "query_id": "R4"
+    },
+    {
+      "id": "R4_18",
+      "position": 18,
+      "title": "Rethinking Saliency Maps: A Cognitive Human Aligned Taxonomy and Evaluation Framework for Explanations | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37375",
+      "query_id": "R4"
+    },
+    {
+      "id": "R5_01",
+      "position": 1,
+      "title": "Differentiable Economics for Randomized Affine Maximizer Auctions",
+      "url": "https://arxiv.org/abs/2202.02872",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_02",
+      "position": 2,
+      "title": "Learning Revenue-Maximizing Auctions With Differentiable Matching",
+      "url": "https://proceedings.mlr.press/v151/curry22a.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_03",
+      "position": 3,
+      "title": "Certifying Strategyproof Auction Networks",
+      "url": "https://proceedings.neurips.cc/paper/2020/hash/3465ab6e0c21086020e382f09a482ced-Abstract.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_06",
+      "position": 6,
+      "title": "Automated Design of Affine Maximizer Mechanisms in Dynamic Settings | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28819",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_07",
+      "position": 7,
+      "title": "A Scalable Neural Network for DSIC Affine Maximizer Auction Design",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/af31604708f3e44b4de9fdfa6dcaa9d1-Abstract.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_13",
+      "position": 13,
+      "title": "Optimal-er Auctions through Attention",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/e0c07bb70721255482020afca44cabf2-Paper-Conference.pdf",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_14",
+      "position": 14,
+      "title": "Mode Connectivity in Auction Design",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/a5e4907a40c0dcb8433a35c714ba9d79-Abstract-Conference.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_15",
+      "position": 15,
+      "title": "Enhancing Affine Maximizer Auctions with Correlation-Aware Payment",
+      "url": "https://proceedings.mlr.press/v306/sun26as.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_16",
+      "position": 16,
+      "title": "A Permutation-Equivariant Neural Network Architecture For Auction Design | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/16711",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_17",
+      "position": 17,
+      "title": "Learning Auctions with Robust Incentive Guarantees",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/c14a2a57ead18f3532a5a8949382c536-Abstract.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R5_21",
+      "position": 21,
+      "title": "Optimal Auctions through Deep Learning",
+      "url": "https://proceedings.mlr.press/v97/duetting19a.html",
+      "query_id": "R5"
+    },
+    {
+      "id": "R6_05",
+      "position": 5,
+      "title": "Learning Optimal Auctions with Correlated Value Distributions | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33525",
+      "query_id": "R6"
+    },
+    {
+      "id": "R6_08",
+      "position": 8,
+      "title": "Safely Learning Optimal Auctions: A Testable Learning Framework for Mechanism Design",
+      "url": "https://proceedings.mlr.press/v267/kher25a.html",
+      "query_id": "R6"
+    },
+    {
+      "id": "R6_10",
+      "position": 10,
+      "title": "Formal Verification of Diffusion Auctions | Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38983",
+      "query_id": "R6"
+    },
+    {
+      "id": "R6_15",
+      "position": 15,
+      "title": "Enabling Automatic Certification of Online Auctions",
+      "url": "https://arxiv.org/abs/1404.0854",
+      "query_id": "R6"
+    },
+    {
+      "id": "R6_16",
+      "position": 16,
+      "title": "Conformalized Strategy-Proof Auctions",
+      "url": "https://arxiv.org/abs/2405.12016",
+      "query_id": "R6"
+    }
+  ],
+  "engine_total_hits": "not observed; not reported"
+}

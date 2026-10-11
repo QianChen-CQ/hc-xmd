@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-11",
+  "inventory_type": "reference_coding_inventory",
+  "existing_bibliography_records": 60,
+  "existing_unique_study_groups": 58,
+  "existing_first_half_records": 34,
+  "existing_first_half_groups": 32,
+  "existing_second_half_records": 26,
+  "existing_second_half_groups": 26,
+  "new_unique_references": 8,
+  "new_unique_study_groups": 8,
+  "total_bibliography_records": 68,
+  "total_unique_study_groups": 66,
+  "duplicate_groups": {
+    "gemnet2024": [
+      "wang2024gemnet",
+      "wang2024gemnetec"
+    ],
+    "regretnet_icml2019_jacm2024": [
+      "duetting2019optimal",
+      "duetting2024jacm"
+    ]
+  },
+  "merged_new_aliases": {
+    "gonczarowski2024experiment": "gonczarowski2024describing"
+  },
+  "separation_note": "These are actual retained bibliography records and study groups, not search-engine hits. Supplementary discovery candidates and screening decisions are maintained separately; a search count of 58 must not be substituted for the 68 bibliography records or 66 study groups.",
+  "terminology": {
+    "explanation_objects": {
+      "O": "outcome justification",
+      "I": "incentive comprehensibility",
+      "M": "mechanism interpretability"
+    },
+    "evaluation_dimensions": {
+      "P": "performance",
+      "I": "incentive properties",
+      "S": "structural auditability",
+      "B": "participant-facing burden"
+    }
+  },
+  "source_version_corrections": {
+    "gonczarowski2023descriptions": "https://arxiv.org/abs/2209.13148v3 (8 October 2025); original evidence logs preserved"
+  },
+  "limitations": [
+    "Tags describe the relevance of a source to the review; they do not claim that every axis was quantitatively measured.",
+    "Adjacent sources concern mechanisms, policy, governance, or HCI; their placement is the review authors' synthesis, not a claim that the source directly studies explainable mechanism design.",
+    "Evidence classified as behavioral can concern trust, preferences, reporting, or explanation use; these outcomes are not interchangeable.",
+    "Access-level labels retain source-specific limits. Full text opened does not mean a line-by-line or independent full-text review.",
+    "code_note means qualitative coding/interpretation note; this inventory does not audit software repository availability.",
+    "R01–R68 are stable coding-row identifiers, not article citation numbers, which depend on ordering.",
+    "The original AI Economist preprint is replaced by its journal version under a stable key; the unverifiable original online-mechanism citation is replaced by the verified Parkes chapter."
+  ]
+}

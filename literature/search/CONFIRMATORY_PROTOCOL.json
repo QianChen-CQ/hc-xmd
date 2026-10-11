@@ -1,0 +1,43 @@
+{
+  "stage": "confirmatory_visible_results_screen",
+  "date": "2026-10-10",
+  "set_before_execution": true,
+  "rule": "For each of six topic queries, inventory EVERY result visibly returned by the search tool. No total engine-hit estimate is used. Merge exact URLs; then merge publication versions by normalized title and authors/DOI. Exclude non-scholarly pages, generic profiles, and explicit topic mismatches using title/metadata. Attempt to open the primary abstract/paper for every remaining distinct scholarly work; classify inaccessible sources separately. Record each decision, access level and mapping. No ranking cutoff or positive-result criterion.",
+  "domains": [
+    "arxiv.org",
+    "link.springer.com",
+    "nature.com",
+    "aeaweb.org",
+    "ojs.aaai.org",
+    "proceedings.mlr.press",
+    "proceedings.neurips.cc",
+    "dl.acm.org",
+    "sigecom.org"
+  ],
+  "queries": [
+    {
+      "id": "R1",
+      "q": "explainability mechanism design social choice"
+    },
+    {
+      "id": "R2",
+      "q": "obviously strategyproof mechanisms simplicity human"
+    },
+    {
+      "id": "R3",
+      "q": "human centred mechanism design explanations governance"
+    },
+    {
+      "id": "R4",
+      "q": "human evaluation explanation interpretability simulatability"
+    },
+    {
+      "id": "R5",
+      "q": "learned auction mechanism design affine maximizer RegretNet"
+    },
+    {
+      "id": "R6",
+      "q": "verification certification learned auction mechanism strategyproof"
+    }
+  ]
+}

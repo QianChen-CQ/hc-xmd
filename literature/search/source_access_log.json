@@ -1,0 +1,494 @@
+{
+  "R1_01": {
+    "url": "https://arxiv.org/abs/2206.03031",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_03": {
+    "url": "https://pubs.aeaweb.org/doi/10.1257/aer.20211491",
+    "status": "unavailable",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_04": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41330",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_06": {
+    "url": "https://arxiv.org/abs/2205.15863",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_09": {
+    "url": "https://link.springer.com/article/10.1007/s11257-023-09363-0",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_10": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/30272",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_13": {
+    "url": "https://www.aeaweb.org/articles?id=10.1257%2Faer.20240579",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_15": {
+    "url": "https://link.springer.com/chapter/10.1007/978-3-032-11108-1_14",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R1_20": {
+    "url": "https://proceedings.neurips.cc/paper/2020/file/10c72a9d42dd07a028ee910f7854da5d-Paper.pdf",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and introductory text"
+  },
+  "R1_22": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/download/26344/26116",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and introductory text"
+  },
+  "R2_01": {
+    "url": "https://swlb2.aeaweb.org/articles?id=10.1257%2Faer.20160425",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_02": {
+    "url": "https://link.springer.com/article/10.1007/s00199-025-01684-y",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_05": {
+    "url": "https://arxiv.org/abs/1812.00849",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_06": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33540",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_07": {
+    "url": "https://link.springer.com/article/10.1007/s00224-026-10264-z",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_08": {
+    "url": "https://link.springer.com/article/10.1007/s00224-022-10071-2",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_09": {
+    "url": "https://arxiv.org/abs/1805.04190",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_11": {
+    "url": "https://link.springer.com/article/10.1007/s10683-021-09720-z",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_12": {
+    "url": "https://swlb2.aeaweb.org/articles?id=10.1257%2Fjep.38.4.175",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_13": {
+    "url": "https://arxiv.org/abs/1804.10512",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_14": {
+    "url": "https://link.springer.com/article/10.1007/s00453-020-00771-x",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_15": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38724",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R2_18": {
+    "url": "https://link.springer.com/article/10.1007/s00355-022-01416-4",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R3_01": {
+    "url": "https://ojs.aaai.org/index.php/AIES/article/view/36586",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R3_09": {
+    "url": "https://arxiv.org/abs/2201.11441",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R3_11": {
+    "url": "https://arxiv.org/abs/2310.16704",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R3_15": {
+    "url": "https://arxiv.org/abs/2508.01388",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R3_16": {
+    "url": "https://arxiv.org/abs/2002.01092",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_01": {
+    "url": "https://arxiv.org/abs/1802.00682",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_02": {
+    "url": "https://arxiv.org/abs/1902.00006",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_03": {
+    "url": "https://ojs.aaai.org/index.php/HCOMP/article/view/18938",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_04": {
+    "url": "https://arxiv.org/abs/2005.01831",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_05": {
+    "url": "https://arxiv.org/abs/1902.03501",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_06": {
+    "url": "https://ojs.aaai.org/index.php/HCOMP/article/download/5280/5132/8381",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and introductory text"
+  },
+  "R4_09": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41082",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_10": {
+    "url": "https://proceedings.mlr.press/v235/chen24bl.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_11": {
+    "url": "https://link.springer.com/article/10.1007/s11023-022-09607-9",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_12": {
+    "url": "https://link.springer.com/article/10.1007/s12559-024-10297-x",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_15": {
+    "url": "https://proceedings.mlr.press/v306/malladi26a.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_16": {
+    "url": "https://link.springer.com/chapter/10.1007/978-981-96-5290-7_26",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_17": {
+    "url": "https://proceedings.mlr.press/v306/guo26u.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R4_18": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/37375",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_01": {
+    "url": "https://arxiv.org/abs/2202.02872",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_02": {
+    "url": "https://proceedings.mlr.press/v151/curry22a.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_03": {
+    "url": "https://proceedings.neurips.cc/paper/2020/hash/3465ab6e0c21086020e382f09a482ced-Abstract.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_06": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28819",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_07": {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/af31604708f3e44b4de9fdfa6dcaa9d1-Abstract.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_13": {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/e0c07bb70721255482020afca44cabf2-Paper-Conference.pdf",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and introductory text"
+  },
+  "R5_14": {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/a5e4907a40c0dcb8433a35c714ba9d79-Abstract-Conference.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_15": {
+    "url": "https://proceedings.mlr.press/v306/sun26as.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_16": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/16711",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_17": {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/c14a2a57ead18f3532a5a8949382c536-Abstract.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R5_21": {
+    "url": "https://proceedings.mlr.press/v97/duetting19a.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R6_05": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/33525",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R6_08": {
+    "url": "https://proceedings.mlr.press/v267/kher25a.html",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R6_10": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38983",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R6_15": {
+    "url": "https://arxiv.org/abs/1404.0854",
+    "status": "unavailable",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "R6_16": {
+    "url": "https://arxiv.org/abs/2405.12016",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C01": {
+    "url": "https://link.springer.com/chapter/10.1007/978-3-031-20614-6_21",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C02": {
+    "url": "https://arxiv.org/abs/2206.03031",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C03": {
+    "url": "https://arxiv.org/abs/2603.29791",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C04": {
+    "url": "https://www.aeaweb.org/articles?id=10.1257%2Faer.20160425",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C05": {
+    "url": "https://arxiv.org/abs/2502.11148",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C06": {
+    "url": "https://cris.maastrichtuniversity.nl/en/publications/a-revelation-principle-for-obviously-strategy-proof-implementatio-2/",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C07": {
+    "url": "https://arxiv.org/abs/2311.02589",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C08": {
+    "url": "https://arxiv.org/abs/2201.11441",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C09": {
+    "url": "https://arxiv.org/abs/2112.03184",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C10": {
+    "url": "https://princetonvisualai.github.io/HIVE/",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C11": {
+    "url": "https://arxiv.org/abs/2005.01831",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C12": {
+    "url": "https://arxiv.org/abs/2407.03545",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C13": {
+    "url": "https://arxiv.org/abs/1907.06831",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C14": {
+    "url": "https://arxiv.org/abs/2305.12162",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C15": {
+    "url": "https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and selected introductory/method passages"
+  },
+  "C16": {
+    "url": "https://arxiv.org/abs/2601.13489",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C17": {
+    "url": "https://arxiv.org/abs/2006.08742",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C18": {
+    "url": "https://arxiv.org/html/1804.10512v1",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and selected introductory/method passages"
+  },
+  "C19": {
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.3982/TE6266",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and selected introductory/method passages"
+  },
+  "C20": {
+    "url": "https://www.sciencedirect.com/science/article/pii/S000437022400208X",
+    "status": "unavailable",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C21": {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26373/26145",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and selected introductory/method passages"
+  },
+  "C22": {
+    "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  },
+  "C23": {
+    "url": "https://arxiv.org/html/1902.00006v2",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract and selected introductory/method passages"
+  },
+  "C24": {
+    "url": "https://link.springer.com/article/10.1007/s00199-025-01684-y",
+    "status": "available",
+    "access_date": "2026-10-10",
+    "screening_read": "abstract"
+  }
+}
